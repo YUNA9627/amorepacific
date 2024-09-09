@@ -6,7 +6,7 @@
 @import url('https://webfontbox.github.io/Arita/font.min.css');
 
 /*
-font-family: 'Pretendard-Regular'; font-weight: 400,500,600;
+font-family: 'Pretendard'; font-weight: 400,500,600;
 font-family: 'Arita'; font-weight: 300,400,500,600,700;
 font-family: 'Arita buri'; font-weight: 400,500,600;
 */
@@ -31,19 +31,22 @@ font-family: 'Arita buri'; font-weight: 400,500,600;
   TYPOGRAPHY
 */
 body{
+  font-family: 'Arita', '돋움', sans-serif;
+  font-weight: 400;
   line-height: var(--lh);
 }
 .sec_title_lg{
+  font-family: 'Arita buri';
   font-size: 2.625rem;
   font-weight: 600;
 }
 .sec_title_sm{
+  font-family: 'Arita buri';
   font-size: 1.625rem ;
   font-weight: 600;
 }
 .sec_desc_md{
   font-size: 1.5rem;
-  font-weight: 400;
 }
 .con_title_lg{
   font-size: 2.5rem;
@@ -54,7 +57,7 @@ body{
   font-weight: 500;
 }
 .con_desc_md{
-  font-family: 'Pretendard-Regular';
+  font-family: 'Pretendard';
   font-size: 1rem;
   font-weight: 400;
 }
