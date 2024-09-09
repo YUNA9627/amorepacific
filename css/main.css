@@ -1,4 +1,20 @@
 /* HEADER */
-.header .content svg {
-  width: 20px;
+header {
+  background: var(--primary);
+  * {color: var(--white);}
 }
+.header {display: flex; justify-content: space-between; padding-top: 10px;
+  .logo {padding: 20px;}
+  .language_area {
+    
+  }
+}
+.header .content svg {width: 20px; fill: var(--white);}
+.language_area {background: none; border: none;}
+nav .gnb {display: flex; justify-content: center;
+  > li a {font-family: 'Arita buri'; font-weight: 600; font-size: 20px;}
+  .gnb-item {display: flex;
+    > a {padding: 18px 20px;}
+  }
+}
+nav .lnb {display: none;}
