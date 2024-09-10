@@ -31,6 +31,25 @@ nav .gnb {display: flex; justify-content: center;
 }
 nav .lnb {display: none;}
 
+/* MAIN BANNER */
+.main_banner{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+.main_banner .video{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+.main_banner .video video{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 /* BRANDS */
 .brands{
   padding: 143px 0 88px 0;
