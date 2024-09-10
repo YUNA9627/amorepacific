@@ -3,16 +3,28 @@ header {
   background: var(--primary);
   * {color: var(--white);}
 }
-.header {display: flex; justify-content: space-between; padding-top: 10px;
-  .logo {padding: 20px;}
-  .language_area {
-    
-  }
+.header {padding-top: 10px; position: relative;
+  .logo {padding: 20px; position: absolute; left: 50%; transform: translateX(-50%)}
+  .content_wrapper {display: flex; justify-content: space-between; align-items: center; padding: 16px 0;}
 }
-.header .content svg {width: 20px; fill: var(--white);}
-.language_area {background: none; border: none;}
+.header .content {display: flex;
+  a {padding: 0 5px;}
+  a svg {width: 18px; fill: var(--white); padding: 0 5px; vertical-align: middle;}
+}
+.header .content .sns_wrapper > a {font-size: 18px; padding: 0 5px;}
+.header .content .sns_wrapper:after {
+  content: '';
+  display: inline-block;
+  background: var(--light-gray); 
+  width: 1px;
+  height: 15px;
+}
+.language_area {background: none; border: none;
+  .bi-globe2 {margin: 0 5px;}
+  .bi-chevron-down {font-size: 14px; margin-left: 5px;}
+}
 nav .gnb {display: flex; justify-content: center;
-  > li a {font-family: 'Arita buri'; font-weight: 600; font-size: 20px;}
+  > li a {font-family: 'Arita buri'; font-weight: 600; font-size: 1.25rem;}
   .gnb-item {display: flex;
     > a {padding: 18px 20px;}
   }
