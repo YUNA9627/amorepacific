@@ -9,7 +9,7 @@ header {
 }
 .header .content {display: flex;
   a {padding: 0 5px;}
-  a svg {width: 18px; fill: var(--white); padding: 0 5px; vertical-align: middle;}
+  a svg {width: 18px; fill: var(--white); padding: 0 5px; vertical-align: sub;}
 }
 .header .content .sns_wrapper > a {font-size: 18px; padding: 0 5px;}
 .header .content .sns_wrapper:after {
@@ -23,13 +23,16 @@ header {
   .bi-globe2 {margin: 0 5px;}
   .bi-chevron-down {font-size: 14px; margin-left: 5px;}
 }
-nav .gnb {display: flex; justify-content: center;
+.gnb {display: flex; justify-content: center;
   > li a {font-family: 'Arita buri'; font-weight: 600; font-size: 1.25rem;}
-  .gnb-item {display: flex;
-    > a {padding: 18px 20px;}
-  }
 }
-nav .lnb {display: none;}
+.gnb .gnb-item {display: flex; position: relative;
+  > a {padding: 18px 20px; transition: 0.3s;}
+  .lnb {display: none; background: var(--white); position: absolute;
+  * {color: var(--medium-gray);}}
+}
+.gnb .gnb-item:hover .lnb {display: none;}
+.gnb .gnb-item:hover a {color: var(--secondary);}
 
 /* MAIN BANNER */
 .main_banner{
