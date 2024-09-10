@@ -102,3 +102,27 @@ section .button .prev{
 .brands_wrapper ul p:hover{
   color: var(--black);
 }
+
+/* EMPLOY */
+.employ .employ_wrapper{
+  background: 
+  url(../images/employ_bg.jpg)no-repeat;
+  margin-bottom: 143px;
+  height: 320px;
+  border-radius: 25px;
+}
+.employ .employ_wrapper:after{
+  content: '';
+  display: block;
+  background: linear-gradient(to right, rgba(6,44,94,0) 0%, #062C5E 80%, #062C5E 100%);
+  transform: rotate(180deg);
+  width: 1200px;
+  height: 320px;
+  border-radius: 25px;
+}
+
+
+ 
+.employ_wrapper p,
+.employ_wrapper a
+{color:var(--white);}
