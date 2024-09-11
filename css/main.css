@@ -119,7 +119,8 @@ section .button .prev{
   color: var(--black);
 }
 
-/* EMPLOY */
+/* EMPLOY - 강현주
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
 .employ .employ_wrapper{
   background: 
   url(../images/employ_bg.jpg)no-repeat;
