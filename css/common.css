@@ -89,3 +89,13 @@ body{
     font-size: 1.125rem;
   }
 }
+
+/*
+  LAYOUT
+*/
+section.pd1{
+  padding: 143px 0 143px 0;
+}
+section.pd2{
+  padding: 143px 0 88px 0;
+}
