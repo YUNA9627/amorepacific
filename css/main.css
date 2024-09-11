@@ -83,7 +83,6 @@ section .button ul li{
 }
 section .button ul li:hover{
   color: var(--black);
-  font-weight: 500;
 }
 .button a{
   position: absolute;
@@ -97,6 +96,9 @@ section .button .prev{
   left: 100%;
 }
 .brands_wrapper{
+  position: relative;
+}
+.brands_wrp{
   overflow: hidden;
 }
 .brands_wrapper ul{
@@ -117,6 +119,16 @@ section .button .prev{
 }
 .brands_wrapper ul p:hover{
   color: var(--black);
+}
+.brands_wrapper .btn_more{
+  position: absolute;
+  right: 0;
+  bottom: calc(100% + 95px);
+}
+.brands_wrapper .btn_more:hover{
+  color: var(--white);
+  background: var(--primary);
+  border: 1px solid var(--primary);
 }
 
 /* SUSTAIN - 홍은진
