@@ -105,14 +105,17 @@ body{
   BUTTON
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
 .btn_more{
+  display: inline-block;
+  width: 168px;
+  height: 58px;
   box-sizing: border-box;
   color: var(--primary);
   border: 1px solid var(--primary);
   border-radius: 30px;
   font-size: 20px;
-  padding: 18px 26px;
+  text-align: center;
+  line-height: 58px;
 }
-
 .btn_more i{
   margin-left: 40px;
 }
