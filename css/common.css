@@ -13,7 +13,7 @@ font-family: 'Arita buri'; font-weight: 400,500,600;
 
 /*
   VARIABLES
-*/
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
 :root{
   --primary: #062C5E;
   --secondary: #7CA7DE;
@@ -29,7 +29,7 @@ font-family: 'Arita buri'; font-weight: 400,500,600;
 
 /*
   TYPOGRAPHY
-*/
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
 body{
   font-family: 'Arita', '돋움', sans-serif;
   font-weight: 400;
@@ -46,7 +46,8 @@ body{
   font-weight: 600;
 }
 .sec_desc_md{
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+  font-weight: 300; 
 }
 .con_title_lg{
   font-size: 2.5rem;
@@ -92,10 +93,22 @@ body{
 
 /*
   LAYOUT
-*/
-section.pd1{
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+.pd1{
   padding: 143px 0 143px 0;
 }
-section.pd2{
+.pd2{
   padding: 143px 0 88px 0;
+}
+
+/*
+  BUTTON
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+.btn_more{
+  box-sizing: border-box;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  border-radius: 30px;
+  font-size: 20px;
+  padding: 18px 26px;
 }

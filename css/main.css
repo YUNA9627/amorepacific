@@ -111,6 +111,62 @@ section .button .prev{
   color: var(--black);
 }
 
+/* SUSTAIN - 홍은진
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+.sustain{
+  background: url('../images/sustain_bg.png') no-repeat;
+  color: #fff;
+  position: relative;
+  >::after{
+    content:'';
+    position: absolute;
+    left: 0;right: 0;top: 0;bottom: 0;
+    background: rgba(0,0,0,.5);
+  }
+  .row > *{
+    z-index: 10;
+  }
+  h2{
+    margin-bottom: 100px;
+  }
+  .col-6 p{
+    width: 540px;
+  }
+  .col-6 .btn_more{
+    color: #fff;
+    border-color:#fff;
+  }
+  .col-6 .btn_more i{
+    margin-left: 40px;
+  }
+  .row > *{
+    border-right: 1px solid rgba(255,255,255,.5);
+  }
+  .col-3{
+    text-align: center;
+    transition: .3s;
+    background: rgba(255,255,255,0);
+  }
+  .col-3:hover{
+    background: rgba(255,255,255,.15);
+  }
+  .col-3 h4{
+    margin-top: 71px;
+    margin-bottom: 189px;
+  }
+  .col-3 p{
+    width: 240px;
+    margin: 0 auto;
+  }
+  .col-3 a i{
+    font-size: 3rem;
+    color: #fff;
+  }
+   
+}
+
+
+
 /* EMPLOY */
 .employ .employ_wrapper{
   background: 
