@@ -193,27 +193,20 @@ header {
 
 /* BRANDS - 강현주
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
-.brands {
-  padding: 143px 0 88px 0;
-}
-
 .brands h2 {
   margin-bottom: 50px;
 }
-
 .brands .button {
   width: 312px;
   position: relative;
   margin-left: 24px;
 }
-
 .button .tt_li {
   width: 252px;
   height: 45px;
   overflow: hidden;
   margin-left: 30px;
 }
-
 section .button ul {
   display: flex;
   width: 441px;
@@ -221,67 +214,54 @@ section .button ul {
   flex-wrap: wrap;
   color: var(--light-gray);
 }
-
 section .button ul li {
   cursor: pointer;
 }
-
 section .button ul li:hover {
   color: var(--black);
 }
-
 .button a {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
 }
-
 section .button .next {
   right: 100%;
 }
-
 section .button .prev {
   left: 100%;
 }
-
 .brands_wrapper {
   position: relative;
 }
-
 .brands_wrp {
   overflow: hidden;
 }
-
 .brands_wrapper ul {
   display: flex;
   width: 3360px;
   padding-top: 50px;
 }
-
-.brands_wrapper ul li {
+.brands_wrapper ul li{
   width: 336px;
+  border-right: 1px solid var(--light-gray);
 }
-
 .brands_wrapper ul li img {
   padding: 0 80px 0 80px;
 }
-
 .brands_wrapper ul p {
   text-align: center;
   margin-top: 68px;
   color: var(--light-gray);
 }
-
 .brands_wrapper ul p:hover {
   color: var(--black);
 }
-
 .brands_wrapper .btn_more {
   position: absolute;
   right: 0;
   bottom: calc(100% + 95px);
 }
-
 .brands_wrapper .btn_more:hover {
   color: var(--white);
   background: var(--primary);
@@ -392,7 +372,6 @@ section .button .prev {
 .employ_wrapper a {
   position: absolute;
   color: var(--white);
-  z-index: 10;
 }
 
 .employ_wrapper p {
