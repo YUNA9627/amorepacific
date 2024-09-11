@@ -1,6 +1,5 @@
 /* HEADER */
-header {
-  background: var(--primary);
+header {background: var(--primary); position: fixed; z-index: 50; width: 100vw;
   * {color: var(--white);}
 }
 .header {padding-top: 10px; position: relative;
@@ -19,20 +18,34 @@ header {
   width: 1px;
   height: 15px;
 }
-.language_area {background: none; border: none;
+.language_area {background: none; border: none; position: relative;
   .bi-globe2 {margin: 0 5px;}
   .bi-chevron-down {font-size: 14px; margin-left: 5px;}
 }
-.gnb {display: flex; justify-content: center;
-  > li a {font-family: 'Arita buri'; font-weight: 600; font-size: 1.25rem;}
+.language_area .lang_list {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 100%;
+  background: #fff;
+  border: 1px solid var(--primary);
+  border-radius: 5px;
+  padding: 5px 0;
+  z-index: 60;
+}
+.language_area .lang_list li {padding: 5px 10px;
+  a {color: var(--medium-gray);}
+}
+.gnb {display: flex; justify-content: center; position: relative;
+  > li > a {font-family: 'Arita buri'; font-weight: 600; font-size: 1.25rem;}
 }
 .gnb .gnb-item {display: flex; position: relative;
   > a {padding: 18px 20px; transition: 0.3s;}
-  .lnb {display: none; background: var(--white); position: absolute;
+  .lnb {display: none; position: absolute; top: calc(100% + 40px); left: 60px;
   * {color: var(--medium-gray);}}
 }
-.gnb .gnb-item:hover .lnb {display: none;}
-.gnb .gnb-item:hover a {color: var(--secondary);}
+.gnb .gnb-item:hover .lnb {display: block;}
+.gnb .gnb-item:hover > a {color: var(--secondary);}
 
 /* MAIN BANNER */
 .main_banner{
