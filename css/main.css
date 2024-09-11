@@ -144,9 +144,9 @@ section .button .prev{
     color: #fff;
     border-color:#fff;
   }
-  .col-6 .btn_more i{
+  /* .col-6 .btn_more i{
     margin-left: 40px;
-  }
+  } */
   .row > *{
     border-right: 1px solid rgba(255,255,255,.5);
   }
