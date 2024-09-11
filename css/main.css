@@ -1,158 +1,281 @@
-/* HEADER */
-header {background: var(--primary); position: fixed; z-index: 100; width: 100vw; position: relative;
-  * {color: var(--white);}
+/* HEADER - 배유나
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+header {
+  background: var(--primary);
+  position: fixed;
+  z-index: 100;
+  width: 100vw;
+  position: relative;
+
+  * {
+    color: var(--white);
+  }
 }
-.header {padding-top: 10px; position: relative;
-  .logo {padding: 20px; position: absolute; left: 50%; transform: translateX(-50%)}
-  .content_wrapper {display: flex; justify-content: space-between; align-items: center; padding: 16px 0;}
+
+.header {
+  padding-top: 10px;
+  position: relative;
+
+  .logo {
+    padding: 20px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%)
+  }
+
+  .content_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+  }
 }
-.header .content {display: flex;
-  a {padding: 0 5px;}
-  a svg {width: 18px; fill: var(--white); padding: 0 5px; vertical-align: sub;}
+
+.header .content {
+  display: flex;
+
+  a {
+    padding: 0 5px;
+  }
+
+  a svg {
+    width: 18px;
+    fill: var(--white);
+    padding: 0 5px;
+    vertical-align: sub;
+  }
 }
-.header .content .sns_wrapper > a {font-size: 18px; padding: 0 5px;}
+
+.header .content .sns_wrapper>a {
+  font-size: 18px;
+  padding: 0 5px;
+}
+
 .header .content .sns_wrapper:after {
   content: '';
   display: inline-block;
-  background: var(--light-gray); 
+  background: var(--light-gray);
   width: 1px;
   height: 15px;
 }
-.language_area {background: none; border: none; position: relative; padding: 5px 0;
-  .bi-globe2 {margin: 0 5px;}
-  .bi-chevron-down {font-size: 14px; margin-left: 5px;}
+
+.language_area {
+  background: none;
+  border: none;
+  position: relative;
+  padding: 5px 0;
+
+  .bi-globe2 {
+    margin: 0 5px;
+  }
+
+  .bi-chevron-down {
+    font-size: 14px;
+    margin-left: 5px;
+  }
 }
+
 .language_area .lang_list {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   top: 100%;
-  background: rgba(255,255,255,.20);
-  border: 1px solid rgba(255,255,255,.5);
+  background: rgba(255, 255, 255, .20);
+  border: 1px solid rgba(255, 255, 255, .5);
   border-radius: 5px;
   padding: 5px 0;
   opacity: 0;
   transition: 0.3s;
 }
-.language_area .lang_list li {padding: 5px 10px;
-  a {color: rgba(255,255,255,.5);}
-  a:hover {color: var(--white);}
+
+.language_area .lang_list li {
+  padding: 5px 10px;
+
+  a {
+    color: rgba(255, 255, 255, .5);
+  }
+
+  a:hover {
+    color: var(--white);
+  }
 }
 
 .language_area:hover .lang_list {
   opacity: 1;
 }
 
-.gnb {display: flex; justify-content: center;
-  > li > a {font-family: 'Arita buri'; font-weight: 600; font-size: 1.25rem;}
+.gnb {
+  display: flex;
+  justify-content: center;
+
+  >li>a {
+    font-family: 'Arita buri';
+    font-weight: 600;
+    font-size: 1.25rem;
+  }
 }
-.gnb .gnb-item {display: flex;
-  > a {padding: 18px 20px; transition: 0.3s; color: var(--white);}
-  .lnb {position: absolute; opacity: 0; display: flex; padding: 40px 0 0 60px; top: 100%; left: 0;
-    * {color: var(--dark-gray);
+
+.gnb .gnb-item {
+  display: flex;
+
+  >a {
+    padding: 18px 20px;
+    transition: 0.3s;
+    color: var(--white);
+  }
+
+  .lnb {
+    position: absolute;
+    opacity: 0;
+    display: flex;
+    padding: 40px 0 0 60px;
+    top: 100%;
+    left: 0;
+
+    * {
+      color: var(--dark-gray);
+
       .lnbList {
-        * {color: var(--medium-gray);}
-        li {margin-right: 20px; width: 135px;}
+        * {
+          color: var(--medium-gray);
+        }
+
+        li {
+          margin-right: 20px;
+          width: 135px;
+        }
       }
     }
   }
 }
-.gnb .gnb-item:hover > a {color: var(--secondary);}
-.gnb .gnb-item:hover .lnb {opacity: 1;}
-.gnb .gnb-item:hover .lnb:before {opacity: 1;}
 
-/* MAIN BANNER */
-.main_banner{
+.gnb .gnb-item:hover>a {
+  color: var(--secondary);
+}
+
+.gnb .gnb-item:hover .lnb {
+  opacity: 1;
+}
+
+.gnb .gnb-item:hover .lnb:before {
+  opacity: 1;
+}
+
+/* MAIN BANNER - 한태희
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+.main_banner {
   position: relative;
   width: 100%;
   height: 100vh;
 }
-.main_banner .video{
+
+.main_banner .video {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100vh;
 }
-.main_banner .video video{
+
+.main_banner .video video {
   position: absolute;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-/* BRANDS */
-.brands{
+
+/* BRANDS - 강현주
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+.brands {
   padding: 143px 0 88px 0;
 }
-.brands h2{
+
+.brands h2 {
   margin-bottom: 50px;
 }
-.brands .button{
+
+.brands .button {
   width: 312px;
   position: relative;
   margin-left: 24px;
 }
-.button .tt_li{
+
+.button .tt_li {
   width: 252px;
   height: 45px;
   overflow: hidden;
   margin-left: 30px;
 }
-section .button ul{
+
+section .button ul {
   display: flex;
   width: 441px;
-  gap:30px;
+  gap: 30px;
   flex-wrap: wrap;
   color: var(--light-gray);
 }
-section .button ul li{
+
+section .button ul li {
   cursor: pointer;
 }
-section .button ul li:hover{
+
+section .button ul li:hover {
   color: var(--black);
 }
-.button a{
+
+.button a {
   position: absolute;
-  top:50%;
+  top: 50%;
   transform: translateY(-50%);
 }
-section .button .next{
+
+section .button .next {
   right: 100%;
 }
-section .button .prev{
+
+section .button .prev {
   left: 100%;
 }
-.brands_wrapper{
+
+.brands_wrapper {
   position: relative;
 }
-.brands_wrp{
+
+.brands_wrp {
   overflow: hidden;
 }
-.brands_wrapper ul{
+
+.brands_wrapper ul {
   display: flex;
   width: 3360px;
   padding-top: 50px;
 }
-.brands_wrapper ul li{
+
+.brands_wrapper ul li {
   width: 336px;
 }
-.brands_wrapper ul li img{
-  padding: 0 80px 0 80px; 
+
+.brands_wrapper ul li img {
+  padding: 0 80px 0 80px;
 }
-.brands_wrapper ul p{
+
+.brands_wrapper ul p {
   text-align: center;
   margin-top: 68px;
   color: var(--light-gray);
 }
-.brands_wrapper ul p:hover{
+
+.brands_wrapper ul p:hover {
   color: var(--black);
 }
-.brands_wrapper .btn_more{
+
+.brands_wrapper .btn_more {
   position: absolute;
   right: 0;
   bottom: calc(100% + 95px);
 }
-.brands_wrapper .btn_more:hover{
+
+.brands_wrapper .btn_more:hover {
   color: var(--white);
   background: var(--primary);
   border: 1px solid var(--primary);
@@ -160,94 +283,119 @@ section .button .prev{
 
 /* SUSTAIN - 홍은진
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
-.sustain{
+.sustain {
   background: url('../images/sustain_bg.png') no-repeat;
   color: var(--white);
   position: relative;
-  >::after{
-    content:'';
+
+  >::after {
+    content: '';
     position: absolute;
-    left: 0;right: 0;top: 0;bottom: 0;
-    background: rgba(0,0,0,.5);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .5);
   }
-  .row > *{
-    z-index: 10;
-  }
-  h2{
-    margin-bottom: 100px;
-  }
-  .col-6 p{
-    width: 540px;
-  }
+
   .row {
     margin-left: 0;
     margin-right: 0;
   }
-  .row > *{
-    border-right: 1px solid rgba(255,255,255,.5);
+
+  .row>* {
+    z-index: 10;
+    border-right: 1px solid rgba(255, 255, 255, .5);
   }
-  .col-3{
+
+  h2 {
+    margin-bottom: 100px;
+  }
+
+  .col-6 p {
+    width: 540px;
+  }
+
+  .col-6 .btn_more {
+    margin-top: 63px;
+  }
+
+  .col-3 {
     text-align: center;
     transition: .3s;
-    background: rgba(255,255,255,0);
+    background: rgba(255, 255, 255, 0);
+    padding-right: 0;
+    padding-left: 0;
   }
-  .col-3:hover{
-    background: rgba(255,255,255,.15);
+
+  .col-3:hover {
+    background: rgba(255, 255, 255, .15);
   }
-  .col-3 h4{
-    margin-top: 71px;
+
+  .col-3 > a {
+    display: block;
+    height: 100%;
+    padding: 143px 0 0;
+    box-sizing: border-box;
+    color: var(--white);
+  }
+
+  .col-3 h4 {
+    margin-top: 72px;
     margin-bottom: 189px;
   }
-  .col-3 p{
+
+  .col-3 p {
     width: 240px;
     margin: 0 auto;
   }
-  .col-3 a i{
+
+  .col-3 .bi-download::before{
     font-size: 3rem;
     color: var(--white);
   }
-   
+
 }
 
 /* EMPLOY - 강현주
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
-.employ .employ_wrapper{
-  background: 
-  url(../images/employ_bg.jpg)no-repeat;
+.employ .employ_wrapper {
+  background:
+    url(../images/employ_bg.jpg)no-repeat;
   height: 320px;
   border-radius: 25px;
   position: relative;
 }
-.employ .employ_wrapper:after{
+
+.employ .employ_wrapper:after {
   content: '';
   display: block;
-  background: linear-gradient(to left, rgba(6,44,94,0) 0%, #062C5E 80%, #062C5E 100%);
+  background: linear-gradient(to left, rgba(6, 44, 94, 0) 0%, #062C5E 80%, #062C5E 100%);
   width: 1200px;
   height: 320px;
   border-radius: 25px;
 }
 
-.employ_wrapper img{
+.employ_wrapper img {
   position: absolute;
   top: 83px;
   left: 70px;
 }
 
 .employ_wrapper p,
-.employ_wrapper a
-{
+.employ_wrapper a {
   position: absolute;
-  color:var(--white);
+  color: var(--white);
   z-index: 10;
 }
 
-.employ_wrapper p{
+.employ_wrapper p {
   top: 161px;
   left: 70px;
   font-size: 2.188rem;
 }
 
-.employ_wrapper a{
+.employ_wrapper a {
   bottom: 32px;
   left: 50%;
   transform: translateX(-50%);
