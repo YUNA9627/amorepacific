@@ -38,12 +38,12 @@ body{
 .sec_title_lg{
   font-family: 'Arita buri';
   font-size: 2.625rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 .sec_title_sm{
   font-family: 'Arita buri';
   font-size: 1.625rem ;
-  font-weight: 600;
+  font-weight: 700;
 }
 .sec_desc_md{
   font-size: 1.25rem;
@@ -51,7 +51,7 @@ body{
 }
 .con_title_lg{
   font-size: 2.5rem;
-  font-weight: 500;
+  font-weight: 600;
 }
 .con_title_sm{
   font-size: 1.875rem;
@@ -120,4 +120,8 @@ body{
 }
 .btn_more i{
   margin-left: 40px;
+}
+.btn_more_w{
+  color: var(--white);
+  border-color: var(--white);
 }
