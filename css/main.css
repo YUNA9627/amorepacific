@@ -62,14 +62,14 @@ header {
   margin-bottom: 50px;
 }
 
-section .button{
-  position: relative;
+.button .tt_li{
   width: 338px;
+  height: 45px;
+  overflow: hidden;
 }
 
 section .button ul{
   display: flex;
-  gap: 30px;
   color: var(--light-gray);
 }
 
@@ -107,11 +107,12 @@ section .button .prev{
   margin: 0 66px;
 }
 
-.brands_wrapper ul:after li{
+.brands_wrapper ul li:after{
   content: '';
-  width: 10px;
+  display: block;
+  width: 1px;
   height: 250px;
-  color: var(--light-gray);
+  color: var(--black);
 }
 
 .brands_wrapper ul p{
