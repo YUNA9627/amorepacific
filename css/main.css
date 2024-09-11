@@ -57,71 +57,56 @@ header {
 .brands{
   padding: 143px 0 88px 0;
 }
-
 .brands h2{
   margin-bottom: 50px;
 }
-
 .button .tt_li{
-  width: 338px;
+  width: 252px;
   height: 45px;
   overflow: hidden;
+  position: relative;
 }
-
 section .button ul{
   display: flex;
+  width: 441px;
+  gap:30px;
+  flex-wrap: wrap;
   color: var(--light-gray);
 }
-
 section .button ul li{
   cursor: pointer;
 }
-
 section .button ul li:hover{
   color: var(--black);
   font-weight: 500;
 }
-
-section .button a{
+.button a{
   position: absolute;
   top:50%;
   transform: translateY(-50%);
 }
-
 section .button .next{
   right: 100%;
 }
-
 section .button .prev{
   left: 100%;
 }
-
 .brands_wrapper{
   overflow: hidden;
 }
-
 .brands_wrapper ul{
   display: flex;
+  /* width: 3360px; */
   padding-top: 50px;
-  gap: 78px;
-  margin: 0 66px;
 }
-
-.brands_wrapper ul li:after{
-  content: '';
-  display: block;
-  width: 1px;
-  height: 250px;
-  color: var(--black);
+.brands_wrapper ul li img{
+  padding: 0 80px 0 80px; 
 }
-
 .brands_wrapper ul p{
   text-align: center;
   margin-top: 68px;
   color: var(--light-gray);
-  font-weight: 500;
 }
-
 .brands_wrapper ul p:hover{
   color: var(--black);
 }
