@@ -18,7 +18,7 @@ header {background: var(--primary); position: fixed; z-index: 100; width: 100vw;
   width: 1px;
   height: 15px;
 }
-.language_area {background: none; border: none; position: relative;
+.language_area {background: none; border: none; position: relative; padding: 5px 0;
   .bi-globe2 {margin: 0 5px;}
   .bi-chevron-down {font-size: 14px; margin-left: 5px;}
 }
@@ -31,11 +31,18 @@ header {background: var(--primary); position: fixed; z-index: 100; width: 100vw;
   border: 1px solid rgba(255,255,255,.5);
   border-radius: 5px;
   padding: 5px 0;
+  opacity: 0;
+  transition: 0.3s;
 }
 .language_area .lang_list li {padding: 5px 10px;
   a {color: rgba(255,255,255,.5);}
   a:hover {color: var(--white);}
 }
+
+.language_area:hover .lang_list {
+  opacity: 1;
+}
+
 .gnb {display: flex; justify-content: center;
   > li > a {font-family: 'Arita buri'; font-weight: 600; font-size: 1.25rem;}
 }
