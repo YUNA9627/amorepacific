@@ -1,5 +1,50 @@
-.employ_wrapper p{
-  top: 161px;
-  left: 70px;
-  font-size: 2.188rem;
+@media (max-width: 768px){
+  /* brands */
+  #brand{
+    margin: 0 24px;
+    max-width: 720px;
+  }
+  .brands .button{
+    width: 219px;
+  }
+  .button .tt_li{
+    width: 159px;
+    height: 40px;
+  }
+  .brands_wrapper ul li{
+    width: 251px;
+  }
+  .brands_wrapper ul li img{
+    padding: 0 40px 0 40px;
+  }
+  /* employ */
+  #em{
+    margin: 0 24px;
+    max-width: 718px;
+  }
+  .employ .employ_wrapper {
+    background: url(../images/employ_bg1.jpg);
+    height: 192px;
+    border-radius: 20px;
+  }
+  .employ .employ_wrapper:after{
+    width: 718px;
+    height: 192px;
+    border-radius: 20px;
+  }
+  .employ_wrapper img{
+    width: 205px;
+    height: 20px;
+    top: 52px;
+    left: 41px;
+  }
+  .employ_wrapper p{
+    top: 92px;
+    left: 41px;
+    font-size: 1.25rem;
+  }
+  .employ_wrapper a{
+    bottom: 23px;
+    font-size: 1rem;
+  }
 }
