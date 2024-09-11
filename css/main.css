@@ -186,9 +186,27 @@ header {
 
 /* SPACE - 홍은진
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+.space{
+  background-image: 
+  linear-gradient(rgba(124,167,222,0.1), rgba(124,167,222,0.9)),  
+  url(../images/space_bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  color: var(--white);
+  .space_wrapper{
+    display: flex;
+    justify-content: space-between;
+    article{
+      width: 33.3333%;
+      p{
+          width: 265px;
+          margin: 0 auto;
+      }
+    }
 
-.space_wrapper{
-  display: flex;
+  }
 }
 
 /* BRANDS - 강현주
