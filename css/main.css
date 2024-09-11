@@ -1,5 +1,5 @@
 /* HEADER */
-header {background: var(--primary); position: fixed; z-index: 50; width: 100vw;
+header {background: var(--primary); position: fixed; z-index: 100; width: 100vw; position: relative;
   * {color: var(--white);}
 }
 .header {padding-top: 10px; position: relative;
@@ -27,25 +27,32 @@ header {background: var(--primary); position: fixed; z-index: 50; width: 100vw;
   left: 50%;
   transform: translateX(-50%);
   top: 100%;
-  background: #fff;
-  border: 1px solid var(--primary);
+  background: rgba(255,255,255,.20);
+  border: 1px solid rgba(255,255,255,.5);
   border-radius: 5px;
   padding: 5px 0;
-  z-index: 60;
 }
 .language_area .lang_list li {padding: 5px 10px;
-  a {color: var(--medium-gray);}
+  a {color: rgba(255,255,255,.5);}
+  a:hover {color: var(--white);}
 }
-.gnb {display: flex; justify-content: center; position: relative;
+.gnb {display: flex; justify-content: center;
   > li > a {font-family: 'Arita buri'; font-weight: 600; font-size: 1.25rem;}
 }
-.gnb .gnb-item {display: flex; position: relative;
-  > a {padding: 18px 20px; transition: 0.3s;}
-  .lnb {display: none; position: absolute; top: calc(100% + 40px); left: 60px;
-  * {color: var(--medium-gray);}}
+.gnb .gnb-item {display: flex;
+  > a {padding: 18px 20px; transition: 0.3s; color: var(--white);}
+  .lnb {position: absolute; opacity: 0; display: flex; padding: 40px 0 0 60px; top: 100%; left: 0;
+    * {color: var(--dark-gray);
+      .lnbList {
+        * {color: var(--medium-gray);}
+        li {margin-right: 20px; width: 135px;}
+      }
+    }
+  }
 }
-.gnb .gnb-item:hover .lnb {display: block;}
 .gnb .gnb-item:hover > a {color: var(--secondary);}
+.gnb .gnb-item:hover .lnb {opacity: 1;}
+.gnb .gnb-item:hover .lnb:before {opacity: 1;}
 
 /* MAIN BANNER */
 .main_banner{
