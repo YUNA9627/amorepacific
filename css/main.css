@@ -132,19 +132,41 @@ section .button .prev{
   margin-bottom: 143px;
   height: 320px;
   border-radius: 25px;
+  position: relative;
 }
 .employ .employ_wrapper:after{
   content: '';
   display: block;
-  background: linear-gradient(to right, rgba(6,44,94,0) 0%, #062C5E 80%, #062C5E 100%);
-  transform: rotate(180deg);
+  background: linear-gradient(to left, rgba(6,44,94,0) 0%, #062C5E 80%, #062C5E 100%);
   width: 1200px;
   height: 320px;
   border-radius: 25px;
 }
 
+.employ_wrapper img{
+  position: absolute;
+  top: 83px;
+  left: 70px;
+}
 
- 
 .employ_wrapper p,
 .employ_wrapper a
-{color:var(--white);}
+{
+  position: absolute;
+  color:var(--white);
+  z-index: 10;
+}
+
+.employ_wrapper p{
+  top: 161px;
+  left: 70px;
+  font-size: 2.188rem;
+}
+
+.employ_wrapper a{
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 500;
+  font-size: 1.563rem;
+}
