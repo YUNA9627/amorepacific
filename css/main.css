@@ -184,6 +184,13 @@ header {
   object-fit: cover;
 }
 
+/* SPACE - 홍은진
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.space_wrapper{
+  display: flex;
+}
+
 /* BRANDS - 강현주
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
 .brands {
@@ -284,10 +291,9 @@ section .button .prev {
 /* SUSTAIN - 홍은진
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
 .sustain {
-  background: url('../images/sustain_bg.png') no-repeat;
+  background: url('../images/sustain_bg.png') center/cover no-repeat;
   color: var(--white);
   position: relative;
-
   >::after {
     content: '';
     position: absolute;
@@ -313,7 +319,7 @@ section .button .prev {
   }
 
   .col-6 p {
-    width: 540px;
+    width: 526px;
   }
 
   .col-6 .btn_more {
