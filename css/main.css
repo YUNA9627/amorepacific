@@ -65,11 +65,7 @@ header {
   border: none;
   position: relative;
   padding: 5px 0;
-
-  .bi-globe2 {
-    margin: 0 5px;
-  }
-
+  .bi-globe2 {margin: 0 5px;}
   .bi-chevron-down {
     font-size: 14px;
     margin-left: 5px;
@@ -91,20 +87,27 @@ header {
 
 .language_area .lang_list li {
   padding: 5px 10px;
-
-  a {
-    color: rgba(255, 255, 255, .5);
-  }
-
-  a:hover {
-    color: var(--white);
-  }
+  a {color: rgba(255, 255, 255, .5);}
+  a:hover {color: var(--white);}
 }
 
 .language_area:hover .lang_list {
   opacity: 1;
 }
 
+.lnbBg {
+  background: var(--white);
+  width: 100%;
+  height: 300px;
+  position: absolute;
+  top: 100%;
+  display: none;
+  opacity: 0;
+}
+.lnbBg.visible {
+  display: block;
+  opacity: 1;
+}
 
 .gnb {
   display: flex;
@@ -119,29 +122,25 @@ header {
 
 .gnb .gnb-item {
   display: flex;
-
   >a {
     padding: 18px 20px;
     transition: 0.3s;
     color: var(--white);
   }
-
   .lnb {
     position: absolute;
     opacity: 0;
-    display: flex;
+    /* display: flex; */
+    display: none;
     padding: 40px 0 0 60px;
     top: 100%;
     left: 0;
-
     * {
       color: var(--dark-gray);
-
       .lnbList {
         * {
           color: var(--medium-gray);
         }
-
         li {
           margin-right: 20px;
           width: 135px;
@@ -150,7 +149,6 @@ header {
     }
   }
 }
-/*
 .gnb .gnb-item:hover>a {
   color: var(--secondary);
 }
@@ -162,7 +160,6 @@ header {
 .gnb .gnb-item:hover .lnb:before {
   opacity: 1;
 }
-*/
 
 /* MAIN BANNER - 한태희
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -415,8 +412,30 @@ section .button .prev {
 
 /* FOOTER - 배유나
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+.amoremall {
+  position: fixed;
+  right: 20px;
+  bottom: 100px;
+  z-index: 100;
+}
+.amoremall > a {
+  display: block;
+}
 .go_to_top {
-  text-align: right;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+}
+.go_to_top > a {
+  background: var(--white);
+  width: 70px;
+  line-height: 70px;
+  border: 1px solid var(--black);
+  border-radius: 50%;
+  display: block;
+  text-align: center;
+  font-size: 40px;
 }
 
 .footer_wrapper {
@@ -442,6 +461,22 @@ section .button .prev {
 .footer_menu .other ul li {width: 202px;}
 
 .footer_box {padding: 50px 0; display: flex; justify-content: space-between;}
+
+.footer_box span p {display: inline;}
+
+.footer_box ul {margin-bottom: 20px;}
+
+.footer_box p {color: var(--medium-gray);}
+
+.footer_box span p:nth-child(1):after {
+  content: '';
+  background: var(--medium-gray);
+  width: 1px;
+  height: 16px;
+  display: inline-block;
+  margin: 0 10px;
+  vertical-align: middle;
+}
 
 .footer_box .footer_sns {
   display: flex;
