@@ -13,7 +13,7 @@ font-family: 'Arita buri'; font-weight: 400,500,600;
 
 /*
   VARIABLES
-*/
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
 :root{
   --primary: #062C5E;
   --secondary: #7CA7DE;
@@ -21,7 +21,7 @@ font-family: 'Arita buri'; font-weight: 400,500,600;
   --dark-gray: #666666;
   --medium-gray: #868686;
   --light-gray: #C7C7C7;
-  --bg-gray: ##F5F5F5;
+  --bg-gray: #F5F5F5;
   --white: #FFFFFF;
   --font:1rem;
   --lh:1.625;
@@ -29,32 +29,34 @@ font-family: 'Arita buri'; font-weight: 400,500,600;
 
 /*
   TYPOGRAPHY
-*/
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
 body{
   font-family: 'Arita', '돋움', sans-serif;
-  font-weight: 400;
+  font-weight: 500;
   line-height: var(--lh);
+  letter-spacing: -0.01em;
 }
 .sec_title_lg{
   font-family: 'Arita buri';
   font-size: 2.625rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 .sec_title_sm{
   font-family: 'Arita buri';
   font-size: 1.625rem ;
-  font-weight: 600;
+  font-weight: 700;
 }
 .sec_desc_md{
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+  font-weight: 300; 
 }
 .con_title_lg{
-  font-size: 2.5rem;
-  font-weight: 500;
+  font-size: 2.25rem;
+  font-weight: 600;
 }
 .con_title_sm{
   font-size: 1.875rem;
-  font-weight: 500;
+  font-weight: 600;
 }
 .con_desc_md{
   font-family: 'Pretendard';
@@ -88,4 +90,49 @@ body{
   .con_title_sm{
     font-size: 1.125rem;
   }
+}
+
+/*
+  LAYOUT
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+.pd1{
+  padding: 143px 0 143px 0;
+}
+.pd2{
+  padding: 143px 0 88px 0;
+}
+
+/*
+  BUTTON
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+.btn_more{
+  display: inline-block;
+  width: 168px;
+  height: 58px;
+  box-sizing: border-box;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  border-radius: 30px;
+  font-size: 20px;
+  text-align: center;
+  line-height: 58px;
+  transition: 0.3s;
+}
+.btn_more i{
+  margin-left: 40px;
+}
+.btn_more_w{
+  color: var(--white);
+  border-color: var(--white);
+  border-width: 2px;
+}
+.btn_more_w:hover{
+  background: rgba(255, 255, 255, 0.8);
+  color: var(--black);
+}
+.btn_more i::before{
+  transition: 0.2s;
+}
+.btn_more:hover i::before{
+  transform: translateX(4px);
 }

@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/bootstrap_custom.css">
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
   <!-- header 배유나 -->
@@ -21,6 +22,11 @@
             <i class="bi bi-globe2"></i>KR
             <i class="bi bi-chevron-down"></i>
           </a>
+          <ul class="lang_list">
+            <li><a href="">KR</a></li>
+            <li><a href="">EN</a></li>
+            <li><a href="">CN</a></li>
+          </ul>
         </button>
         <div class="content">
           <div class="sns_wrapper">
@@ -35,25 +41,27 @@
         </div>
       </div>
     </div>
-    <nav class="container">
-      <ul class="gnb">
+    <nav>
+      <ul class="gnb container">
         <li class="gnb-item"><a href="">ABOUT US</a>
-          <ul class="lnb">
-            <li><a href="">Amorepacific</a>
-              <ul>
-                <li><a href="">Our Story</a></li>
-                <li><a href="">Our History</a></li>
-                <li><a href="">Our Values</a></li>
-              </ul>
-            </li>
-            <li><a href="">Research & Innovation</a></li>
-            <li><a href="">Visual Identity</a></li>
-          </ul>
+          <div class="gnbInner">
+            <ul class="lnb">
+              <li><a href="">Amorepacific</a>
+                <ul class="lnbList">
+                  <li><a href="">Our Story</a></li>
+                  <li><a href="">Our History</a></li>
+                  <li><a href="">Our Values</a></li>
+                </ul>
+              </li>
+              <li><a href="">연구 & 혁신</a></li>
+              <li><a href="">브랜드 아이덴티티</a></li>
+            </ul>
+          </div>
         </li>
         <li class="gnb-item"><a href="">BRANDS</a>
           <ul class="lnb">
             <li>화장품
-              <ul>
+              <ul class="lnbList">
                 <li><a href="">설화수</a></li>
                 <li><a href="">라네즈</a></li>
                 <li><a href="">이니스프리</a></li>
@@ -71,19 +79,19 @@
               </ul>
             </li>
             <li>향수
-              <ul>
+              <ul class="lnbList">
                 <li><a href="">구딸</a></li>
               </ul>
             </li>
             <li>뷰티
-              <ul>
+              <ul class="lnbList">
                 <li><a href="">에스트라</a></li>
                 <li><a href="">메이크온</a></li>
                 <li><a href="">바이탈뷰티</a></li>
               </ul>
             </li>
             <li>케어
-              <ul>
+              <ul class="lnbList">
                 <li><a href="">려</a></li>
                 <li><a href="">미장센</a></li>
                 <li><a href="">라보에이치</a></li>
@@ -98,87 +106,93 @@
               </ul>
             </li>
             <li>티컬쳐
-              <ul>
+              <ul class="lnbList">
                 <li><a href="">오설록</a></li>
               </ul>
             </li>
           </ul>
         </li>
         <li class="gnb-item"><a href="">OUR CULTURE</a>
-          <ul class="lnb">
-            <li><a href="">건축</a>
-              <ul>
-                <li><a href="">본사</a></li>
-                <li><a href="">아모레 뷰티 파크</a></li>
-                <li><a href="">미지움</a></li>
-                <li><a href="">제주 오설록</a></li>
+          <div class="gnbInner">
+            <ul class="lnb">
+              <li><a href="">건축</a>
+                <ul class="lnbList">
+                  <li><a href="">본사</a></li>
+                  <li><a href="">아모레 뷰티 파크</a></li>
+                  <li><a href="">미지움</a></li>
+                  <li><a href="">제주 오설록</a></li>
+                </ul>
+              </li>
+              <li><a href="">공간</a>
+                <ul class="lnbList">
+                  <li><a href="">본사</a></li>
+                  <li><a href="">플래그십 스토어</a></li>
+                  <li><a href="">아모레 뷰티 파크</a></li>
+                </ul>
+              </li>
+              <li><a href="">문화경영</a>
+              <ul class="lnbList">
+                <li><a href="">메세나 활동</a></li>
+                <li><a href="">출간 도서</a></li>
               </ul>
             </li>
-            <li><a href="">공간</a>
-              <ul>
-                <li><a href="">본사</a></li>
-                <li><a href="">플래그십 스토어</a></li>
-                <li><a href="">아모레 뷰티 파크</a></li>
-              </ul>
-            </li>
-            <li><a href="">문화경영</a>
-            <ul>
-              <li><a href="">메세나 활동</a></li>
-              <li><a href="">출간 도서</a></li>
             </ul>
-          </li>
-          </ul>
+          </div>
         </li>
         <li class="gnb-item"><a href="">COMMITMENTS</a>
-          <ul class="lnb">
-            <li><a href="">지속가능경영</a>
-              <ul>
-                <li><a href="">고객∙사회와의 동행</a></li>
-                <li><a href="">대자연과의 공존</a></li>
-                <li><a href="">지속가능성 보고서<i class="bi bi-download"></i></a></li>
-              </ul>
-            </li>
-            <li><a href="">고객안심품질</a>
-              <ul>
-                <li><a href="">투명한 성분</a></li>
-                <li><a href="">최상의 원료</a></li>
-                <li><a href="">안전한 제품</a></li>
-                <li><a href="">생산 품질</a></li>
-                <li><a href="">Ingredients Glossary<i class="bi bi-chevron-right"></i></a></li>
-              </ul>
-            </li>
-            <li><a href="">생명 존중의 원칙</a>
-              <ul>
-                <li><a href="">동물실험 금지 선언</a></li>
-                <li><a href="">동물대체시험법 연구</a></li>
-                <li><a href="">비건 소재 기술</a></li>
-              </ul>
-            </li>
-          </ul>
+          <div class="gnbInner">
+            <ul class="lnb">
+              <li><a href="">지속가능경영</a>
+                <ul class="lnbList">
+                  <li><a href="">고객∙사회와의 동행</a></li>
+                  <li><a href="">대자연과의 공존</a></li>
+                  <li><a href="">지속가능성 보고서<i class="bi bi-download"></i></a></li>
+                </ul>
+              </li>
+              <li><a href="">고객안심품질</a>
+                <ul class="lnbList">
+                  <li><a href="">투명한 성분</a></li>
+                  <li><a href="">최상의 원료</a></li>
+                  <li><a href="">안전한 제품</a></li>
+                  <li><a href="">생산 품질</a></li>
+                  <li><a href="">Ingredients Glossary<i class="bi bi-chevron-right"></i></a></li>
+                </ul>
+              </li>
+              <li><a href="">생명 존중의 원칙</a>
+                <ul class="lnbList">
+                  <li><a href="">동물실험 금지 선언</a></li>
+                  <li><a href="">동물대체시험법 연구</a></li>
+                  <li><a href="">비건 소재 기술</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
         </li>
         <li class="gnb-item"><a href="">INVESTORS</a>
-          <ul class="lnb">
-            <li><a href="">아모레퍼시픽</a>
-              <ul>
-                <li><a href="">IR 자료</a></li>
-                <li><a href="">재무정보</a></li>
-                <li><a href="">공시정보</a></li>
-                <li><a href="">주식정보</a></li>
-                <li><a href="">기업지배구조</a></li>
-              </ul>
-            </li>
-            <li><a href="">아모레퍼시픽 그룹</a>
-              <ul>
-                <li><a href="">IR 자료</a></li>
-                <li><a href="">재무정보</a></li>
-                <li><a href="">공시정보</a></li>
-                <li><a href="">주식정보</a></li>
-                <li><a href="">기업지배구조</a></li>
-              </ul>
-            </li>
-            <li><a href="">주가 정보</a></li>
-            <li><a href="">NEWS</a></li>
-          </ul>
+          <div class="gnbInner">
+            <ul class="lnb">
+              <li><a href="">아모레퍼시픽</a>
+                <ul class="lnbList">
+                  <li><a href="">IR 자료</a></li>
+                  <li><a href="">재무정보</a></li>
+                  <li><a href="">공시정보</a></li>
+                  <li><a href="">주식정보</a></li>
+                  <li><a href="">기업지배구조</a></li>
+                </ul>
+              </li>
+              <li><a href="">아모레퍼시픽 그룹</a>
+                <ul class="lnbList">
+                  <li><a href="">IR 자료</a></li>
+                  <li><a href="">재무정보</a></li>
+                  <li><a href="">공시정보</a></li>
+                  <li><a href="">주식정보</a></li>
+                  <li><a href="">기업지배구조</a></li>
+                </ul>
+              </li>
+              <li><a href="">주가 정보</a></li>
+              <li><a href="">NEWS</a></li>
+            </ul>
+          </div>
         </li>
       </ul>
     </nav>
@@ -248,11 +262,11 @@
     <!-- NEWS 한태희 -->
     <section class="news"></section>
     <!-- //NEWS 한태희 -->
-    <!-- Story 홍은진 -->
-    <section class="story container">
-      <h3>About Our Brands</h3>
-      <h2>Story of AMOREPACIFIC</h2>
-      <p>아모레퍼시픽은 공간을 통해 기업의 비전과 함께 사회를 향한 약속까지 담아냅니다.</p>
+    <!-- Story 홍은진 보류-->
+    <!-- <section class="story pd1 container">
+      <h3 class="sec_title_sm">About Our Brands</h3>
+      <h2 class="sec_title_lg">Story of AMOREPACIFIC</h2>
+      <p class="sec_desc_md">아모레퍼시픽은 공간을 통해 기업의 비전과 함께 사회를 향한 약속까지 담아냅니다.</p>
       <ul class="story_list">
         <li><a href="">고객안심품질</a></li>
         <li><a href="">혁신기술</a></li>
@@ -265,154 +279,189 @@
         <li class="story_thumb2"><a href="">스피어 플랫폼</a></li>
         <li class="story_thumb2"><a href="">순수 비타민C</a></li>
       </ul>
-      <p>아모레퍼시픽은 공간을 통해 기업의 비전과 함께 사회를 향한 약속까지 담아냅니다.아모레퍼시픽은 공간을 통해 기업의 비전과 함께 사회를 향한 약속까지 담아냅니다.</p>
+      <p class="con_desc_md">아모레퍼시픽은 공간을 통해 기업의 비전과 함께 사회를 향한 약속까지 담아냅니다.아모레퍼시픽은 공간을 통해 기업의 비전과 함께 사회를 향한 약속까지 담아냅니다.</p>
       <a href="#" class="btn_more">더보기 <i class="bi bi-chevron-right"></i></a>
-    </section>
+    </section> -->
     <!-- //Story 홍은진 -->
     <!-- Space 홍은진 -->
-    <section class="space">
-      <h2>Space of AMOREPACIFIC</h2>
-      <article class="space_1">
-        <svg width="145" height="149" viewBox="0 0 145 149" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <line x1="72.3516" y1="147.836" x2="72.3516" y2="1.83611" stroke="white" stroke-width="2" stroke-linecap="round"/>
-          <line x1="86.6211" y1="147.836" x2="86.6211" y2="15.7111" stroke="white" stroke-width="2" stroke-linecap="round"/>
-          <line x1="100.89" y1="147.836" x2="100.89" y2="29.5861" stroke="white" stroke-width="2" stroke-linecap="round"/>
-          <line x1="115.16" y1="147.836" x2="115.16" y2="43.4611" stroke="white" stroke-width="2" stroke-linecap="round"/>
-          <line x1="129.428" y1="147.836" x2="129.428" y2="57.336" stroke="white" stroke-width="2" stroke-linecap="round"/>
-          <line x1="143.697" y1="147.836" x2="143.697" y2="71.211" stroke="white" stroke-width="2" stroke-linecap="round"/>
-          <line x1="58.0825" y1="147.836" x2="58.0825" y2="15.7111" stroke="white" stroke-width="2" stroke-linecap="round"/>
-          <line x1="43.813" y1="147.836" x2="43.813" y2="29.5861" stroke="white" stroke-width="2" stroke-linecap="round"/>
-          <line x1="29.5442" y1="147.836" x2="29.5442" y2="43.4611" stroke="white" stroke-width="2" stroke-linecap="round"/>
-          <line x1="15.2747" y1="147.836" x2="15.2747" y2="57.336" stroke="white" stroke-width="2" stroke-linecap="round"/>
-          <line x1="1.00586" y1="147.836" x2="1.00586" y2="71.211" stroke="white" stroke-width="2" stroke-linecap="round"/>
+    <section class="space pd1">
+      <h2 class="sec_title_lg">Space of AMOREPACIFIC</h2>
+      <div class="space_wrapper">
+        <article class="space_1">
+          <svg width="145" height="149" viewBox="0 0 145 149" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line x1="72.3516" y1="147.836" x2="72.3516" y2="1.83611" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            <line x1="86.6211" y1="147.836" x2="86.6211" y2="15.7111" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            <line x1="100.89" y1="147.836" x2="100.89" y2="29.5861" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            <line x1="115.16" y1="147.836" x2="115.16" y2="43.4611" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            <line x1="129.428" y1="147.836" x2="129.428" y2="57.336" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            <line x1="143.697" y1="147.836" x2="143.697" y2="71.211" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            <line x1="58.0825" y1="147.836" x2="58.0825" y2="15.7111" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            <line x1="43.813" y1="147.836" x2="43.813" y2="29.5861" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            <line x1="29.5442" y1="147.836" x2="29.5442" y2="43.4611" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            <line x1="15.2747" y1="147.836" x2="15.2747" y2="57.336" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            <line x1="1.00586" y1="147.836" x2="1.00586" y2="71.211" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          <h4>아모레 본사</h4>
+          <p>세계의 무대를 향한 열린 미의 전당이자 과거, 현재, 미래를 담고있는 공간</p>
+        </article>
+        <article class="space_2">
+          <svg width="160" height="176" viewBox="0 0 160 176" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line x1="1.63062" y1="87.835" x2="159" y2="87.835" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            <line x1="12.6809" y1="105.844" x2="147.438" y2="105.844" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            <line x1="25.1133" y1="123" x2="135.005" y2="123" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            <line x1="34.783" y1="140.156" x2="125.336" y2="140.156" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            <line x1="48.5967" y1="157.312" x2="111.522" y2="157.312" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            <line x1="67.936" y1="174.468" x2="92.1823" y2="174.468" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            <line x1="12.6809" y1="70.459" x2="147.438" y2="70.459" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            <line x1="25.1133" y1="53.3027" x2="135.005" y2="53.3027" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            <line x1="34.783" y1="36.1475" x2="125.336" y2="36.1475" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            <line x1="48.5967" y1="18.9912" x2="111.522" y2="18.9912" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            <line x1="67.936" y1="1.83496" x2="92.1823" y2="1.83496" stroke="white" stroke-width="2" stroke-linecap="round"/>
           </svg>
-        <h4>아모레 본사</h4>
-        <p>세계의 무대를 향한 열린 미의 전당이자 과거, 현재, 미래를 담고있는 공간</p>
-      <article class="space_2">
-        <svg width="160" height="176" viewBox="0 0 160 176" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <line x1="1.63062" y1="87.835" x2="159" y2="87.835" stroke="white" stroke-width="2" stroke-linecap="round"/>
-          <line x1="12.6809" y1="105.844" x2="147.438" y2="105.844" stroke="white" stroke-width="2" stroke-linecap="round"/>
-          <line x1="25.1133" y1="123" x2="135.005" y2="123" stroke="white" stroke-width="2" stroke-linecap="round"/>
-          <line x1="34.783" y1="140.156" x2="125.336" y2="140.156" stroke="white" stroke-width="2" stroke-linecap="round"/>
-          <line x1="48.5967" y1="157.312" x2="111.522" y2="157.312" stroke="white" stroke-width="2" stroke-linecap="round"/>
-          <line x1="67.936" y1="174.468" x2="92.1823" y2="174.468" stroke="white" stroke-width="2" stroke-linecap="round"/>
-          <line x1="12.6809" y1="70.459" x2="147.438" y2="70.459" stroke="white" stroke-width="2" stroke-linecap="round"/>
-          <line x1="25.1133" y1="53.3027" x2="135.005" y2="53.3027" stroke="white" stroke-width="2" stroke-linecap="round"/>
-          <line x1="34.783" y1="36.1475" x2="125.336" y2="36.1475" stroke="white" stroke-width="2" stroke-linecap="round"/>
-          <line x1="48.5967" y1="18.9912" x2="111.522" y2="18.9912" stroke="white" stroke-width="2" stroke-linecap="round"/>
-          <line x1="67.936" y1="1.83496" x2="92.1823" y2="1.83496" stroke="white" stroke-width="2" stroke-linecap="round"/>
-        </svg>
-        <h4>아모레 뷰티파크</h4>
-        <p>서로 연결된 복합적이고 다중적인 주체가 만나는 협업의 공간</p>
-      <article class="space_1">
-        <svg width="152" height="126" viewBox="0 0 152 126" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <line x1="69.0002" y1="1.83496" x2="83.0002" y2="1.83496" stroke="white" stroke-width="2" stroke-linecap="round"/>
-          <line x1="59.0005" y1="22.335" x2="93.0005" y2="22.335" stroke="white" stroke-width="2" stroke-linecap="round"/>
-          <line x1="48.0005" y1="42.835" x2="104" y2="42.835" stroke="white" stroke-width="2" stroke-linecap="round"/>
-          <line x1="36.0005" y1="63.335" x2="116" y2="63.335" stroke="white" stroke-width="2" stroke-linecap="round"/>
-          <line x1="24.0005" y1="83.835" x2="128" y2="83.835" stroke="white" stroke-width="2" stroke-linecap="round"/>
-          <line x1="12" y1="104.335" x2="140" y2="104.335" stroke="white" stroke-width="2" stroke-linecap="round"/>
-          <line x1="1" y1="124.835" x2="151" y2="124.835" stroke="white" stroke-width="2" stroke-linecap="round"/>
-          </svg>          
-        <h4>플래그십 스토어</h4>
-        <p>아모레퍼시픽의 제품과 다양한 서비스를 체험할 수 있는 감각적인 공간</p>
-      </article>
+          <h4>아모레 뷰티파크</h4>
+          <p>서로 연결된 복합적이고 다중적인 주체가 만나는 협업의 공간</p>
+        </article>
+        <article class="space_3">
+          <svg width="152" height="126" viewBox="0 0 152 126" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line x1="69.0002" y1="1.83496" x2="83.0002" y2="1.83496" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            <line x1="59.0005" y1="22.335" x2="93.0005" y2="22.335" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            <line x1="48.0005" y1="42.835" x2="104" y2="42.835" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            <line x1="36.0005" y1="63.335" x2="116" y2="63.335" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            <line x1="24.0005" y1="83.835" x2="128" y2="83.835" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            <line x1="12" y1="104.335" x2="140" y2="104.335" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            <line x1="1" y1="124.835" x2="151" y2="124.835" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            </svg>          
+          <h4>플래그십 스토어</h4>
+          <p>아모레퍼시픽의 제품과 다양한 서비스를 체험할 수 있는 감각적인 공간</p>
+        </article>
+      </div>
     </section>
     <!-- //Space 홍은진 -->
     <!-- Brands 강현주 -->
-    <section class="brands container">
+    <section id="brand" class="brands container pd2">
         <h2 class="sec_title_lg">Follow Our Brands</h2>
       <div class="button">
-        <ul>
-          <li class="con_title_sm">화장품</li>
-          <li class="con_title_sm">향수</li>
-          <li class="con_title_sm">뷰티</li> 
-          <!-- <li class="con_title_sm">케어</li> 
-          <li class="con_title_sm">티컬쳐</li>  -->
-        </ul>
+        <div class="tt_li">
+          <ul>
+            <li class="con_title_sm">화장품</li>
+            <li class="con_title_sm">향수</li>
+            <li class="con_title_sm">뷰티</li> 
+            <li class="con_title_sm">케어</li> 
+            <li class="con_title_sm">티컬쳐</li> 
+          </ul>
+        </div>
         <a href="" class="next sec_desc_md"> <i class="bi bi-chevron-left"></i></a>
         <a href="" class="prev sec_desc_md"> <i class="bi bi-chevron-right"></i></a>
       </div>
       <div class="brands_wrapper">
-        <ul>
-          <li>
-            <a href="">
-              <img src="images/brands_logo1.png" alt="Sulwhasoo logo">
-              <p class="con_title_sm">Sulwhasoo</p>
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <img src="images/brands_logo2.png" alt="Laneige logo">
-              <p class="con_title_sm">Laneige</p>
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <img src="images/brands_logo3.png" alt="Innisfree logo">
-              <p class="con_title_sm">Innisfree</p>
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <img src="images/brands_logo4.png" alt="Goutal logo">
-              <p class="con_title_sm">Goutal</p>
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <img src="images/brands_logo5.png" alt="Vital Beautie logo">
-              <p class="con_title_sm">Vital Beautie</p>
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <img src="images/brands_logo6.png" alt="Aestura logo">
-              <p class="con_title_sm">Aestura</p>
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <img src="images/brands_logo7.png" alt="Ayunche logo">
-              <p class="con_title_sm">Ayunche</p>
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <img src="images/brands_logo8.png" alt="Ryo logo">
-              <p class="con_title_sm">Ryo</p>
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <img src="images/brands_logo9.png" alt="Happy Bath logo">
-              <p class="con_title_sm">Happy Bath</p>
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <img src="images//brands_logo10.png" alt="Osulloc logo">
-              <p class="con_title_sm">Osulloc</p>
-            </a>
-          </li>
-        </ul>
-        <a href="#" class="btn_more">더보기 <i class="bi bi-chevron-right"></i></a>
+        <div class="brands_wrp">
+          <ul class="row">
+            <li>
+              <a href="">
+                <img src="images/brands_logo1.png" alt="Sulwhasoo logo">
+                <p class="con_title_sm">Sulwhasoo</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="images/brands_logo2.png" alt="Laneige logo">
+                <p class="con_title_sm">Laneige</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="images/brands_logo3.png" alt="Innisfree logo">
+                <p class="con_title_sm">Innisfree</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="images/brands_logo4.png" alt="Goutal logo">
+                <p class="con_title_sm">Goutal</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="images/brands_logo5.png" alt="Vital Beautie logo">
+                <p class="con_title_sm">Vital Beautie</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="images/brands_logo6.png" alt="Aestura logo">
+                <p class="con_title_sm">Aestura</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="images/brands_logo7.png" alt="Ayunche logo">
+                <p class="con_title_sm">Ayunche</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="images/brands_logo8.png" alt="Ryo logo">
+                <p class="con_title_sm">Ryo</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="images/brands_logo9.png" alt="Happy Bath logo">
+                <p class="con_title_sm">Happy Bath</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="images//brands_logo10.png" alt="Osulloc logo">
+                <p class="con_title_sm">Osulloc</p>
+              </a>
+            </li>
+          </ul>
+          <a href="#" class="btn_more">더보기 <i class="bi bi-chevron-right"></i></a>
+        </div>
       </div>
     </section>
     <!-- //Brands 강현주 -->
     <!-- SNS 배유나 -->
-    <section class="sns"></section>
+    <section class="sns container">
+      <h2 class="sec_title_lg">SNS</h2>
+      <div class="sns_wrapper">
+        <ul>
+          <li></li>
+        </ul>
+      </div>
+    </section>
     <!-- //SNS 배유나 -->
     <!-- Sustainability 홍은진 -->
     <section class="sustain">
-      <h2>Sustainability</h2>
+      <div class="container">
+        <div class="row">       
+          <div class="col-6 pd1"> 
+              <h2 class="sec_title_lg">Sustainability</h2>
+              <p class="sec_desc_md">아모레퍼시픽은 모두가 함께 하는 더 나은 사회를 위해 기여하며, 인류 앞에 놓인 기후 위기를 함께 해결하고 대자연과 공존하기 위해 노력하고자 합니다.</p>
+              <a href="#" class="btn_more btn_more_w">더보기 <i class="bi bi-chevron-right"></i></a>
+          </div>
+          <div class="col-3">
+            <a href="#">
+              <h4 class="con_title_sm">ESG</h4>
+              <p>지속가능경영 목표 ‘2030 A MORE Beautiful Promise’ 수립</p>
+            </a>
+          </div>
+          <div class="col-3">
+            <a href="#">       
+              <h4 class="con_title_sm">지속가능 보고서</h4>
+              <i class="bi bi-download"></i>
+            </a>
+          </div>
+        </div> 
+      </div>
     </section>
     <!-- //Sustainability 홍은진 -->
     <!-- 채용 강현주 -->
-    <section class="employ container">
+    <section id="em"  class="employ container pd1">
       <div class="employ_wrapper">
         <img src="images/employ_logo.svg" alt="amorepacific_logo">
-        <p>함께 아름다움을 만들어갈 인재를 기다립니다.</p>
+        <p class="con_desc_md">함께 아름다움을 만들어갈 인재를 기다립니다.</p>
         <a href="">채용바로가기 <i class="bi bi-chevron-right"></i></a>
       </div>
     </section>
@@ -420,6 +469,88 @@
   </main>
   <!-- Footer 배유나 -->
   <footer>
+    <div class="go_to_top">
+      <a href="">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="m3.293 11.293 1.414 1.414L11 6.414V20h2V6.414l6.293 6.293 1.414-1.414L12 2.586l-8.707 8.707z"/></svg>
+      </a>
+    </div>
+    <div class="footer_wrapper">
+      <div class="footer_menu">
+        <div class="menu_list container">
+          <ul>
+            <li><a href="">ABOUT US</a>
+              <ul>
+                <li><a href="">Amorepacific</a></li>
+                <li><a href="">연구 & 혁신</a></li>
+                <li><a href="">브랜드 아이덴티티</a></li>
+              </ul>
+            </li>
+            <li><a href="">BRANDS</a>
+              <ul>
+                <li><a href="">화장품</a></li>
+                <li><a href="">향수</a></li>
+                <li><a href="">뷰티</a></li>
+                <li><a href="">케어</a></li>
+                <li><a href="">티컬쳐</a></li>
+              </ul>
+            </li>
+            <li><a href="">OUR CULTURE</a>
+              <ul>
+                <li><a href="">건축</a></li>
+                <li><a href="">공간</a></li>
+                <li><a href="">문화경영</a></li>
+              </ul>
+            </li>
+            <li><a href="">COMMITMENTS</a>
+              <ul>
+                <li><a href="">지속가능경영</a></li>
+                <li><a href="">고객안심품질</a></li>
+                <li><a href="">생명 존중의 원칙</a></li>
+              </ul>
+            </li>
+            <li><a href="">INVESTORS</a>
+              <ul>
+                <li><a href="">아모레퍼시픽</a></li>
+                <li><a href="">아모레퍼시픽 그룹</a></li>
+                <li><a href="">뉴스</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="other container">
+          <ul>
+            <li><a href="">윤리경영</a></li>
+            <li><a href="">글로벌네트워크</a></li>
+            <li><a href="">매거진</a></li>
+            <li><a href="">관련사이트</a></li>
+            <li><a href="">사이트맵</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer_box container">
+        <div class="footer_info">
+          <a href=""><img src="images/footer_logo.svg" alt=""></a>
+          <div class="content">
+            <ul>
+              <li>
+                <ul class="footer_text">
+                  <li><a href="">개인정보 처리방침</a><a href="">법적고지</a></li>
+                  <li><a href="">영상정보처리기기 운영방침</a></li>
+                </ul>
+              </li>
+            </ul>
+            <span><p>(주) 아모레퍼시픽 대표이사 : 서경배, 김승환</p><p>서울 용산구 한강대로 100 아모레퍼시픽</p><p>(02-6060-5114)</p></span>
+            <p>ⓒ Since 1945 Amorepacific, All Rights Reserved.</p>
+          </div>
+        </div>
+        <div class="footer_sns">
+          <a href=""><i class="bi bi-facebook"></i></a>
+          <a href=""><i class="bi bi-instagram"></i></a>
+          <a href="">in</a>
+          <a href=""><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+    </div>
   </footer>
   <!-- //Footer 배유나 -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js" integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
