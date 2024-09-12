@@ -1,3 +1,15 @@
+/* HEADER - 배유나
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+$('.gnb-item').mouseenter(function(){
+  $('.innerBg').addClass('active');
+})
+$('.gnb-item').mouseleave(function(){
+  $('.innerBg').removeClass('active');
+})
+
+/* MAIN BANNER - 한태희
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+
 let mainBanner = document.querySelector('.main_banner');
 let video = mainBanner.querySelector('.video');
 let slides = video.querySelectorAll('li');
