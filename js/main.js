@@ -1,11 +1,6 @@
 /* HEADER - 배유나
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
-$('.gnb-item').mouseenter(function(){
-  $('.innerBg').addClass('active');
-})
-$('.gnb-item').mouseleave(function(){
-  $('.innerBg').removeClass('active');
-})
+
 
 /* MAIN BANNER - 한태희
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
