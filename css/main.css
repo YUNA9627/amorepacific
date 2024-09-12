@@ -267,7 +267,7 @@ nav {position: relative;}
 }
 .button .tt_li {
   width: 252px;
-  height: 45px;
+  height: 55px;
   overflow: hidden;
   margin-left: 30px;
 }
@@ -280,9 +280,11 @@ section .button ul {
 }
 section .button ul li {
   cursor: pointer;
+  
 }
 section .button ul li:hover {
   color: var(--black);
+  border-bottom: 2px solid var(--primary);
 }
 .button a {
   position: absolute;
