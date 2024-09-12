@@ -56,3 +56,10 @@
   .footer_box span p:nth-child(2) {display: inline-block;}
   .footer_box span p:nth-child(3) {display: inline-block;}
 }
+
+
+
+@media (max-width: 360px){
+    /* BRANDS */
+    
+}
