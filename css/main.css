@@ -107,7 +107,7 @@ header {
   display: none;
   opacity: 0;
 }
-.lnbBg.visible {
+.lnbBg.active {
   display: block;
   opacity: 1;
 }
@@ -120,7 +120,7 @@ header {
   display: none;
   opacity: 0;
 }
-.lnbBg.visible {
+.lnbBg.active {
   display: block;
   opacity: 1;
 }
@@ -138,46 +138,36 @@ header {
 
 .gnb .gnb-item {
   display: flex;
-  >a {
+  > a {
     padding: 18px 20px;
     transition: 0.3s;
     color: var(--white);
   }
-  .lnb {
-    position: absolute;
-    opacity: 0;
-    /* display: flex; */
-    display: none;
-    /* display: flex; */
-    display: none;
-    padding: 40px 0 0 60px;
-    top: 100%;
-    left: 0;
-    * {
-      color: var(--dark-gray);
-      .lnbList {
-        * {
-          color: var(--medium-gray);
-        }
-        li {
-          margin-right: 20px;
-          width: 135px;
-        }
-      }
-    }
-  }
-}
-.gnb .gnb-item:hover>a {
-  color: var(--secondary);
 }
 
-.gnb .gnb-item:hover .lnb {
-  opacity: 1;
+nav {position: relative;}
+
+.innerBg {
+  display: none;
+  position: absolute;
+  background: var(--white);
+  width: 100%;
+  height: 300px;
+  top: 100%;
+  opacity: 0;
+  margin: 0 auto;
 }
 
-.gnb .gnb-item:hover .lnb:before {
-  opacity: 1;
+.innerBg.active {display: none; opacity: 0;}
+
+.gnb .gnb-item .lnb {
+  position: absolute; display: none; opacity: 0; top: 100%; left: 0;
+  * {color: var(--medium-gray);}
 }
+
+.gnb .gnb-item:hover > a {color: var(--secondary);}
+
+.gnb .gnb-item:hover .lnb {display: none; opacity: 0;}
 
 /* MAIN BANNER - 한태희
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -523,6 +513,17 @@ section .button .prev {
 .footer_menu .other ul {display: flex;}
 
 .footer_box {padding: 50px 0; display: flex; justify-content: space-between;}
+
+.footer_text li a:nth-child(2):before,
+.footer_text li:nth-child(2) a:before {
+  content: '';
+  background: var(--medium-gray);
+  width: 1px;
+  height: 16px;
+  display: inline-block;
+  margin: 0 10px;
+  vertical-align: middle;
+}
 
 .footer_box span p {display: inline;}
 
