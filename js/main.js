@@ -1,6 +1,14 @@
 /* HEADER - 배유나
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+let header = $('header');
 
+$(window).scroll(function(){
+  if($(this).scrollTop() > 400){
+    header.addClass('shrink');
+  }else {
+    header.removeClass('shrink');
+  }
+})
 
 /* MAIN BANNER - 한태희
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
