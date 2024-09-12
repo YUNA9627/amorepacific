@@ -167,7 +167,7 @@ nav {position: relative;}
 
 .gnb .gnb-item:hover > a {color: var(--secondary);}
 
-.gnb .gnb-item:hover .lnb {display: none; opacity: 0;}
+.gnb .gnb-item:hover .lnb {display: flex; opacity: 1;}
 
 /* MAIN BANNER - 한태희
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
