@@ -231,16 +231,26 @@ header {
 
 /* SPACE - 홍은진
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
-.space{
-  background-image: 
-  linear-gradient(rgba(124,167,222,0.1), rgba(124,167,222,0.9)),  
-  url(../images/space_bg.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+.space {
+  position: relative;
   text-align: center;
   color: var(--white);
-  .space_wrapper{
+  .space_bg{
+    position: absolute;
+    top: 0; bottom: 0;
+    left: 0; right: 0;
+    z-index: -10;
+    background-image: 
+    linear-gradient(rgba(124,167,222,0.1), rgba(124,167,222,0.9)),  
+    url(../images/space_bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  .content_wrapper{
+    background: rgba(6, 44, 94, .8); 
+  }
+  .atc_wrapper{
     display: flex;
     justify-content: space-between;
     article{
@@ -250,7 +260,6 @@ header {
           margin: 0 auto;
       }
     }
-
   }
 }
 
@@ -327,11 +336,6 @@ section .button .prev {
   position: absolute;
   right: 0;
   bottom: calc(100% + 95px);
-}
-.brands_wrapper .btn_more:hover {
-  color: var(--white);
-  background: var(--primary);
-  border: 1px solid var(--primary);
 }
 
 /* SUSTAIN - 홍은진
