@@ -98,33 +98,6 @@ header {
   opacity: 1;
 }
 
-.lnbBg {
-  background: var(--white);
-  width: 100%;
-  height: 300px;
-  position: absolute;
-  top: 100%;
-  display: none;
-  opacity: 0;
-}
-.lnbBg.active {
-  display: block;
-  opacity: 1;
-}
-.lnbBg {
-  background: var(--white);
-  width: 100%;
-  height: 300px;
-  position: absolute;
-  top: 100%;
-  display: none;
-  opacity: 0;
-}
-.lnbBg.active {
-  display: block;
-  opacity: 1;
-}
-
 .gnb {
   display: flex;
   justify-content: center;
@@ -147,27 +120,48 @@ header {
 
 nav {position: relative;}
 
-.innerBg {
-  display: none;
+.gnb .gnb-item .lnbBg {
   position: absolute;
   background: var(--white);
   width: 100%;
-  height: 300px;
   top: 100%;
+  left: 0;
+  right: 0;
   opacity: 0;
-  margin: 0 auto;
+  display: none;
 }
 
-.innerBg.active {display: none; opacity: 0;}
+.gnb .gnb-item .lnbBg:after {
+  content: '';
+  background: var(--bg-gray);
+  width: 30%;
+  height: 100%;
+  display: block;
+  top: 0;
+}
 
-.gnb .gnb-item .lnb {
-  position: absolute; display: none; opacity: 0; top: 100%; left: 0;
-  * {color: var(--medium-gray);}
+/* .gnb .gnb-item .lnbBg.active {visibility: visible; opacity: 1;} */
+
+.gnb .gnb-item .lnbBg .lnbInner {
+  padding: 60px 60px; margin: 0 auto;
+  * {color: var(--medium-gray); font-size: 18px;}
+  .lnbDesc {
+     padding-right: 39px;
+    display: flex; flex-direction: column; align-items: flex-start; gap: 30px; 
+    h3 {font-family: 'Arita buri'; font-size: 32px; font-weight: 700; line-height: 38px; color: var(--black);}
+    p {font-size: 16px;}
+    button {background: none; border: none;}
+  }
+  .lnb {display: flex; gap: 40px;  padding-left: 60px;
+    > li {width: 153px;}
+    .lnbList {margin-top: 20px; display: flex; flex-direction: column; gap: 10px;}
+  }
 }
 
 .gnb .gnb-item:hover > a {color: var(--secondary);}
 
-.gnb .gnb-item:hover .lnb {display: flex; opacity: 1;}
+.gnb .gnb-item:hover .lnbBg {display: block; opacity: 1; height: auto;}
+.gnb .gnb-item .lnbBg .lnbInner .lnb li a:hover {color: var(--black)}
 
 /* MAIN BANNER - 한태희
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
