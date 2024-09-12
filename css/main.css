@@ -1,17 +1,21 @@
 /* HEADER - 배유나
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
 header {
-  background: var(--primary);
+  background: none;
+  transition: 0.3s;
   position: fixed;
   z-index: 100;
   width: 100%;
   position: relative;
   position: fixed;
-
   * {
     color: var(--white);
   }
 }
+
+header:hover {background: var(--primary);}
+
+header.shrink {background: var(--primary);}
 
 .header {
   padding-top: 10px;
@@ -128,7 +132,7 @@ nav {position: relative;}
   left: 0;
   right: 0;
   opacity: 0;
-  display: none;
+  display: none; 
 }
 
 .gnb .gnb-item .lnbBg:after {
@@ -261,7 +265,7 @@ nav {position: relative;}
 }
 .button .tt_li {
   width: 252px;
-  height: 55px;
+  height: 45px;
   overflow: hidden;
   margin-left: 30px;
 }
@@ -274,11 +278,9 @@ section .button ul {
 }
 section .button ul li {
   cursor: pointer;
-  
 }
 section .button ul li:hover {
   color: var(--black);
-  border-bottom: 2px solid var(--primary);
 }
 .button a {
   position: absolute;
