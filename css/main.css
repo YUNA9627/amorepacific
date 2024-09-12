@@ -66,6 +66,7 @@ header {
   position: relative;
   padding: 5px 0;
   .bi-globe2 {margin: 0 5px;}
+  .bi-globe2 {margin: 0 5px;}
   .bi-chevron-down {
     font-size: 14px;
     margin-left: 5px;
@@ -89,12 +90,27 @@ header {
   padding: 5px 10px;
   a {color: rgba(255, 255, 255, .5);}
   a:hover {color: var(--white);}
+  a {color: rgba(255, 255, 255, .5);}
+  a:hover {color: var(--white);}
 }
 
 .language_area:hover .lang_list {
   opacity: 1;
 }
 
+.lnbBg {
+  background: var(--white);
+  width: 100%;
+  height: 300px;
+  position: absolute;
+  top: 100%;
+  display: none;
+  opacity: 0;
+}
+.lnbBg.visible {
+  display: block;
+  opacity: 1;
+}
 .lnbBg {
   background: var(--white);
   width: 100%;
@@ -130,6 +146,8 @@ header {
   .lnb {
     position: absolute;
     opacity: 0;
+    /* display: flex; */
+    display: none;
     /* display: flex; */
     display: none;
     padding: 40px 0 0 60px;
@@ -447,7 +465,30 @@ section .button .prev {
 .amoremall > a {
   display: block;
 }
+.amoremall {
+  position: fixed;
+  right: 20px;
+  bottom: 100px;
+  z-index: 100;
+}
+.amoremall > a {
+  display: block;
+}
 .go_to_top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+}
+.go_to_top > a {
+  background: var(--white);
+  width: 70px;
+  line-height: 70px;
+  border: 1px solid var(--black);
+  border-radius: 50%;
+  display: block;
+  text-align: center;
+  font-size: 40px;
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -473,18 +514,13 @@ section .button .prev {
   padding: 40px 0;
   border-bottom: 1px solid var(--light-gray);
 }
-
 .footer_menu .menu_list > ul {display: flex;}
-.footer_menu .menu_list ul li {
-  width: 202px;
-}
 .footer_menu .menu_list ul li ul {display: flex; flex-direction: column; gap: 20px; margin-top: 20px;}
 .footer_menu .menu_list > ul > li > a {
   font-weight: 700;
 }
 .footer_menu .other {margin-top: 60px;}
 .footer_menu .other ul {display: flex;}
-.footer_menu .other ul li {width: 202px;}
 
 .footer_box {padding: 50px 0; display: flex; justify-content: space-between;}
 
@@ -519,6 +555,11 @@ section .button .prev {
   color: var(--white);
   border-radius: 50%;
 }
+
+.footer_box .footer_sns a:nth-child(1):hover {background: #29447C;}
+.footer_box .footer_sns a:nth-child(2):hover {background: #BA2066;}
+.footer_box .footer_sns a:nth-child(3):hover {background: #0A66C2;}
+.footer_box .footer_sns a:nth-child(4):hover {background: #AB2521;}
 
 .footer_box .footer_info .content {
   margin-top: 40px;
