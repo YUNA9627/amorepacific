@@ -104,7 +104,7 @@ header {
   display: none;
   opacity: 0;
 }
-.lnbBg.visible {
+.lnbBg.active {
   display: block;
   opacity: 1;
 }
@@ -122,44 +122,36 @@ header {
 
 .gnb .gnb-item {
   display: flex;
-  >a {
+  > a {
     padding: 18px 20px;
     transition: 0.3s;
     color: var(--white);
   }
-  .lnb {
-    position: absolute;
-    opacity: 0;
-    /* display: flex; */
-    display: none;
-    padding: 40px 0 0 60px;
-    top: 100%;
-    left: 0;
-    * {
-      color: var(--dark-gray);
-      .lnbList {
-        * {
-          color: var(--medium-gray);
-        }
-        li {
-          margin-right: 20px;
-          width: 135px;
-        }
-      }
-    }
-  }
-}
-.gnb .gnb-item:hover>a {
-  color: var(--secondary);
 }
 
-.gnb .gnb-item:hover .lnb {
-  opacity: 1;
+nav {position: relative;}
+
+.innerBg {
+  display: none;
+  position: absolute;
+  background: var(--white);
+  width: 100%;
+  height: 300px;
+  top: 100%;
+  opacity: 0;
+  margin: 0 auto;
 }
 
-.gnb .gnb-item:hover .lnb:before {
-  opacity: 1;
+.innerBg.active {display: none; opacity: 0;}
+
+.gnb .gnb-item .lnb {
+  position: absolute; display: none; opacity: 0; top: 100%; left: 0;
+  * {color: var(--medium-gray);}
 }
+
+.gnb .gnb-item:hover > a {color: var(--secondary);}
+
+.gnb .gnb-item:hover .lnb {display: none; opacity: 0;}
 
 /* MAIN BANNER - 한태희
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -468,11 +460,11 @@ section .button .prev {
   vertical-align: middle;
 }
 
-.footer_box span p {display: inline; font-size: 14px;}
+.footer_box span p {display: inline;}
 
 .footer_box ul {margin-bottom: 20px;}
 
-.footer_box p {color: var(--medium-gray); font-size: 14px;}
+.footer_box p {color: var(--medium-gray);}
 
 .footer_box span p:nth-child(1):after {
   content: '';
