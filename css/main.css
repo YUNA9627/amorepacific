@@ -300,32 +300,40 @@ main .btn_more{
     justify-content: space-between;
     article{
       width: 33.3333%;
-      #sp2_lines > *{
+      svg > *{
         stroke-dasharray: 160;
-        stroke-dashoffset: 160;
-        animation: line2 4s linear forwards;	
+        stroke-dashoffset: 160; 
+        animation: line2 1s linear forwards;	
       }
-      #sp2_line11{animation-delay: 0.2s;}
-      #sp2_line10{animation-delay: 0.4s;}
-      #sp2_line9{animation-delay: 0.6s;}
-      #sp2_line8{animation-delay: 0.8s;}
-      #sp2_line7{animation-delay: 0.10s;}
-      #sp2_line1{animation-delay: 0.12s;}
-      #sp2_line2{animation-delay: 0.14s;}
-      #sp2_line3{animation-delay: 0.16s;}
-      #sp2_line4{animation-delay: 0.18s;}
-      #sp2_line5{animation-delay: 0.20s;}
-      #sp2_line6{animation-delay: 0.22s;}
+      #sp1_line11{animation-delay: 1s;}
+      #sp1_line10{animation-delay: 0.8s;}
+      #sp1_line9{animation-delay: 0.6s;}
+      #sp1_line8{animation-delay: 0.4s;}
+      #sp1_line7{animation-delay: 0.2s}
+      #sp1_line1{animation-delay: 0;}
+      #sp1_line2{animation-delay: 0.2s;}
+      #sp1_line3{animation-delay: 0.4s;}
+      #sp1_line4{animation-delay: 0.6s;}
+      #sp1_line5{animation-delay: 0.8s;}
+      #sp1_line6{animation-delay: 1s;}
+
+      #sp3_line7{animation-delay: 0;}
+      #sp3_line6{animation-delay: 0.2s;}
+      #sp3_line5{animation-delay: 0.3s;}
+      #sp3_line4{animation-delay: 0.4s;}
+      #sp3_line3{animation-delay: 0.6s;}
+      #sp3_line2{animation-delay: 0.8s;}
+      #sp3_line1{animation-delay: 1s;}
+
       h4{
         margin-top: 96px;
         margin-bottom: 52px;
       }
       p{
-          width: 265px;
+          width: 392px;
           margin: 0 auto;
           font-size: 1.5rem;
           font-weight: 300;
-          width: 392px;
       }
     }
   }
