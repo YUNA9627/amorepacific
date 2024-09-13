@@ -169,7 +169,6 @@ header {
   height: 100vh;
   overflow: hidden;
 }
-
 .main_banner .video {
   position: absolute;
   top: 0;
@@ -197,7 +196,6 @@ header {
   font-family: 'Arita buri';
   font-weight: 500;
 }
-
 .video_content h3{
   font-size: 1.25rem;
 }
@@ -211,6 +209,13 @@ header {
 }
 
 /* NEWS */
+ main .news{
+  display: flex;
+  position: relative;
+}
+main .btn_more{
+  position: absolute;
+}
 
 /* BRANDS */
 .brands{
