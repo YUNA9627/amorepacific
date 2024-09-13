@@ -1,27 +1,27 @@
 /* HEADER - 배유나
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
 header {
-  background: var(--primary);
+  background: none;
+  transition: 0.3s;
   position: fixed;
   z-index: 100;
   width: 100%;
-  position: relative;
   position: fixed;
-
+  display: block;
   * {
     color: var(--white);
   }
 }
 
 .header {
-  padding-top: 10px;
-  position: relative;
-
+  padding-top: 10px; position: relative;
   .logo {
-    padding: 20px;
     position: absolute;
     left: 50%;
-    transform: translateX(-50%)
+    transform: translateX(-50%);
+    a {display: block; padding: 20px;
+      img {width: auto;}
+    }
   }
 
   .content_wrapper {
@@ -34,11 +34,9 @@ header {
 
 .header .content {
   display: flex;
-
   a {
     padding: 0 5px;
   }
-
   a svg {
     width: 18px;
     fill: var(--white);
@@ -64,6 +62,7 @@ header {
   background: none;
   border: none;
   position: relative;
+  display: block;
   padding: 5px 0;
   .bi-globe2 {margin: 0 5px;}
   .bi-globe2 {margin: 0 5px;}
@@ -102,7 +101,7 @@ header {
   display: flex;
   justify-content: center;
 
-  >li>a {
+  > li > a {
     font-family: 'Arita buri';
     font-weight: 600;
     font-size: 1.25rem;
@@ -118,8 +117,6 @@ header {
   }
 }
 
-nav {position: relative;}
-
 .gnb .gnb-item .lnbBg {
   position: absolute;
   background: var(--white);
@@ -128,7 +125,7 @@ nav {position: relative;}
   left: 0;
   right: 0;
   opacity: 0;
-  display: none;
+  display: none; 
 }
 
 .gnb .gnb-item .lnbBg:after {
@@ -150,13 +147,24 @@ nav {position: relative;}
     display: flex; flex-direction: column; align-items: flex-start; gap: 30px; 
     h3 {font-family: 'Arita buri'; font-size: 32px; font-weight: 700; line-height: 38px; color: var(--black);}
     p {font-size: 16px;}
-    button {background: none; border: none;}
+    a {background: none; border: none;}
   }
   .lnb {display: flex; gap: 40px;  padding-left: 60px;
     > li {width: 153px;}
     .lnbList {margin-top: 20px; display: flex; flex-direction: column; gap: 10px;}
   }
 }
+
+header:hover {background: var(--primary);}
+
+header.shrink {background: var(--primary); display: flex;}
+
+.shrink .content_wrapper {display: none;}
+
+.shrink .header .logo a {padding: 20px 0;}
+.shrink .header .logo a img {max-width: 170px;}
+
+.shrink .gnb > li > a {font-size: 1.125rem; padding: 12px 15px;}
 
 .gnb .gnb-item:hover > a {color: var(--secondary);}
 
@@ -171,7 +179,6 @@ nav {position: relative;}
   height: 100vh;
   overflow: hidden;
 }
-
 .main_banner .video {
   position: absolute;
   top: 0;
@@ -199,7 +206,6 @@ nav {position: relative;}
   font-family: 'Arita buri';
   font-weight: 500;
 }
-
 .video_content h3{
   font-size: 1.25rem;
 }
@@ -281,6 +287,13 @@ nav {position: relative;}
     }
   }
 }
+ main .news{
+  display: flex;
+  position: relative;
+}
+main .btn_more{
+  position: absolute;
+}
 
 /* BRANDS */
 .brands{
@@ -297,7 +310,7 @@ nav {position: relative;}
 }
 .button .tt_li {
   width: 252px;
-  height: 55px;
+  height: 45px;
   overflow: hidden;
   margin-left: 30px;
 }
@@ -310,11 +323,9 @@ section .button ul {
 }
 section .button ul li {
   cursor: pointer;
-  
 }
 section .button ul li:hover {
   color: var(--black);
-  border-bottom: 2px solid var(--primary);
 }
 .button a {
   position: absolute;
@@ -514,7 +525,6 @@ section .button .prev {
   display: block;
   text-align: center;
   font-size: 40px;
-  position: fixed;
   bottom: 20px;
   right: 20px;
   z-index: 100;
@@ -560,13 +570,13 @@ section .button .prev {
   vertical-align: middle;
 }
 
-.footer_box span p {display: inline;}
+.footer_box div p {display: inline;}
 
 .footer_box ul {margin-bottom: 20px;}
 
 .footer_box p {color: var(--medium-gray);}
 
-.footer_box span p:nth-child(1):after {
+.footer_box div p:nth-child(1):after {
   content: '';
   background: var(--medium-gray);
   width: 1px;
