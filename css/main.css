@@ -206,6 +206,19 @@ header.shrink {background: var(--primary);}
   height: 100%;
   width: 100%;
 }
+.slide .video_content{
+  z-index: 10;
+  position:relative;
+}
+.slide:after{
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0,.3);
+}
 .main_banner .slide video{
   position: absolute;
   width: 100%;
@@ -257,14 +270,26 @@ progress {
   width: 80px;
   height: 10px;
 }
-progress::-webkit-progress-bar {
-  background-color: #f3f3f3;
-  border-radius: 5px;
+
+.progress-btn {
+  width: 80px;
+  height: 10px;
+  border: none;
+  background: rgba(255, 255, 255, .15);
+  padding: 0;
+  position: relative;
+  border-radius:5px;
+  overflow:hidden;
 }
-progress::-webkit-progress-value {
-  background-color: #007bff;
-  border-radius: 5px;
+.progress-btn span{
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background: #fff;;
+  width: 0;
 }
+
 
 /* NEWS */
 main .news{
@@ -273,12 +298,14 @@ main .news{
 }
 main .btn_more{
   position: absolute;
+  right: 0;
 }
 .n_left{
   width: 50%;
 }
 .n_right{
   width: 50%;
+  margin-top: 90px;
 }
 .news_list{
   border-top: 2px solid var(--black);
@@ -298,6 +325,23 @@ main .btn_more{
   height: 28.13rem;
   overflow: hidden;
 }
+.news_list li:nth-child(1) img{
+  visibility: visible;
+  opacity: 1;
+  transform:none;
+}
+.news_list li img{
+  visibility: hidden;
+  opacity: 0;
+  transform:translateX(-50px);
+  transition:0.3s;
+}
+.news_list li:hover img{
+  visibility: visible;
+  opacity: 1;
+  transform:none;
+}
+
 
 
 
