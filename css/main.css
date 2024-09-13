@@ -225,6 +225,51 @@ header.shrink {background: var(--primary);}
   font-size: 1.25rem;
   font-weight: 400;
 }
+.video>li .video_content>* {
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.2s 0.4s ease-in-out;
+}
+
+.video>li.active .video_content>* {
+  color: #fff;
+  opacity: 1;
+}
+
+/* NEWS */
+main .news{
+  display: flex;
+  position: relative;
+}
+main .btn_more{
+  position: absolute;
+}
+.n_left{
+  width: 50%;
+}
+.n_right{
+  width: 50%;
+}
+.news_list{
+  border-top: 2px solid var(--black);
+}
+.news_list li{
+  border-bottom: 2px solid var(--black);
+}
+.news_list li a{
+  display: block;
+  padding: 2.188rem;
+}
+.news_list li .n_imagebox{
+  position: absolute;
+  left: 0;
+  bottom: 20%;
+  z-index: 10;
+  width: 24rem;
+  height: 28.13rem;
+  overflow: hidden;
+}
+
 
 /* SPACE - 홍은진
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -284,13 +329,6 @@ header.shrink {background: var(--primary);}
       }
     }
   }
-}
- main .news{
-  display: flex;
-  position: relative;
-}
-main .btn_more{
-  position: absolute;
 }
 
 @keyframes line2{
