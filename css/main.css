@@ -208,8 +208,8 @@ header.shrink {background: var(--primary);}
 }
 .video_content{
   position: absolute;
-  top: 25%;
-  left: 5%;
+  top: 40%;
+  left: 140px;
   color:var(--white);
   font-family: 'Arita buri';
   font-weight: 500;
@@ -230,10 +230,34 @@ header.shrink {background: var(--primary);}
   opacity: 0;
   transition: opacity 0.2s 0.4s ease-in-out;
 }
-
 .video>li.active .video_content>* {
   color: #fff;
   opacity: 1;
+}
+.main_banner .buttons{
+  position: absolute;
+  bottom: 60px;
+  left: 140px;
+  display: flex;
+  gap: 15px;
+}
+.progress-btn {
+  border: none;
+  background: none; 
+  padding: 0;
+  opacity: 65%;
+}
+progress {
+  width: 80px;
+  height: 10px;
+}
+progress::-webkit-progress-bar {
+  background-color: #f3f3f3;
+  border-radius: 5px;
+}
+progress::-webkit-progress-value {
+  background-color: #007bff;
+  border-radius: 5px;
 }
 
 /* NEWS */
@@ -264,11 +288,11 @@ main .btn_more{
   position: absolute;
   left: 0;
   bottom: 20%;
-  z-index: 10;
   width: 24rem;
   height: 28.13rem;
   overflow: hidden;
 }
+
 
 
 /* SPACE - 홍은진
