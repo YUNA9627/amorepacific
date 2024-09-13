@@ -353,7 +353,7 @@ main .btn_more{
 }
 .button .tt_li {
   width: 252px;
-  height: 45px;
+  height: 55px;
   overflow: hidden;
   margin-left: 30px;
 }
@@ -369,6 +369,7 @@ section .button ul li {
 }
 section .button ul li:hover {
   color: var(--black);
+  border-bottom: 3px solid var(--primary);
 }
 .button a {
   position: absolute;
@@ -398,13 +399,17 @@ section .button .prev {
 }
 .brands_wrapper ul li img {
   padding: 0 80px 0 80px;
+  opacity: 0.5;
 }
-.brands_wrapper ul p {
+.brands_wrapper ul p{
   text-align: center;
   margin-top: 68px;
   color: var(--light-gray);
 }
-.brands_wrapper ul p:hover {
+.brands_wrapper ul li:hover img{
+  opacity: 1;
+}
+.brands_wrapper ul li:hover p{
   color: var(--black);
 }
 .brands_wrapper .btn_more {
