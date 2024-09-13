@@ -1,39 +1,38 @@
 @media (max-width: 768px){
-  /* HEADER */
-
+ 
   /* BRANDS */
-#brand{
-  margin: 0 24px;
-  max-width: 720px;
+  #brand{
+    margin: 0 24px;
+    max-width: 720px;
   }
-  #brand .sec_title_lg{
-  font-size: 2.375rem;
+   #brand .sec_title_lg{
+    font-size: 2.375rem;
   }
   .brands .button{
-  width: 300px;
-  margin-left: 24px;
+    width: 300px;
+    margin-left: 24px;
   }
   .button .tt_li{
-  width: 250px;
-  height: 50px;
+    width: 250px;
+    height: 50px;
   }
   .brands_wrapper .btn_more{
     bottom: calc(100% + 103px);
   }
   .brands_wrapper ul{
-  width: 2500px;
+    width: 2500px;
   }
   .brands_wrapper ul li{
-  width: 250px;
-  font-size: 1.25rem;
+    width: 250px;
+    font-size: 1.25rem;
   }
   .brands_wrapper ul li img{
     padding: 0 40px;
   }
   /* employ */
   #em{
-  margin: 0 24px;
-  max-width: 718px;
+    margin: 0 24px;
+    max-width: 718px;
   }
   .employ .employ_wrapper {
     background: url(../images/employ_bg1.jpg)no-repeat;
@@ -41,34 +40,33 @@
     border-radius: 20px;
   }
   .employ .employ_wrapper:after{
-  width: 718px;
-  height: 192px;
-  border-radius: 20px;
+    width: 718px;
+    height: 192px;
+    border-radius: 20px;
   }
   .employ_wrapper img{
-  width: 205px;
-  height: 20px;
-  top: 52px;
-  left: 41px;
+    width: 205px;
+    height: 20px;
+    top: 52px;
+    left: 41px;
   }
   .employ_wrapper p{
-  top: 92px;
-  left: 41px;
-  font-size: 1.25rem;
+    top: 92px;
+    left: 41px;
+    font-size: 1.25rem;
   }
   .employ_wrapper a{
-  bottom: 23px;
-  font-size: 1rem;
+    bottom: 23px;
+    font-size: 1rem;
   }
-  
+
   /* FOOTER */
   .menu_list {display: none;}
   .footer_box span p:nth-child(1):after {display: none;}
   .footer_box span p:nth-child(1) {display: block;}
   .footer_box span p:nth-child(2) {display: inline-block;}
   .footer_box span p:nth-child(3) {display: inline-block;}
-  }
-
+}
 
 
 
@@ -77,8 +75,8 @@
     #brand{
       margin: 0 20px;
       max-width: 536px;
-      }
-      #brand .sec_title_lg{
+    }
+    #brand .sec_title_lg{
       font-size: 1.75rem;
     }
     .brands .button{
@@ -90,8 +88,8 @@
       font-size: 15px;
       text-align: center;
       line-height: 34px;
-      }
-      .btn_more i{
+    }
+    .btn_more i{
       margin-left: 20px;
     }
     .brands_wrapper .btn_more{
