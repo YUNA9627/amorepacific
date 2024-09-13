@@ -149,11 +149,12 @@ function newsCursor() {
 
 /* BRANDS - 강현주
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
-$('.basic .slider').slick({
-  dots: true,
-  infinite: true,
+$('#brand .slider').slick({
+  arrows:false,
+  dots: false,
+  infinite: false,
   speed: 300,
-  slidesToShow: 3,
+  slidesToShow: 1,
   centerMode: true,
   variableWidth: true
 });
