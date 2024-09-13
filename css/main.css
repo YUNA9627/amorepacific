@@ -179,7 +179,6 @@ header.shrink {background: var(--primary); display: flex;}
   height: 100vh;
   overflow: hidden;
 }
-
 .main_banner .video {
   position: absolute;
   top: 0;
@@ -207,7 +206,6 @@ header.shrink {background: var(--primary); display: flex;}
   font-family: 'Arita buri';
   font-weight: 500;
 }
-
 .video_content h3{
   font-size: 1.25rem;
 }
@@ -288,6 +286,13 @@ header.shrink {background: var(--primary); display: flex;}
       }
     }
   }
+}
+ main .news{
+  display: flex;
+  position: relative;
+}
+main .btn_more{
+  position: absolute;
 }
 
 /* BRANDS */
