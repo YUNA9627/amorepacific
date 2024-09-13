@@ -35,18 +35,11 @@ header {
   }
 }
 
-.header .content {
-  display: flex;
-  a {
-    padding: 0 5px;
-  }
-  a svg {
-    width: 18px;
-    fill: var(--white);
-    padding: 0 5px;
-    vertical-align: sub;
-  }
+.header .content {display: flex;
+  .search_area button {padding: 0 10px; background: none; border: none;}
 }
+
+.search_box {position: absolute; left: 0; top: 100%;}
 
 .header .content .sns_wrapper > a {
   font-size: 18px;
@@ -103,6 +96,7 @@ nav {position: absolute; left: 0; right: 0; bottom: 0;}
   justify-content: center;
   max-width: 1320px;
   margin: auto;
+  transform: translateX(5%);
   > li > a {
     font-family: 'Arita buri';
     font-weight: 600;
@@ -161,7 +155,8 @@ header.shrink {background: var(--primary);}
 
 .shrink .content_wrapper {justify-content: flex-end; right: 0;}
 
-.shrink .language_area, .shrink .sns_wrapper {display: none;}
+.shrink .language_area,
+.shrink .sns_wrapper {display: none;}
 
 .shrink nav {top: 0;}
 
