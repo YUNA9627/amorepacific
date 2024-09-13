@@ -121,18 +121,27 @@ body{
 .btn_more i{
   margin-left: 40px;
 }
-.btn_more_w{
+
+.btn_more i::before{
+  transition: 0.1s;
+}
+
+.btn_more:hover {
+  color: var(--white);
+  background: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+.btn_more:hover i::before{
+  transform: translateX(4px);
+}
+
+.btn_more.btn_more_w{
   color: var(--white);
   border-color: var(--white);
   border-width: 2px;
 }
-.btn_more_w:hover{
+.btn_more.btn_more_w:hover{
   background: rgba(255, 255, 255, 0.8);
   color: var(--black);
-}
-.btn_more i::before{
-  transition: 0.2s;
-}
-.btn_more:hover i::before{
-  transform: translateX(4px);
 }

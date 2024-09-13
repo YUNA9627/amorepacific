@@ -1,18 +1,27 @@
 @media (max-width: 768px){
-  /* brands */
+ 
+  /* BRANDS */
   #brand{
     margin: 0 24px;
     max-width: 720px;
   }
+   #brand .sec_title_lg{
+    font-size: 2.375rem;
+  }
   .brands .button{
-    width: 219px;
+    width: 300px;
+    margin-left: 24px;
   }
   .button .tt_li{
-    width: 159px;
-    height: 40px;
+    width: 250px;
+    height: 50px;
+  }
+  .brands_wrapper ul{
+    width: 2500px;
   }
   .brands_wrapper ul li{
-    width: 251px;
+    width: 250px;
+    font-size: 1.25rem;
   }
   .brands_wrapper ul li img{
     padding: 0 40px 0 40px;
@@ -47,4 +56,49 @@
     bottom: 23px;
     font-size: 1rem;
   }
+
+  /* FOOTER */
+  .menu_list {display: none;}
+  .footer_box span p:nth-child(1):after {display: none;}
+  .footer_box span p:nth-child(1) {display: block;}
+  .footer_box span p:nth-child(2) {display: inline-block;}
+  .footer_box span p:nth-child(3) {display: inline-block;}
+}
+
+
+
+@media (max-width: 576px){
+    /* BRANDS */
+    #brand{
+      margin: 0 20px;
+      max-width: 536px;
+    }
+    #brand .sec_title_lg{
+      font-size: 1.75rem;
+    }
+    .btn_more{
+      width: 104px;
+      height: 34px;
+      font-size: 11px;
+      text-align: center;
+      line-height: 34px;
+    }
+    .btn_more i{
+      margin-left: 20px;
+    }
+    .brands_wrapper .btn_more{
+      bottom: calc(100% + 104px);
+    }
+    .button .tt_li{
+      width: 250px;
+      height: 50px;
+    }
+    .brands_wrapper ul{
+      width: 2500px;
+    }
+    .brands_wrapper ul li{
+      width: 250px;
+      font-size: 1.25rem;
+    }
+    
 }
