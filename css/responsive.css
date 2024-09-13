@@ -16,6 +16,9 @@
     width: 250px;
     height: 50px;
   }
+  .brands_wrapper .btn_more{
+    bottom: calc(100% + 103px);
+  }
   .brands_wrapper ul{
     width: 2500px;
   }
@@ -24,7 +27,7 @@
     font-size: 1.25rem;
   }
   .brands_wrapper ul li img{
-    padding: 0 40px 0 40px;
+    padding: 0 40px;
   }
   /* employ */
   #em{
@@ -32,7 +35,7 @@
     max-width: 718px;
   }
   .employ .employ_wrapper {
-    background: url(../images/employ_bg1.jpg);
+    background: url(../images/employ_bg1.jpg)no-repeat;
     height: 192px;
     border-radius: 20px;
   }
@@ -76,10 +79,13 @@
     #brand .sec_title_lg{
       font-size: 1.75rem;
     }
+    .brands .button{
+      width: 248px;
+    }
     .btn_more{
       width: 104px;
       height: 34px;
-      font-size: 11px;
+      font-size: 15px;
       text-align: center;
       line-height: 34px;
     }
@@ -87,18 +93,53 @@
       margin-left: 20px;
     }
     .brands_wrapper .btn_more{
-      bottom: calc(100% + 104px);
+      bottom: calc(100% + 88px);
     }
     .button .tt_li{
-      width: 250px;
-      height: 50px;
+      width: 218px;
+      height: 34px;
     }
-    .brands_wrapper ul{
-      width: 2500px;
-    }
-    .brands_wrapper ul li{
-      width: 250px;
+    .button .tt_li .con_title_sm{
       font-size: 1.25rem;
     }
-    
+    .brands_wrapper ul{
+      width: 2780px;
+    }
+    .brands_wrapper  ul li{
+      width: 278px;
+    }
+    .brands_wrapper ul li img{
+      padding: 0 53px;
+    }
+
+    /* employ */
+    #em{
+      margin: 0 20px;
+      max-width: 531px;
+    }
+    .employ .employ_wrapper {
+      background: url(../images/employ_bg2.jpg)no-repeat;
+      height: 142px;
+      border-radius: 15px;
+    }
+    .employ .employ_wrapper:after{
+      width: 531px;
+      height: 142px;
+      border-radius: 15px;
+    }
+    .employ_wrapper img{
+      width: 151px;
+      height: 15px;
+      top: 38px;
+      left: 30px;
+    }
+    .employ_wrapper p{
+      top: 67px;
+      left: 30px;
+      font-size: 0.9375rem;
+    }
+    .employ_wrapper a{
+      bottom: 15px;
+      font-size: 0.9375rem;
+    }
 }
