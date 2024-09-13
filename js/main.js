@@ -5,10 +5,16 @@ let header = $('header');
 $(window).scroll(function(){
   if($(this).scrollTop() > 400){
     header.addClass('shrink');
+    if($(this).scrollTop() > 0) {
+      header.fadeOut(100);
+    }
   }else {
     header.removeClass('shrink');
   }
-})
+
+});
+
+
 
 /* MAIN BANNER - 한태희
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
