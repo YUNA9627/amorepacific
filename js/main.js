@@ -80,71 +80,26 @@ function autoSlide() {
   }, time);
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-  var videos = document.querySelectorAll(".video video");
-  var progressBars = document.querySelectorAll(".progress-btn progress");
 
-  // 각 비디오에 대해 progressbar 업데이트
-  videos.forEach(function(video, index) {
-    var progressBar = progressBars[index];
+var videos = document.querySelectorAll(".video video");
+var progressBars = document.querySelectorAll(".progress-btn span");
 
-    // 비디오가 재생될 때
-    video.addEventListener("timeupdate", function () {
-      var value = (video.currentTime / video.duration) * 100;
-      progressBar.value = value;  // 비디오 진행에 맞춰 게이지 업데이트
-    });
 
-    // 비디오가 끝나면 게이지를 다시 0으로
-    video.addEventListener("ended", function () {
-      progressBar.value = 0;
-    });
+// 각 비디오에 대해 progressbar 업데이트
+videos.forEach(function(video, index) {
+  var progressBar = progressBars[index];
+
+
+  // 비디오가 재생될 때
+  video.addEventListener("timeupdate", function () {
+    var value = (video.currentTime / video.duration) * 100;
+    progressBar.style.width= value+'px';  // 비디오 진행에 맞춰 게이지 업데이트
   });
-});
-
-
-function newsCursor() {
-  var newsItem = $(".news_list > li");
-  newsItem.on('mouseenter',function(){
-      newsItem.removeClass("cursor-active");
-      $(this).addClass("cursor-active");
+  // 비디오가 끝나면 게이지를 다시 0으로
+  video.addEventListener("ended", function () {
+    progressBar.style.width= 0;
   });
-  newsItem.on('mouseleave',function(){
-      newsItem.removeClass("cursor-active");
-  });
-}
-
-document.addEventListener("DOMContentLoaded", function () {
-  var videos = document.querySelectorAll(".video video");
-  var progressBars = document.querySelectorAll(".progress-btn progress");
-
-  // 각 비디오에 대해 progressbar 업데이트
-  videos.forEach(function(video, index) {
-    var progressBar = progressBars[index];
-
-    // 비디오가 재생될 때
-    video.addEventListener("timeupdate", function () {
-      var value = (video.currentTime / video.duration) * 100;
-      progressBar.value = value;  // 비디오 진행에 맞춰 게이지 업데이트
-    });
-
-    // 비디오가 끝나면 게이지를 다시 0으로
-    video.addEventListener("ended", function () {
-      progressBar.value = 0;
-    });
-  });
-});
-
-
-function newsCursor() {
-  var newsItem = $(".news_list > li");
-  newsItem.on('mouseenter',function(){
-      newsItem.removeClass("cursor-active");
-      $(this).addClass("cursor-active");
-  });
-  newsItem.on('mouseleave',function(){
-      newsItem.removeClass("cursor-active");
-  });
-}
+})
 
 
 /* BRANDS - 강현주
