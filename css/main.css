@@ -131,15 +131,6 @@ nav {position: absolute; left: 0; right: 0; bottom: 0;}
   display: none; 
 }
 
-.gnb .gnb-item .lnbBg:after {
-  content: '';
-  background: var(--bg-gray);
-  width: 30%;
-  height: 100%;
-  display: block;
-  top: 0;
-}
-
 /* .gnb .gnb-item .lnbBg.active {visibility: visible; opacity: 1;} */
 
 .gnb .gnb-item .lnbBg .lnbInner {
