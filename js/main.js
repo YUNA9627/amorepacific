@@ -1,3 +1,21 @@
+/* HEADER - 배유나
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+let header = $('header');
+let headerTop = $('.header');
+
+$(window).scroll(function(){
+  if($(this).scrollTop() > 500){
+    header.addClass('shrink');
+    // headerTop.hide(300);
+  }else {
+    header.removeClass('shrink');
+    headerTop.show(300);
+  }
+});
+
+/* MAIN BANNER - 한태희
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
 let mainBanner = document.querySelector(".main_banner");
 let video = mainBanner.querySelector(".video");
 let slides = video.querySelectorAll("li");
