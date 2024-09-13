@@ -63,9 +63,10 @@
   /* FOOTER */
   .footer_wrapper .menu_list {display: none;}
   .footer_menu .other {margin-top: 0;}
-  .footer_menu .other li {width: 17%; text-align: center;}
+  .footer_menu .other ul {gap: 60px;}
+  .footer_menu .other ul li ul li {width: auto; text-align: left;}
   .footer_box div p {display: block;}
-  .footer_box div a {width: auto;}
+  .footer_box div li {width: auto;}
 
   .footer_box div p:nth-child(1):after {display: none;}
   .footer_box div p:nth-child(1) {display: block;}
@@ -149,9 +150,12 @@
     }
 
     /* FOOTER */
-    .footer_box .footer_text li:nth-child(2) {
-      display: block;
-    }
     .footer_box div p:nth-child(3) {display: block;}
-    .footer_box {flex-direction: column;}
+    .footer_box {flex-direction: column; gap: 20px;}
+    .footer_box .footer_text > li:nth-child(2) {display: block;}
+    .footer_box .footer_text {flex-direction: column;}
+    .footer_text li:nth-child(2) a:before {display: none;}
+    .footer_menu .other ul > li > ul {display: flex; gap: 60px;}
+    .footer_menu .other ul li ul li {display: inline-block;}
+    .footer_menu .other ul {flex-direction: column; gap: 20px;}
 }
