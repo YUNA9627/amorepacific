@@ -7,8 +7,10 @@ let headerTop = $('.header');
 $(window).scroll(function(){
   if($(this).scrollTop() > 500){
     header.addClass('shrink');
+    $('.content_wrapper').removeClass('container');
   }else {
     header.removeClass('shrink');
+    $('.content_wrapper').addClass('container');
   }
 });
 
