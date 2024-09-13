@@ -1,17 +1,16 @@
 /* HEADER - 배유나
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
 let header = $('header');
+let headerTop = $('.header');
 
 $(window).scroll(function(){
-  if($(this).scrollTop() > 400){
+  if($(this).scrollTop() > 500){
     header.addClass('shrink');
-    if($(this).scrollTop() > 0) {
-      header.fadeOut(100);
-    }
+    // headerTop.hide(300);
   }else {
     header.removeClass('shrink');
+    headerTop.show(300);
   }
-
 });
 
 
