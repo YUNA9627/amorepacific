@@ -1,69 +1,73 @@
 @media (max-width: 768px){
- 
+
   /* BRANDS */
-  #brand{
-    margin: 0 24px;
-    max-width: 720px;
+#brand{
+  margin: 0 24px;
+  max-width: 720px;
   }
-   #brand .sec_title_lg{
-    font-size: 2.375rem;
+  #brand .sec_title_lg{
+  font-size: 2.375rem;
   }
   .brands .button{
-    width: 300px;
-    margin-left: 24px;
+  width: 300px;
+  margin-left: 24px;
   }
   .button .tt_li{
-    width: 250px;
-    height: 50px;
+  width: 250px;
+  height: 50px;
+  }
+  .brands_wrapper .btn_more{
+  bottom: calc(100% + 103px);
   }
   .brands_wrapper ul{
-    width: 2500px;
+  width: 2500px;
   }
   .brands_wrapper ul li{
-    width: 250px;
-    font-size: 1.25rem;
+  width: 250px;
+  font-size: 1.25rem;
   }
   .brands_wrapper ul li img{
-    padding: 0 40px 0 40px;
+  padding: 0 40px;
   }
   /* employ */
   #em{
-    margin: 0 24px;
-    max-width: 718px;
+  margin: 0 24px;
+  max-width: 718px;
   }
   .employ .employ_wrapper {
-    background: url(../images/employ_bg1.jpg);
-    height: 192px;
-    border-radius: 20px;
+  background: url(../images/employ_bg1.jpg)no-repeat;
+  height: 192px;
+  border-radius: 20px;
   }
   .employ .employ_wrapper:after{
-    width: 718px;
-    height: 192px;
-    border-radius: 20px;
+  width: 718px;
+  height: 192px;
+  border-radius: 20px;
   }
   .employ_wrapper img{
-    width: 205px;
-    height: 20px;
-    top: 52px;
-    left: 41px;
+  width: 205px;
+  height: 20px;
+  top: 52px;
+  left: 41px;
   }
   .employ_wrapper p{
-    top: 92px;
-    left: 41px;
-    font-size: 1.25rem;
+  top: 92px;
+  left: 41px;
+  font-size: 1.25rem;
   }
   .employ_wrapper a{
-    bottom: 23px;
-    font-size: 1rem;
+  bottom: 23px;
+  font-size: 1rem;
   }
-
+  
   /* FOOTER */
   .menu_list {display: none;}
   .footer_box span p:nth-child(1):after {display: none;}
   .footer_box span p:nth-child(1) {display: block;}
   .footer_box span p:nth-child(2) {display: inline-block;}
   .footer_box span p:nth-child(3) {display: inline-block;}
-}
+  }
+
 
 
 
@@ -72,33 +76,70 @@
     #brand{
       margin: 0 20px;
       max-width: 536px;
-    }
-    #brand .sec_title_lg{
+      }
+      #brand .sec_title_lg{
       font-size: 1.75rem;
-    }
-    .btn_more{
+      }
+      .brands .button{
+      width: 248px;
+      }
+      .btn_more{
       width: 104px;
       height: 34px;
-      font-size: 11px;
+      font-size: 15px;
       text-align: center;
       line-height: 34px;
-    }
-    .btn_more i{
+      }
+      .btn_more i{
       margin-left: 20px;
-    }
-    .brands_wrapper .btn_more{
-      bottom: calc(100% + 104px);
-    }
-    .button .tt_li{
-      width: 250px;
-      height: 50px;
-    }
-    .brands_wrapper ul{
-      width: 2500px;
-    }
-    .brands_wrapper ul li{
-      width: 250px;
+      }
+      .brands_wrapper .btn_more{
+      bottom: calc(100% + 88px);
+      }
+      .button .tt_li{
+      width: 218px;
+      height: 34px;
+      }
+      .button .tt_li .con_title_sm{
       font-size: 1.25rem;
+      }
+      .brands_wrapper ul{
+      width: 2780px;
+      }
+      .brands_wrapper  ul li{
+      width: 278px;
+      }
+      .brands_wrapper ul li img{
+      padding: 0 53px;
+      }
+    /* employ */
+    #em{
+      margin: 0 20px;
+      max-width: 531px;
     }
-    
+    .employ .employ_wrapper {
+      background: url(../images/employ_bg2.jpg)no-repeat;
+      height: 142px;
+      border-radius: 15px;
+    }
+    .employ .employ_wrapper:after{
+      width: 531px;
+      height: 142px;
+      border-radius: 15px;
+    }
+    .employ_wrapper img{
+      width: 151px;
+      height: 15px;
+      top: 38px;
+      left: 30px;
+    }
+    .employ_wrapper p{
+      top: 67px;
+      left: 30px;
+      font-size: 0.9375rem;
+    }
+    .employ_wrapper a{
+      bottom: 15px;
+      font-size: 0.9375rem;
+    }
 }
