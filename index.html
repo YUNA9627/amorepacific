@@ -15,39 +15,48 @@
   <header>
     <div class="header container">
       <h1 class="logo">
-        <a href=""><img src="images/header_logo.svg" alt="Amorepacific"></a>
+        <a href="">
+          <img src="images/header_logo.svg" class="logo_wh" alt="Amorepacific">
+          <img src="images/header_logo_black.svg" class="logo_bk" alt="Amorepacific">
+        </a>
       </h1>
       <div class="content_wrapper container">
-        <button class="language_area">
-          <a href="">
+        <div class="language">
+          <button class="language_area">
             <i class="bi bi-globe2"></i>KR
             <i class="bi bi-chevron-down"></i>
-          </a>
-          <ul class="lang_list">
-            <li><a href="">KR</a></li>
-            <li><a href="">EN</a></li>
-            <li><a href="">CN</a></li>
-          </ul>
-        </button>
+            <ul class="lang_list">
+              <li><a href="">KR</a></li>
+              <li><a href="">EN</a></li>
+              <li><a href="">CN</a></li>
+            </ul>
+          </button>
+        </div>
         <div class="content">
           <div class="sns_wrapper">
-            <a href=""><i class="bi bi-facebook"></i></a>
-            <a href=""><i class="bi bi-instagram"></i></a>
-            <a href="">in</a>
-            <a href=""><i class="bi bi-youtube"></i></a>
+            <ul>
+              <li><a href=""><i class="bi bi-facebook"></i></a></li>
+              <li><a href=""><i class="bi bi-instagram"></i></a></li>
+              <li><a href="">in</a></li>
+              <li><a href=""><i class="bi bi-youtube"></i></a></li>
+            </ul> 
           </div>
           <div class="search_area">
-            <a href=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg></a>
-            <div class="search_box">
-              
-            </div>
+            <button class="searchBtn">
+              <i class="bi bi-search"></i>
+              <div class="hamburger-button">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </button>
           </div>
         </div>
       </div>
     </div>
     <nav>
-      <ul class="gnb">
-        <li></li>
+      <ul class="gnb container">
         <li class="gnb-item"><a href="">ABOUT US</a>
           <div class="lnbBg">
             <div class="lnbInner container row">
@@ -247,6 +256,17 @@
         </li>
       </ul>
     </nav>
+    <div class="search_wrapper">
+      <div class="search_box container">
+        <div class="searchWideBar">
+          <input type="text" placeholder="검색어를 입력해주세요.">
+          <div class="searchBtn">
+            <button><i class="bi bi-search"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header_overlay"></div>
   </header>
   <!-- //header 배유나 -->
   <main>
@@ -645,7 +665,7 @@
           </ul>
         </div>
         <div class="other container">
-          <ul>
+          <ul class="row">
             <li><a href="">윤리경영</a></li>
             <li>
               <ul>
