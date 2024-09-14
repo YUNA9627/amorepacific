@@ -14,6 +14,39 @@ $(window).scroll(function(){
   }
 });
 
+$('.searchBtn').click(function(){
+  header.toggleClass('open');
+});
+
+$('.header_overlay').click(function(){
+  header.removeClass('open');
+});
+
+$('.hamburger-button').click(function(){
+  $(this).toggleClass('active');
+})
+
+$('.gnb-item').mouseenter(function(){
+  $(this).addClass('active');
+  $('.header_overlay').addClass('active');
+})
+
+$('.gnb-item').mouseleave(function(){
+  $(this).removeClass('active');
+  $('.header_overlay').removeClass('active');
+})
+
+var prevST = 0;
+$(window).scroll(function(){
+  currentST = $(this).scrollTop();
+  if(currentST > prevST){
+    header.css('top', '-145px');
+  }else {
+    header.css('top', '0');
+  }
+  prevST = currentST;
+})
+
 /* MAIN BANNER - 한태희
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
 let $mainBanner = $(".main_banner");
