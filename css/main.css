@@ -325,7 +325,7 @@ header.shrink {background: var(--primary);}
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(0, 0, 0,.3);
+  background-color: rgba(0, 0, 0,.7);
 }
 .main_banner .slide video{
   position: absolute;
@@ -335,7 +335,7 @@ header.shrink {background: var(--primary);}
 }
 .video_content{
   position: absolute;
-  top: 40%;
+  top: 55%;
   left: 140px;
   color:var(--white);
   font-family: 'Arita buri';
@@ -378,12 +378,11 @@ progress {
   width: 80px;
   height: 10px;
 }
-
 .progress-btn {
   width: 80px;
   height: 10px;
   border: none;
-  background: rgba(255, 255, 255, .15);
+  background: rgba(255, 255, 255, .5);
   padding: 0;
   position: relative;
   border-radius:5px;
@@ -394,9 +393,43 @@ progress {
   left: 0;
   top: 0;
   bottom: 0;
-  background: #fff;;
+  background: #fff;
   width: 0;
 }
+.main_banner .m_scroll{
+  position: absolute;
+  bottom: 0;
+  right: 100px;
+  z-index: 10;
+  color: white;
+  transform-origin: right bottom;
+  transform: rotate(90deg);
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  font-size: 1.25rem;
+  font-family: 'Pretendard';
+  font-weight: 400;
+  line-height: 33px;
+}
+.main_banner .m_scroll .gage{
+  width: 80px;
+  height: 2px;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.7);
+  margin-left: 10px;
+  overflow: hidden;
+}
+.main_banner .m_scroll .gage .gage_bar{
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 35%;
+  height: 100%;
+  background-color: white;
+  animation: mainScroll 1s infinite linear;
+}
+@keyframes mainScroll {to{left: 100%;}}
 
 
 /* NEWS */
@@ -409,10 +442,10 @@ main .btn_more{
   right: 0;
 }
 .n_left{
-  width: 50%;
+  width: 45%;
 }
 .n_right{
-  width: 50%;
+  width: 55%;
   margin-top: 90px;
 }
 .news_list{
@@ -448,6 +481,30 @@ main .btn_more{
   visibility: visible;
   opacity: 1;
   transform:none;
+}
+.n_textbox{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.n_textbox h3{
+  font-family: 'Arita';
+  font-weight: 600;
+  font-size: 1.563rem;
+  line-height: 26px;
+}
+.n_textbox p{
+  font-family: 'Pretendard';
+  font-weight: 300;
+  font-size: 1.25rem;
+  line-height: 32.5px;
+}
+.n_textbox span{
+  font-family: 'Arita';
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 26px;
+  color: var(--medium-gray);
 }
 
 
