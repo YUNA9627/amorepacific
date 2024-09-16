@@ -1,15 +1,14 @@
 /* HEADER - 배유나
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
 header {
-  background: none;
-  transition: 0.3s;
+  background-color: none;
   position: fixed;
   top: 0;
   z-index: 100;
   width: 100%;
   display: block;
   text-align: center;
-  transition: top 0.5s ease;
+  transition: top 0.5s ease, background-color 0.5s ease;
   a, button {color: var(--white); transition: 0.3s linear;}
 }
 
@@ -59,8 +58,8 @@ header {
   border: 1px solid rgba(255, 255, 255, .5);
   border-radius: 5px;
   padding: 5px 0;
-  opacity: 0;
   z-index: 100;
+  opacity: 0;
   transition: 0.3s;
 }
 
@@ -229,8 +228,19 @@ nav {position: absolute; left: 0; right: 0; bottom: 0;}
     padding: 18px 20px;
     transition: 0.3s;
     color: var(--white);
-    display: block;
+    display: block; position: relative; width: 100%;
   }
+}
+
+.gnb .gnb-item a:before {
+  content: '';
+  background: var(--secondary);
+  width: 100%; height: 3px;
+  position: absolute;
+  bottom: 0; left: 0;
+  transform: scaleX(0);
+  opacity: 0;
+  transition: 0.3s;
 }
 
 .gnb .gnb-item .lnbBg {
@@ -241,6 +251,7 @@ nav {position: absolute; left: 0; right: 0; bottom: 0;}
   left: 0;
   right: 0;
   opacity: 0;
+  transition: opacity 0.3s;
   visibility: hidden;
 }
 
@@ -248,19 +259,24 @@ nav {position: absolute; left: 0; right: 0; bottom: 0;}
   padding: 60px 60px; margin: 0 auto; text-align: left;
   * {color: var(--medium-gray); font-size: 1.125rem;}
   .lnbDesc {
-     padding-right: 39px;
+     padding-right: 39px; height: 100%;
     display: flex; flex-direction: column; align-items: flex-start; gap: 30px; 
     h3 {font-family: 'Arita buri'; font-size: 2rem; font-weight: 700; line-height: 38px; color: var(--black);}
     p {font-size: 1rem;}
     a {background: none; border: none;}
   }
   .lnb {display: flex; gap: 40px;  padding-left: 60px;
-    > li {width: 153px;}
-    .lnbList {margin-top: 20px; display: flex; flex-direction: column; gap: 10px;}
+    > li {width: 155px;
+      strong {font-weight: 600; color: var(--black)}
+    }
+    .lnbList {margin-top: 20px; display: flex; flex-direction: column; gap: 10px;
+      li:nth-child(3) i {font-size: 1rem; margin-left: 5px;}
+      .igbtn, .igbtn i {color: var(--primary); font-size: 1rem;}
+      .igbtn i {vertical-align: bottom;}
+    }
   }
 }
 
-header:hover {background: var(--primary);}
 header.shrink {background: var(--primary);}
 .shrink .header {height: 54px; justify-content: space-between; padding-top: 0;}
 .shrink .header .logo {top: 0; left: 0; transform: none;}
@@ -287,10 +303,11 @@ header.shrink {background: var(--primary);}
 .open .header_overlay {visibility: visible; opacity: 1;}
 
 .gnb-item.active > a {color: var(--secondary);}
+.gnb-item.active > a:before {opacity: 1; transform: scaleX(1);}
 .gnb-item.active .lnbBg {visibility: visible; opacity: 1;}
 .header_overlay.active {visibility: visible; opacity: 1;}
 
-
+header:hover {background-color: var(--primary);}
 .gnb .gnb-item .lnbBg .lnbInner .lnb li a:hover {color: var(--black)}
 
 /* MAIN BANNER - 한태희
@@ -784,29 +801,24 @@ main .btn_more{
 
 /* FOOTER - 배유나
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
-.amoremall {
-  position: fixed;
-  right: 20px;
-  bottom: 100px;
-  z-index: 100;
-}
-.amoremall > a {
-  display: block;
-}
-.amoremall {
-  position: fixed;
-  right: 20px;
-  bottom: 100px;
-  z-index: 100;
-}
-.amoremall > a {
-  display: block;
-}
-.go_to_top {
+
+.side_btn {
+  position: relative;
   position: fixed;
   bottom: 20px;
   right: 20px;
-  z-index: 100;
+  z-index: 90;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.side_btn.on {
+  opacity: 1;
+}
+
+.side_btn .amoremall {
+  position: absolute;
+  bottom: 80px;
 }
 
 .go_to_top > a {
