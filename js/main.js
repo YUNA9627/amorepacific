@@ -3,16 +3,37 @@
 
 let header = $('header');
 let headerTop = $('.header');
+let sideBtn = $('.side_btn');
+let goToTop = $('.go_to_top');
 
 $(window).scroll(function(){
   if($(this).scrollTop() > 500){
     header.addClass('shrink');
+    sideBtn.addClass('on');
     $('.content_wrapper').removeClass('container');
   }else {
     header.removeClass('shrink');
     $('.content_wrapper').addClass('container');
+    sideBtn.removeClass('on');
+  }
+
+  let fOffsetTop = $('.footer_box').offset().top;
+
+  if($(this).scrollTop() >= fOffsetTop - $(window).innerHeight()){
+    let bottom = $(window).scrollTop() - fOffsetTop + $(window).innerHeight() + 20
+    sideBtn.css({"bottom" : bottom});
+  } else {
+    sideBtn.css({"bottom" : "20px"});
   }
 });
+
+goToTop.click(function(e){
+  e.preventDefault();
+    $('html, body').animate({
+        scrollTop: 0
+    }, 200);
+  $('html, body').css('scroll-behavior', 'smooth');
+})
 
 $('.searchBtn').click(function(){
   header.toggleClass('open');
@@ -46,6 +67,28 @@ $(window).scroll(function(){
   }
   prevST = currentST;
 })
+
+let apiUrl = `https://apis.data.go.kr/1160100/service/GetStockSecuritiesInfoService/getStockPriceInfo?serviceKey=bAyCLfuK3Qtrz6nJ9J%2BsVV7zH2dC1T86Gjo0QfMo6trW7eXUGhI2FW0YepT6264Q64dx4g%2FX%2B%2FJt0DKzGBL%2Bxw%3D%3D&numOfRows=10&resultType=json&basDt=20240912&itmsNm=%EC%95%84%EB%AA%A8%EB%A0%88%ED%8D%BC%EC%8B%9C%ED%94%BD`;
+
+/*
+$.get(apiUrl, function(response) {
+  // Assuming response is the JSON data provided
+  const items = response.response.body.items.item;
+
+  // Populate the table with data
+  let tableContent = '';
+  items.forEach(item => {
+      tableContent += `
+          <tr>
+              <td>${item.clpr}</td>
+              <td>${item.vs}</td>
+              <td>${item.fltRt}</td>
+          </tr>
+      `;
+  });
+  $('#stockTable tbody').html(tableContent);
+})
+*/
 
 /* MAIN BANNER - 한태희
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
