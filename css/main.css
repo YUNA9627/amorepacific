@@ -847,8 +847,6 @@ main .btn_more{
   font-weight: 700; font-size: 1rem;
 }
 .footer_menu .other {margin-top: 60px;}
-.footer_menu .other ul {display: flex;}
-.footer_menu .other ul > li {width: auto;}
 .footer_menu .other ul li ul {width: auto; display: flex; gap: 60px;}
 .footer_menu .other ul li ul li {width: auto;}
 
