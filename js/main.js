@@ -183,7 +183,7 @@ videos.forEach(function(video, index) {
  let brandButton = $('#brand .slider').slick({
   arrows:false,
   dots: false,
-  infinite: false,
+  infinite:true,
   speed: 300,
   slidesToShow: 1,
   centerMode: true,
