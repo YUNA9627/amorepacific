@@ -611,19 +611,25 @@ main .btn_more{
   margin-bottom: 50px;
 }
 .brands .button {
-  width: 268px;
+  width: 270px;
   position: relative;
   margin-left: 24px;
 }
-.button ul li {
+.button ul{
+  padding: 0 5px;
+}
+.button ul li{
   cursor: pointer;
+  box-sizing: border-box;
+}
+
+.button .tt_li .draggable{
+  padding: 0 !important;
 }
 .button .tt_li a{
-  margin: 0 16px;
+  margin: 0 10px;
   color: var(--light-gray);
-}
-.button .tt_li li:nth-child(1){
-  padding-left: 10px;
+  padding-bottom: 5px;
 }
 .button ul li:hover a{
   color: var(--black);
@@ -639,10 +645,11 @@ main .btn_more{
   border: none;
 }
 .button .next {
-  right: 100%;
+  left: 100%;
 }
 .button .prev {
-  left: 100%;
+  right: 100%;
+  /* left: calc(100% - 5px); */
 }
 .brands_wrapper {
   position: relative;
@@ -677,7 +684,7 @@ main .btn_more{
 .brands_wrapper .btn_more {
   position: absolute;
   right: 0;
-  bottom: calc(100% + 127px);
+  bottom: calc(100% + 100px);
 }
 
 /* SUSTAIN - 홍은진

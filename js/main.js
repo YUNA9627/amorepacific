@@ -180,7 +180,7 @@ videos.forEach(function(video, index) {
 
 /* BRANDS - 강현주
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
-$('#brand .slider').slick({
+ let brandButton = $('#brand .slider').slick({
   arrows:false,
   dots: false,
   infinite: false,
@@ -189,3 +189,9 @@ $('#brand .slider').slick({
   centerMode: true,
   variableWidth: true
 });
+$('.button .prev').click(function(){
+  brandButton.slick('slickPrev');
+})
+$('.button .next').click(function(){
+  brandButton.slick('slickNext');
+})
