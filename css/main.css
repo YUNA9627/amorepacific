@@ -449,12 +449,13 @@ progress {
 @keyframes mainScroll {to{left: 100%;}}
 
 
-/* NEWS */
+/* NEWS - 한태희
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
 main .news{
   display: flex;
   position: relative;
 }
-main .btn_more{
+.news .btn_more{
   position: absolute;
   right: 0;
 }
@@ -523,8 +524,6 @@ main .btn_more{
   line-height: 26px;
   color: var(--medium-gray);
 }
-
-
 
 
 /* SPACE - 홍은진
