@@ -1,5 +1,5 @@
 $('.gallery').masonry({
     // options
     itemSelector: '.item',
-    gutter: 12,
+    gutter: 10
 });
