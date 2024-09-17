@@ -212,3 +212,47 @@ $('.button .prev').click(function(){
 $('.button .next').click(function(){
   brandButton.slick('slickNext');
 })
+
+/* SNS - 배유나
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+$('.video_slide video').each(function() {
+  $(this).on('mouseover', function() {
+    this.play();
+  }).on('mouseout', function() {
+    this.pause();
+    this.currentTime = 0; // 비디오가 처음부터 다시 재생되도록 설정
+  });
+});
+
+$('.sns_slide').slick({
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  infinite: true,
+  arrows: true,
+  prevArrow: '<button class="slick-prev"><i class="bi bi-chevron-left"></i></button>',
+  nextArrow: '<button class="slick-next"><i class="bi bi-chevron-right"></i></button>',
+  dots: false,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2
+      }
+    },
+    {
+      breakpoint: 576,
+      settings: {
+        slidesToShow: 1
+      }
+    }
+  ]
+});
+
+$('.slick-prev').append('<i class="icon-class"></i>');
