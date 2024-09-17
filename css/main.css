@@ -370,7 +370,7 @@ header:hover {background-color: var(--primary);}
 }
 .video_content{
   position: absolute;
-  top: 55%;
+  top: 60%;
   left: 140px;
   color:var(--white);
   font-family: 'Arita buri';
