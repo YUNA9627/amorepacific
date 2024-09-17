@@ -70,7 +70,6 @@ $(window).scroll(function(){
 
 let apiUrl = `https://apis.data.go.kr/1160100/service/GetStockSecuritiesInfoService/getStockPriceInfo?serviceKey=bAyCLfuK3Qtrz6nJ9J%2BsVV7zH2dC1T86Gjo0QfMo6trW7eXUGhI2FW0YepT6264Q64dx4g%2FX%2B%2FJt0DKzGBL%2Bxw%3D%3D&numOfRows=10&resultType=json&basDt=20240912&itmsNm=%EC%95%84%EB%AA%A8%EB%A0%88%ED%8D%BC%EC%8B%9C%ED%94%BD`;
 
-/*
 $.get(apiUrl, function(response) {
   // Assuming response is the JSON data provided
   const items = response.response.body.items.item;
@@ -78,17 +77,35 @@ $.get(apiUrl, function(response) {
   // Populate the table with data
   let tableContent = '';
   items.forEach(item => {
+    let NumClpr = Number(item.clpr).toLocaleString();
+    let NumVs = Number(item.vs).toLocaleString();
+    let NumFltRt = Number(item.fltRt).toLocaleString(); 
+    function formatDate(dateStr) {
+      const year = dateStr.slice(0, 4);
+      const month = dateStr.slice(4, 6);
+      const day = dateStr.slice(6, 8);
+
+      const shortYear = year.slice(2);
+
+      return `${shortYear}/${month}/${day}`;
+    }
+
       tableContent += `
-          <tr>
-              <td>${item.clpr}</td>
-              <td>${item.vs}</td>
-              <td>${item.fltRt}</td>
-          </tr>
+          <div class="stock-cell">
+            <h4>아모레퍼시픽</h4>
+            <span>${formatDate(item.basDt)}</span>
+          </div>
+          <div class="stock-cell">
+            <i class="price">${NumClpr}</i>
+            <span class="state">
+              <b>-${NumVs}</b>
+              <i>(-${NumFltRt}%)</i>
+            </span>
+          </div>
       `;
   });
-  $('#stockTable tbody').html(tableContent);
+  $('#stock-box').html(tableContent);
 })
-*/
 
 /* MAIN BANNER - 한태희
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -183,7 +200,7 @@ videos.forEach(function(video, index) {
  let brandButton = $('#brand .slider').slick({
   arrows:false,
   dots: false,
-  infinite: false,
+  infinite:true,
   speed: 300,
   slidesToShow: 1,
   centerMode: true,
