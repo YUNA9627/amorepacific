@@ -35,12 +35,20 @@ goToTop.click(function(e){
   $('html, body').css('scroll-behavior', 'smooth');
 })
 
-$('.searchBtn').click(function(){
+$('.search-button').click(function(){
   header.toggleClass('open');
+  if(header.hasClass('open')){
+    $('.hamburger-button').css({"visibility":"hidden"});
+  }else{
+    $('.hamburger-button').css({"visibility":"visible"});
+  }
 });
 
 $('.header_overlay').click(function(){
   header.removeClass('open');
+  if(!header.hasClass('open')){
+    $('.hamburger-button').css({"visibility":"visible"});
+  }
 });
 
 $('.hamburger-button').click(function(){
