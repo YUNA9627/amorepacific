@@ -763,8 +763,10 @@ main .news{
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
 .sustain {
   background: url('../images/sustain_bg.png') center/cover no-repeat;
+  width: 100%;
   color: var(--white);
   position: relative;
+
   >::after {
     content: '';
     position: absolute;
@@ -789,15 +791,19 @@ main .news{
     margin-bottom: 100px;
   }
 
-  .col-6 p {
+  .col-md-6 p {
     width: 526px;
   }
 
-  .col-6 .btn_more {
+  .col-md-6 .btn_more {
     margin-top: 120px;
   }
 
-  .col-3 {
+  .btn_more_sm {
+    display: none;
+  }
+
+  .col-md-3 {
     text-align: center;
     transition: .3s;
     background: rgba(255, 255, 255, 0);
@@ -805,11 +811,11 @@ main .news{
     padding-left: 0;
   }
 
-  .col-3:hover {
+  .col-md-3:hover {
     background: rgba(255, 255, 255, .15);
   }
 
-  .col-3 > a {
+  .col-md-3>a {
     display: block;
     height: 100%;
     padding: 143px 0 0;
@@ -817,21 +823,22 @@ main .news{
     color: var(--white);
   }
 
-  .col-3 h4 {
+  .col-md-3 h4 {
     margin-bottom: 189px;
   }
 
-  .col-3 p {
+  .col-md-3 p {
     width: 240px;
     margin: 0 auto;
   }
 
-  .col-3 .bi-download::before{
+  .col-md-3 .bi-download::before {
     font-size: 3rem;
     color: var(--white);
   }
 
 }
+
 
 /* EMPLOY - 강현주
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
