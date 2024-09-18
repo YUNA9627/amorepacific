@@ -791,12 +791,12 @@ main .news{
     margin-bottom: 100px;
   }
 
-  .col-md-6 p {
+  .st_con1 p {
     max-width: 526px;
     width: 90%;
   }
 
-  .col-md-6 .btn_more {
+  .st_con1 .btn_more {
     margin-top: 120px;
   }
 
@@ -804,7 +804,7 @@ main .news{
     display: none;
   }
 
-  .col-md-3 {
+  .st_right {
     text-align: center;
     transition: .3s;
     background: rgba(255, 255, 255, 0);
@@ -812,29 +812,29 @@ main .news{
     padding-left: 0;
   }
 
-  .col-md-3:hover {
+  .st_right:hover {
     background: rgba(255, 255, 255, .15);
   }
 
-  .col-md-3>a {
+  .st_right>a {
     display: block;
     height: 100%;
     box-sizing: border-box;
     color: var(--white);
   }
 
-  .col-md-3 h4 {
+  .st_right h4 {
     margin-top: 72px;
     margin-bottom: 260px;
   }
 
-  .col-md-3 p {
+  .st_right p {
     max-width: 240px;
     width: 90%;
     margin: 0 auto;
   }
 
-  .col-md-3 .bi-download::before {
+  .st_right .bi-download::before {
     font-size: 3rem;
     color: var(--white);
   }
