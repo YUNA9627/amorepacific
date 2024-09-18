@@ -847,7 +847,7 @@ main .news{
   content: '';
   display: block;
   background: linear-gradient(to left, rgba(6, 44, 94, 0) 0%, #062C5E 80%, #062C5E 100%);
-  width: 1200px;
+  width: 100%;
   height: 320px;
   border-radius: 25px;
 }
