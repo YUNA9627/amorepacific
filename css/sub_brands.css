@@ -40,7 +40,6 @@ h2::before{
 h2::after{
     left: calc(50% + 140px);
 }
-
 h3{
     font-family: 'Arita buri';
     font-weight: 700;
@@ -85,6 +84,7 @@ p{
 }
 .gallery .item:hover{
     background: var(--white);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
 }
 
 @media (max-width:768px){
@@ -106,5 +106,4 @@ p{
     p{
         font-size: 1rem;
     }
-
 }
