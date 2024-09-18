@@ -40,6 +40,7 @@
 
   /* SUSTAIN */
   .sustain {
+    background-image: url(../images/sustain_bg_tb.jpg);
     .container-md {
       --bs-gutter-x: 0;
     }
@@ -76,10 +77,17 @@
         margin-left: 2px;
       }
     }
-
-    .st_con2 {
+    .st_con2{
       border-right: 1px solid rgba(255, 255, 255, .5);
-      padding: 108px 0 90px;
+    }
+    .st_con2, .st_con3{
+      a{
+        padding: 108px 0 90px;
+      }
+      h4{
+        margin-top: 0;
+        margin-bottom: 109px;
+      }
     }
 
     .col-md-6 p {
@@ -228,6 +236,19 @@
   .brands_wrapper ul li img {
     padding: 0 53px;
   }
+
+    /* SUSTAIN */
+    .sustain {
+      background-image: url(../images/sustain_bg_mb.jpg);
+      .col-md-6 p{
+        display: none;
+      }
+      .st_con2{
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, .5);
+      }
+    }
+    
 
   /* employ */
   #em {
