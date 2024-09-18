@@ -89,7 +89,7 @@ body {
   }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 576px) {
   .sec_title_lg {
     font-size: 1.75rem;
   }

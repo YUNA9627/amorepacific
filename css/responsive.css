@@ -243,9 +243,32 @@
       .col-md-6 p{
         display: none;
       }
+      .st_con1 {
+        padding: 62px 10%;
+  
+        h2 {
+          margin-bottom: 0;
+          font-size: 2rem;
+          line-height: 1;
+        }
+        .btn_more_sm{
+          right: 10%;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
       .st_con2{
         border-right: none;
         border-bottom: 1px solid rgba(255, 255, 255, .5);
+      }
+      .st_con2, .st_con3 {
+        a {
+            padding: 62px 0;
+        }
+        h4{
+          margin-bottom: 40px;
+          font-size: 1.25rem;
+        }
       }
     }
     
