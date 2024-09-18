@@ -1,10 +1,6 @@
 /* HEADER - 배유나
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-@media (max-width: 1024px){
-  nav {display: none;}
-}
-
 header {
   background-color: none;
   position: fixed;
@@ -90,15 +86,17 @@ header {
 
 .header .content .sns_wrapper ul li a,
 .header .content .sns_wrapper ul li a i,
-.search_area .searchBtn {vertical-align: middle;
+.search-button {
   i {visibility: visible;}
 }
 
-.search_area .hamburger-button {
+.search-button {background: none; border: none; cursor: pointer;}
+
+.search-button .x-button {
   display: none; position: relative;
   width: 16px; height: 16px; 
 }
-.search_area .hamburger-button span {
+.search-button .x-button span {
   position: absolute;
   left: 0;
   width: 100%;
@@ -107,19 +105,19 @@ header {
   background: var(--black);
 }
 
-.search_area .hamburger-button span:nth-child(1){
+.search-button .x-button span:nth-child(1){
   top: 0; opacity: 0;
 }
 
-.search_area .hamburger-button span:nth-child(2){
+.search-button .x-button span:nth-child(2){
   top: 7px; transform:rotate(45deg);
 }
 
-.search_area .hamburger-button span:nth-child(3){
+.search-button .x-button span:nth-child(3){
   top: 7px; transform:rotate(-45deg);
 }
 
-.search_area .hamburger-button span:nth-child(4){
+.search-button .x-button span:nth-child(4){
   top: 14px; opacity: 0;
 }
 
@@ -131,6 +129,38 @@ header {
   cursor: pointer;
   background: none;
   border: none;
+}
+
+.hamburger-button {
+  border: none; background: none; display: none;
+  position: relative; width: 20px; height: 16px; cursor: pointer;
+  vertical-align: middle; margin: 6px 0;
+}
+
+.hamburger-button span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  border-radius: 1px;
+  background: var(--white);
+  vertical-align: top;
+}
+
+.hamburger-button span:nth-child(1){
+  top: 0;
+}
+
+.hamburger-button span:nth-child(2){
+  top: 7px;
+}
+
+.hamburger-button span:nth-child(3){
+  top: 7px;
+}
+
+.hamburger-button span:nth-child(4){
+  top: 14px;
 }
 
 .search_wrapper {
@@ -293,15 +323,15 @@ nav {position: absolute; left: 0; right: 0; bottom: 0;}
 
 #stock-box .stock-cell:first-child {padding-left: 10px;}
 
-header.shrink {background: var(--primary);}
+header.shrink {background: var(--primary); padding: 5px 0;}
 .shrink .header {height: 54px; justify-content: space-between; padding-top: 0;}
-.shrink .header .logo {top: 0; left: 0; transform: none;}
+.shrink .header .logo {top: 0; left: 0; transform: none; position: static;}
 .shrink .header .logo a {padding: 19px 0;}
 .shrink .header .logo a .logo_wh {max-width: 170px; display: block;}
 .shrink .header .logo a .logo_bk {max-width: 170px; display: none;}
-.shrink .content_wrapper {justify-content: flex-end; right: 0; padding: 14px 0;}
+.shrink .content_wrapper {justify-content: flex-end; right: 0; padding: 19px 0; position: static; margin: 0;}
 .shrink .language_area, .shrink .content .sns_wrapper {display: none;}
-.shrink nav {top: 0;}
+.shrink nav {top: 0; padding: 5px 0;}
 .shrink .gnb {display: block;}
 .shrink .gnb > li {display: inline-block;}
 .shrink .gnb > li > a {font-size: 1rem; padding: 14px 10px;}
@@ -314,8 +344,8 @@ header.shrink {background: var(--primary);}
 .open .header * {color: var(--black);}
 .open nav .gnb .gnb-item > a {color: var(--black);}
 .open .header .content .sns_wrapper {display: none;}
-.open .header .content_wrapper .searchBtn i {display: none;}
-.open .header .content_wrapper .searchBtn .hamburger-button {display: block;}
+.open .header .content_wrapper .content .search-button i {display: none;}
+.open .header .content_wrapper .content .search-button .x-button {display: block;}
 .open .header_overlay {visibility: visible; opacity: 1;}
 
 .gnb-item.active > a {color: var(--secondary);}
@@ -326,6 +356,32 @@ header.shrink {background: var(--primary);}
 header:hover {background-color: var(--primary);}
 .gnb .gnb-item .lnbBg .lnbInner .lnb li a:hover {
   color: var(--black); text-decoration: underline;
+}
+
+@media (max-width: 1024px) {
+  header {padding: 5px 0;}
+  .header {height: 54px; justify-content: space-between; padding-top: 0;}
+  .header .content_wrapper {padding: 13px 0;}
+  .header .content_wrapper .language {visibility: hidden; opacity: 0;}
+  .header .logo {top: 0; left: 0; transform: none; position: static;}
+  .header .logo a {padding: 19px 0;}
+  .header .logo a .logo_wh {max-width: 170px; display: block;}
+  .header .logo a .logo_bk {max-width: 170px; display: none;}
+  .header .content_wrapper .content .sns_wrapper {display: none;}
+  nav {display: none;}
+  .header .content {gap: 15px;}
+  .hamburger-button {display: block;}
+}
+
+.resize_gnb {position: fixed; top: 0; right: 0; bottom: 0;}
+.resize_gnb .resize_gnb_inner {
+  display: flex;
+  background: var(--white);
+  width: 568px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 /* MAIN BANNER - 한태희
