@@ -792,7 +792,8 @@ main .news{
   }
 
   .col-md-6 p {
-    width: 526px;
+    max-width: 526px;
+    width: 90%;
   }
 
   .col-md-6 .btn_more {
@@ -818,17 +819,18 @@ main .news{
   .col-md-3>a {
     display: block;
     height: 100%;
-    padding: 143px 0 0;
     box-sizing: border-box;
     color: var(--white);
   }
 
   .col-md-3 h4 {
-    margin-bottom: 189px;
+    margin-top: 72px;
+    margin-bottom: 260px;
   }
 
   .col-md-3 p {
-    width: 240px;
+    max-width: 240px;
+    width: 90%;
     margin: 0 auto;
   }
 
