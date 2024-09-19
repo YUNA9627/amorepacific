@@ -1,2 +1,7 @@
-$('.gnb-item').addClass('active');
-$('.header_overlay').addClass('active');
+const commitsBg = $('.commits_bg');
+
+$(window).scroll(function(){
+    commitsBg.css({
+        width: '100%'
+    })
+});
