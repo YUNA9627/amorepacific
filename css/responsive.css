@@ -1,5 +1,7 @@
 /* Laptop-small –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
 @media (max-width: 1200px) {
+/* HEADER */
+.header {max-width: 1140px;}
 /* BRANDS */
 .brands_wrapper ul li img {
   padding: 0 40px 0 45px;
@@ -8,6 +10,7 @@
   font-size: 1.875rem;
 }
 }
+
 @media (max-width: 992px) {
 
   .sustain {
@@ -74,6 +77,12 @@
 /* Tablet –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
 @media (max-width: 768px) {
   /* HEADER */
+  .header {max-width: 720px;}
+
+  /* MAIN BANNER */
+  .video_content {
+    left: 15%; 
+  }
 
   /* BRANDS */
   #brand {
@@ -172,9 +181,6 @@
     }
   }
 
-
-
-
   /* employ */
   #em {
     margin: 0 24px;
@@ -221,7 +227,7 @@
   }
 
   .footer_menu .other ul {
-    gap: 60px;
+    gap: 20px;
   }
 
   .footer_menu .other ul li ul li {
@@ -257,6 +263,15 @@
 
 /* Mobile –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
 @media (max-width: 576px) {
+  /* HEADER */
+  aside .resize_gnb .resize_gnb_inner {
+    width: 100%;
+  }
+
+  /* MAIN BANNER */
+  .video_content {
+    left: 15%;
+  }
 
   /* BRANDS */
   #brand {
