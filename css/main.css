@@ -887,6 +887,8 @@ main .news{
 /* SNS - 배유나
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
 
+.sns_wrap .sns_slide {left: -12px;}
+
 .sns_wrap .sns_slide li {margin-left: 24px;}
 
 .video_slide {
@@ -929,11 +931,11 @@ main .news{
 }
 
 .slick-prev {
-  left: -20px;
+  left: -10px;
 }
 
 .slick-next {
-  right: -20px;
+  right: -30px;
 }
 
 /* SUSTAIN - 홍은진
