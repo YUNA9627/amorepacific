@@ -52,7 +52,8 @@ $('.header_overlay').click(function(){
 });
 
 $('.hamburger-button').click(function(){
-  $(this).toggleClass('active');
+  $(this).toggleClass('open');
+  $('aside').addClass('open');
 })
 
 $('.gnb-item').mouseenter(function(){
