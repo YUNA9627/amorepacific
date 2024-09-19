@@ -6,7 +6,7 @@
 @import url('https://webfontbox.github.io/Arita/font.min.css');
 
 /*
-font-family: 'Pretendard'; font-weight: 400,500,600;
+font-family: 'Pretendard'; font-weight: 300,400,500,600;
 font-family: 'Arita'; font-weight: 300,400,500,600,700;
 font-family: 'Arita buri'; font-weight: 400,500,600;
 */
@@ -14,7 +14,7 @@ font-family: 'Arita buri'; font-weight: 400,500,600;
 /*
   VARIABLES
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
-:root{
+:root {
   --primary: #062C5E;
   --secondary: #7CA7DE;
   --black: #161616;
@@ -23,71 +23,86 @@ font-family: 'Arita buri'; font-weight: 400,500,600;
   --light-gray: #C7C7C7;
   --bg-gray: #F5F5F5;
   --white: #FFFFFF;
-  --font:1rem;
-  --lh:1.625;
+  --font: 1rem;
+  --lh: 1.625;
 }
 
 /*
   TYPOGRAPHY
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
-body{
+body {
   font-family: 'Arita', '돋움', sans-serif;
   font-weight: 500;
   line-height: var(--lh);
   letter-spacing: -0.01em;
+  color: var(--black);
 }
-.sec_title_lg{
+
+.sec_title_lg {
   font-family: 'Arita buri';
   font-size: 2.625rem;
   font-weight: 700;
 }
-.sec_title_sm{
+
+.sec_title_sm {
   font-family: 'Arita buri';
-  font-size: 1.625rem ;
+  font-size: 1.625rem;
   font-weight: 700;
 }
-.sec_desc_md{
+
+.sec_desc_md {
   font-size: 1.25rem;
-  font-weight: 300; 
+  font-weight: 300;
 }
-.con_title_lg{
-  font-size: 2.25rem;
+
+.con_title_lg {
+  font-size: 2.125rem;
   font-weight: 600;
 }
-.con_title_sm{
+
+.con_title_sm {
   font-size: 1.875rem;
   font-weight: 600;
 }
-.con_desc_md{
+
+.con_desc_md {
   font-family: 'Pretendard';
   font-size: 1rem;
   font-weight: 400;
 }
-@media (max-width: 768px){
-  .sec_title_lg{
+
+@media (max-width: 768px) {
+  .sec_title_lg {
     font-size: 2.25rem;
   }
-  .sec_desc_md{
+
+  .sec_desc_md {
     font-size: 1.125rem;
   }
-  .con_title_lg{
+
+  .con_title_lg {
     font-size: 2rem;
   }
-  .con_title_sm{
+
+  .con_title_sm {
     font-size: 1.75rem;
   }
 }
-@media (max-width: 360px){
-  .sec_title_lg{
+
+@media (max-width: 576px) {
+  .sec_title_lg {
     font-size: 1.75rem;
   }
-  .sec_desc_md{
+
+  .sec_desc_md {
     font-size: 1rem;
   }
-  .con_title_lg{
+
+  .con_title_lg {
     font-size: 1.25rem;
   }
-  .con_title_sm{
+
+  .con_title_sm {
     font-size: 1.125rem;
   }
 }
@@ -95,17 +110,18 @@ body{
 /*
   LAYOUT
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
-.pd1{
+.pd1 {
   padding: 143px 0 143px 0;
 }
-.pd2{
+
+.pd2 {
   padding: 143px 0 88px 0;
 }
 
 /*
   BUTTON
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
-.btn_more{
+.btn_more {
   display: inline-block;
   width: 168px;
   height: 58px;
@@ -118,11 +134,12 @@ body{
   line-height: 58px;
   transition: 0.3s;
 }
-.btn_more i{
+
+.btn_more i {
   margin-left: 40px;
 }
 
-.btn_more i::before{
+.btn_more i::before {
   transition: 0.1s;
 }
 
@@ -132,16 +149,17 @@ body{
   border: 1px solid var(--primary);
 }
 
-.btn_more:hover i::before{
+.btn_more:hover i::before {
   transform: translateX(4px);
 }
 
-.btn_more.btn_more_w{
+.btn_more_w {
   color: var(--white);
   border-color: var(--white);
   border-width: 2px;
 }
-.btn_more.btn_more_w:hover{
+
+.btn_more_w:hover {
   background: rgba(255, 255, 255, 0.8);
   color: var(--black);
 }
