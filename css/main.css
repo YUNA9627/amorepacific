@@ -2,7 +2,7 @@
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 header {
-  background-color: none;
+  background-color: none; 
   position: fixed;
   top: 0;
   z-index: 100;
@@ -14,25 +14,25 @@ header {
 }
 
 .header {
-  padding-top: 10px; height: 135px;
-  display: flex; align-items: flex-start; position: relative;
+  padding-top: 10px; height: 135px; max-width: 1320px; margin: 0 auto;
+  display: flex; position: relative; padding: 0.3125rem 2rem;
   .logo {
     position: absolute; z-index: 20;
     left: 50%; transform: translateX(-50%);
-    a {display: block; padding: 20px;
+    a {display: inline-block; padding: 18px 0;
       .logo_wh {display: block;}
       .logo_bk {display: none;}
     }
   }
   .content_wrapper {
-    position: absolute;
+    width: 100%;
+    height: 54px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 16px 0;
     margin: 0 auto;
     z-index: 10;
-    transition: 0.5s linear;
+    transition: width 0.5s linear;
   }
 }
 
@@ -134,7 +134,7 @@ header {
 .hamburger-button {
   border: none; background: none; display: none;
   position: relative; width: 20px; height: 16px; cursor: pointer;
-  vertical-align: middle; margin: 6px 0;
+  vertical-align: middle;
 }
 
 .hamburger-button span {
@@ -164,19 +164,21 @@ header {
 }
 
 .search_wrapper {
-  visibility: hidden;
-  opacity: 0;
   background-color: rgba(255,255,255,.9);
   backdrop-filter: blur(40px);
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 8rem 0;
-  transition: 0.3s;
+  /* height: 354px; */
+  height: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s ease;
 }
 
-.search_wrapper .search_box {padding: 1rem 0;}
+.search_wrapper .search_box {padding: 1rem 0; margin: 8rem auto; opacity: 0;
+  visibility: hidden; transition: 0.3s ease;}
 
 .search_wrapper .search_box .searchWideBar {
   position: relative;
@@ -323,20 +325,18 @@ nav .gnb .gnb-item .lnbBg .lnbInner {
 
 #stock-box .stock-cell:first-child {padding-left: 10px;}
 
-header.shrink {background: var(--primary); padding: 5px 0;}
-.shrink .header {height: 54px; justify-content: space-between; padding-top: 0;}
+header.shrink {background: var(--primary);}
+.shrink .header {height: 54px; justify-content: space-between; padding-top: 0; padding: 0.3125rem 2rem;}
 .shrink .header .logo {top: 0; left: 0; transform: none; position: static;}
-.shrink .header .logo a {padding: 19px 0;}
 .shrink .header .logo a .logo_wh {max-width: 170px; display: block;}
 .shrink .header .logo a .logo_bk {max-width: 170px; display: none;}
-.shrink .content_wrapper {justify-content: flex-end; right: 0; padding: 19px 0; position: static; margin: 0;}
+.shrink .content_wrapper {width: auto; justify-content: flex-end; right: 0; position: static; margin: 0;}
 .shrink .language_area, .shrink .content .sns_wrapper {display: none;}
-.shrink nav {top: 0; padding: 5px 0;}
-.shrink .gnb {display: block;}
-.shrink .gnb > li {display: inline-block;}
-.shrink .gnb > li > a {font-size: 1rem; padding: 14px 10px;}
+.shrink nav {top: 0;}
+.shrink .gnb > li > a {font-size: 1rem; padding: 19px 10px;}
 
-.open .search_wrapper {visibility: visible; opacity: 1;}
+.open .search_wrapper {visibility: visible; opacity: 1; height: 354px;}
+.open .search_wrapper .search_box {visibility: visible; opacity: 1;}
 .open nav {display: none;}
 .open .language {visibility: hidden; opacity: 0;}
 .open .header .logo a .logo_wh {display: none;}
@@ -348,9 +348,12 @@ header.shrink {background: var(--primary); padding: 5px 0;}
 .open .header .content_wrapper .content .search-button .x-button {display: block;}
 .open .header_overlay {visibility: visible; opacity: 1;}
 
-html.navOpen {overflow: hidden;}
+
 aside.navOpen {display: block;}
-aside.navOpen .resize_gnb .resize_gnb_inner .content_wrap {width: 100%;}
+aside.navOpen .resize_gnb .resize_gnb_inner .content_wrap {
+  width: 100%; height: 64px;
+}
+aside.navOpen .language_area .lang_list {color: var(--black);}
 
 aside.navOpen:after {visibility: visible; opacity: 1;}
 
@@ -369,9 +372,7 @@ nav .gnb .gnb-item .lnbBg .lnbInner .lnb li a:hover {
 }
 
 @media (max-width: 1024px) {
-  header {padding: 5px 0;}
-  .header {height: 54px; justify-content: space-between; padding-top: 0;}
-  .header .content_wrapper {padding: 13px 0;}
+  .header {height: 54px; justify-content: space-between;}
   .header .content_wrapper .language {visibility: hidden; opacity: 0;}
   .header .logo {top: 0; left: 0; transform: none; position: static;}
   .header .logo a {padding: 19px 0;}
@@ -389,7 +390,6 @@ aside:after {
   position: fixed;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  pointer-events: none;
   visibility: hidden; opacity: 0; z-index: 100;
   background-color: rgba(0, 0, 0, .4);
 }
@@ -403,26 +403,27 @@ aside .resize_gnb .resize_gnb_inner {
   position: absolute;
   top: 0;
   right: 0;
+  box-sizing: border-box;
 }
 aside .resize_gnb .resize_gnb_inner .content_wrap {
   display: flex; gap: 24px; justify-content: flex-end; align-items: center;
+  padding: 0 2rem; box-sizing: border-box;
 }
 
 aside .resize_gnb .resize_gnb_inner .gnb {display: flex; width: 100%;}
 .resize_gnb_inner .gnb .gnb_list {width: 100%;}
+.resize_gnb_inner .gnb .gnb_list .gnb_item {padding: 18px 20px;}
 
 .resize_gnb_inner .gnb .gnb_list .gnb_item > a {
   font-family: 'Arita buri'; font-weight: 700; font-size: 1.25rem; color: var(--light-gray);
   display: block; position: relative;
 }
 .resize_gnb_inner .gnb .gnb_list .gnb_item > a:after {
-  content: "\f282"; font-family: bootstrap-icons; font-weight: 500; font-size: 1rem;
+  content: "\f282"; font-family: bootstrap-icons; font-weight: 600; font-size: 1rem;
   position: absolute; right: 0;
 }
 
-.resize_gnb .gnb_item .lnb_list {
-  height: 0; overflow: hidden;
-}
+.resize_gnb .gnb_item .lnb_list {height: 0; overflow: hidden;}
 
 .content_wrap .x-button {
   position: relative;
@@ -476,10 +477,6 @@ aside .resize_gnb .resize_gnb_inner .gnb {display: flex; width: 100%;}
   height: 100%;
   width: 100%;
 }
-.slide .video_content{
-  z-index: 10;
-  position:relative;
-}
 .slide:after{
   content: '';
   position: absolute;
@@ -496,12 +493,14 @@ aside .resize_gnb .resize_gnb_inner .gnb {display: flex; width: 100%;}
   object-fit: cover;
 }
 .video_content{
-  position: absolute;
-  top: 60%;
-  left: 140px;
+  position:absolute;
+  top: 40%;
+  left: 10%;
   color:var(--white);
   font-family: 'Arita buri';
   font-weight: 500;
+  z-index: 10;
+  transition: left 0.3s linear;
 }
 .video_content h3{
   font-size: 1.25rem;
@@ -527,29 +526,21 @@ aside .resize_gnb .resize_gnb_inner .gnb {display: flex; width: 100%;}
 .main_banner .buttons{
   position: absolute;
   bottom: 60px;
-  left: 140px;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
-  gap: 15px;
-}
-.progress-btn {
-  border: none;
-  background: none; 
-  padding: 0;
-  opacity: 65%;
-}
-progress {
-  width: 80px;
-  height: 10px;
+  gap: 10px;
 }
 .progress-btn {
   width: 80px;
-  height: 10px;
+  height: 4px;
   border: none;
   background: rgba(255, 255, 255, .5);
   padding: 0;
   position: relative;
-  border-radius:5px;
+  border-radius: 2px;
   overflow:hidden;
+  opacity: 65%;
 }
 .progress-btn span{
   position: absolute;
@@ -587,10 +578,10 @@ progress {
   position: absolute;
   top: 0;
   left: -50%;
-  width: 35%;
+  width: 55%;
   height: 100%;
   background-color: white;
-  animation: mainScroll 1s infinite linear;
+  animation: mainScroll 0.3s infinite;
 }
 @keyframes mainScroll {to{left: 100%;}}
 
@@ -1020,7 +1011,7 @@ main .news{
 
 .sns_wrap .sns_slide {left: -12px;}
 
-.sns_wrap .sns_slide li {margin-left: 24px;}
+.sns_wrap .sns_slide li {margin-left: 24px; margin-right: auto;}
 
 .video_slide {
   position: relative;
@@ -1062,11 +1053,11 @@ main .news{
 }
 
 .slick-prev {
-  left: -10px;
+  left: 24px;
 }
 
 .slick-next {
-  right: -30px;
+  right: 0;
 }
 
 /* SUSTAIN - 홍은진
