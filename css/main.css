@@ -832,6 +832,7 @@ main .news{
   right: 100%;
   /* left: calc(100% - 5px); */
 }
+/*brand logo slide */
 .brands_wrapper {
   position: relative;
 }
@@ -840,11 +841,11 @@ main .news{
 }
 .brands_wrapper ul {
   display: flex;
-  width: 3360px;
+  /* width: 3360px; */
   padding-top: 50px;
 }
 .brands_wrapper ul li{
-  width: 336px;
+  /* width: 336px; */
   border-right: 1px solid var(--light-gray);
 }
 .brands_wrapper ul li img {
