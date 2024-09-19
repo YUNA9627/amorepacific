@@ -4,13 +4,7 @@
 @import url('https://webfontbox.github.io/Arita/font.min.css');
 
 :root{
-  --primary: #062C5E;
-  --secondary: #7CA7DE;
   --black: #161616;
-  --dark-gray: #666666;
-  --medium-gray: #868686;
-  --light-gray: #C7C7C7;
-  --bg-gray: #F5F5F5;
   --white: #FFFFFF;
 }
 
@@ -60,9 +54,10 @@ p{
     margin: 0 auto;
 }
 .gallery .item{
-    width: 23%;
-    margin-bottom: 10px;
+    width: 24%;
     position: relative;
+    margin: 0 0.5%;
+    margin-bottom: 10px;
 }
 .gallery .item img{
     width: 100%;
@@ -90,12 +85,14 @@ p{
 @media (max-width:768px){
     .gallery .item{
         width: 46%;
+        margin: 0 4%;
     }
 
 }
 @media (max-width:567px){
     .gallery .item{
         width: 99%;
+        margin: 0 1%;
     }
     h2{
         font-size: 1.25rem;
