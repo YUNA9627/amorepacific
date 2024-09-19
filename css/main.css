@@ -348,6 +348,9 @@ header.shrink {background: var(--primary); padding: 5px 0;}
 .open .header .content_wrapper .content .search-button .x-button {display: block;}
 .open .header_overlay {visibility: visible; opacity: 1;}
 
+aside.open {display: block;}
+aside.open:after {visibility: visible; opacity: 1;}
+
 .gnb-item.active > a {color: var(--secondary);}
 .gnb-item.active > a:before {opacity: 1; transform: scaleX(1);}
 .gnb-item.active .lnbBg {visibility: visible; opacity: 1;}
@@ -373,8 +376,18 @@ header:hover {background-color: var(--primary);}
   .hamburger-button {display: block;}
 }
 
-.resize_gnb {position: fixed; top: 0; right: 0; bottom: 0; display: none;}
-.resize_gnb .resize_gnb_inner {
+aside {display: none;}
+aside:after {
+  content: ''; display: block;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  visibility: hidden; opacity: 0; z-index: 100;
+  background-color: rgba(0, 0, 0, .4);
+}
+aside .resize_gnb {position: fixed; top: 0; right: 0; bottom: 0; z-index: 110;}
+aside .resize_gnb .resize_gnb_inner {
   display: flex;
   background: var(--white);
   width: 568px;
@@ -874,10 +887,7 @@ main .news{
 /* SNS - 배유나
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-.slick-track {
-  display: flex;
-  gap: 24px;
-}
+.sns_wrap .sns_slide li {margin-left: 24px;}
 
 .video_slide {
   position: relative;
