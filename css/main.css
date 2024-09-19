@@ -708,8 +708,6 @@ main .news{
     grid-template-areas: 
     'a a b c'
     'a a d e'
-    'f g j j'
-    'h i j j'
   }
   li{
     border-radius: 20px;
@@ -774,23 +772,23 @@ main .news{
     background-image: url(../images/story_thumb1_bg4.jpg);
   }
   .st_list_6{
-    grid-area: f;
+    grid-area: a;
     background-image: url(../images/story_thumb2_bg1.jpg);
   }
   .st_list_7{
-    grid-area: g;
+    grid-area: b;
     background-image: url(../images/story_thumb2_bg2.jpg);
   }
   .st_list_8{
-    grid-area: h;
+    grid-area: c;
     background-image: url(../images/story_thumb2_bg3.jpg);
   }
   .st_list_9{
-    grid-area: i;
+    grid-area: d;
     background-image: url(../images/story_thumb2_bg4.jpg);
   }
   .st_list_10{
-    grid-area: j;
+    grid-area: e;
     background-image: url(../images/story_bg2.jpg);
   }
   .btn_more{
