@@ -222,7 +222,7 @@ $('.button .next').click(function(){
 })
 
 
-$('.row').slick({
+$('.brand_row').slick({
   slidesToShow: 4,
   slidesToScroll: 1,
   infinite: true,
