@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Investors | Amorepacific</title>
   <link rel="stylesheet" href="css/common.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="css/sub_investors.css">
 </head>
 <body>
@@ -16,123 +17,333 @@
         <p>IR Reports</p>
       </div>
       <div class="tab_title">
-        <div>
-          <div>
-            <ul>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="">
-        <span></span>
-      </div>
-      <div class="sub_content">
-        <div class="">
-          <table class="">
-            <thead>
-              <tr>
-                <th class="th_date">등록일</th>
-                <th class="th_title">제목</th>
-                <th class="th_ko_download">국문<br>(Kor)</th>
-                <th class="th_en_download">영문<br>(Eng)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="td_date">2024-08-06</td>
-                <td class="td_title">아모레퍼시픽 2024년 2/4분기 경영실적</td>
-                <td class="td_kr"></td>
-                <td class="td_en"></td>
-              </tr>
-              <tr>
-                <td class="td_date">2024-04-29</td>
-                <td class="td_title">아모레퍼시픽 2024년 1/4분기 경영실적</td>
-                <td class="td_kr"></td>
-                <td class="td_en"></td>
-              </tr>
-              <tr>
-                <td class="td_date">2024-01-30</td>
-                <td class="td_title">아모레퍼시픽 2023년 4/4분기 경영실적</td>
-                <td class="td_kr"></td>
-                <td class="td_en"></td>
-              </tr>
-              <tr>
-                <td class="td_date">2023-10-31</td>
-                <td class="td_title">아모레퍼시픽 2023년 3/4분기 경영실적</td>
-                <td class="td_kr"></td>
-                <td class="td_en"></td>
-              </tr>
-              <tr>
-                <td class="td_date">2023-07-26</td>
-                <td class="td_title">아모레퍼시픽 2023년 2/4분기 경영실적</td>
-                <td class="td_kr"></td>
-                <td class="td_en"></td>
-              </tr>
-              <tr>
-                <td class="td_date">2023-05-02</td>
-                <td class="td_title">아모레퍼시픽 2023년 1/4분기 경영실적</td>
-                <td class="td_kr"></td>
-                <td class="td_en"></td>
-              </tr>
-              <tr>
-                <td class="td_date">2023-02-01</td>
-                <td class="td_title">아모레퍼시픽 2022년 4/4분기 경영실적</td>
-                <td class="td_kr"></td>
-                <td class="td_en"></td>
-              </tr>
-              <tr>
-                <td class="td_date">2022-10-31</td>
-                <td class="td_title">아모레퍼시픽 2022년 3/4분기 경영실적</td>
-                <td class="td_kr"></td>
-                <td class="td_en"></td>
-              </tr>
-              <tr>
-                <td class="td_date">2022-07-28</td>
-                <td class="td_title">아모레퍼시픽 2022년 2/4분기 경영실적</td>
-                <td class="td_kr"></td>
-                <td class="td_en"></td>
-              </tr>
-              <tr>
-                <td class="td_date">2022-04-28</td>
-                <td class="td_title">아모레퍼시픽 2022년 1/4분기 경영실적</td>
-                <td class="td_kr"></td>
-                <td class="td_en"></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-      <div class="list_pagination">
         <ul>
-          <li>
-            <a href=""></a>
-          </li>
-          <li>
-            <a href=""></a>
-          </li>
-          <li>
-            <a href="">1</a>
-          </li>
-          <li>
-            <a href="">2</a>
-          </li>
-          <li>
-            <a href="">3</a>
-          </li>
-          <li>
-            <a href=""></a>
-          </li>
-          <li>
-            <a href=""></a>
-          </li>
+          <li>실적발표</li>
+          <li>사업보고서</li>
+          <li>영업보고서</li>
+          <li>기타 IR자료</li>
         </ul>
       </div>
+      <!-- <div class="year">
+        <div class="year_list">
+          <ul>
+            <li>2019</li>
+            <li>2020</li>
+            <li>2021</li>
+            <li>2022</li>
+            <li>2023</li>
+            <li>2024</li>
+          </ul>
+        </div>
+        <button class="prev sec_desc_md"><i class="bi bi-chevron-down"></i></button>
+      </div> -->
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+          2024
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+          <li><button class="dropdown-item" type="button">2020</button></li>
+          <li><button class="dropdown-item" type="button">2021</button></li>
+          <li><button class="dropdown-item" type="button">2022</button></li>
+          <li><button class="dropdown-item" type="button">2023</button></li>
+          <li><button class="dropdown-item" type="button">2024</button></li>
+        </ul>
+      </div>
+      <div class="container">
+        <table class="table table-hover">
+          <thead class=" table-light">
+            <tr>
+              <th class="th_date">등록일</th>
+              <th class="th_title">제목</th>
+              <th class="th_ko_download">다운로드<br>(Download)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="td_date">2024-08-06</td>
+              <td class="td_title">아모레퍼시픽 2024년 2/4분기 경영실적</td>
+              <td class="td_dl"><i class="bi bi-download"></i></td>
+            </tr>
+            <tr>
+              <td class="td_date">2024-04-29</td>
+              <td class="td_title">아모레퍼시픽 2024년 1/4분기 경영실적</td>
+              <td class="td_dl"><i class="bi bi-download"></i></td>
+            </tr>
+            <tr>
+              <td class="td_date">2024-01-30</td>
+              <td class="td_title">아모레퍼시픽 2023년 4/4분기 경영실적</td>
+              <td class="td_dl"><i class="bi bi-download"></i></td>
+            </tr>
+            <tr>
+              <td class="td_date">2023-10-31</td>
+              <td class="td_title">아모레퍼시픽 2023년 3/4분기 경영실적</td>
+              <td class="td_dl"><i class="bi bi-download"></i></td>
+            </tr>
+            <tr>
+              <td class="td_date">2023-07-26</td>
+              <td class="td_title">아모레퍼시픽 2023년 2/4분기 경영실적</td>
+              <td class="td_dl"><i class="bi bi-download"></i></td>
+            </tr>
+            <tr>
+              <td class="td_date">2023-05-02</td>
+              <td class="td_title">아모레퍼시픽 2023년 1/4분기 경영실적</td>
+              <td class="td_dl"><i class="bi bi-download"></i></td>
+            </tr>
+            <tr>
+              <td class="td_date">2023-02-01</td>
+              <td class="td_title">아모레퍼시픽 2022년 4/4분기 경영실적</td>
+              <td class="td_dl"><i class="bi bi-download"></i></td>
+            </tr>
+            <tr>
+              <td class="td_date">2022-10-31</td>
+              <td class="td_title">아모레퍼시픽 2022년 3/4분기 경영실적</td>
+              <td class="td_dl"><i class="bi bi-download"></i></td>
+            </tr>
+            <tr>
+              <td class="td_date">2022-07-28</td>
+              <td class="td_title">아모레퍼시픽 2022년 2/4분기 경영실적</td>
+              <td class="td_dl"><i class="bi bi-download"></i></td>
+            </tr>
+            <tr>
+              <td class="td_date">2022-04-28</td>
+              <td class="td_title">아모레퍼시픽 2022년 1/4분기 경영실적</td>
+              <td class="td_dl"><i class="bi bi-download"></i></td>
+            </tr>
+            <tr>
+              <td class="td_date">2022-02-09</td>
+              <td class="td_title">아모레퍼시픽 2021년 4/4분기 경영실적</td>
+              <td class="td_dl"><i class="bi bi-download"></i></td>
+            </tr>
+            <tr>
+              <td class="td_date">2021-10-29</td>
+              <td class="td_title">아모레퍼시픽 2021년 3/4분기 경영실적</td>
+              <td class="td_dl"><i class="bi bi-download"></i></td>
+            </tr>
+            <tr>
+              <td class="td_date">2021-07-28</td>
+              <td class="td_title">아모레퍼시픽 2021년 2/4분기 경영실적</td>
+              <td class="td_dl"><i class="bi bi-download"></i></td>
+            </tr>
+            <tr>
+              <td class="td_date">2021-04-28</td>
+              <td class="td_title">아모레퍼시픽 2021년 1/4분기 경영실적</td>
+              <td class="td_dl"><i class="bi bi-download"></i></td>
+            </tr>
+            <tr>
+              <td class="td_date">2021-02-03</td>
+              <td class="td_title">아모레퍼시픽 2020년 4/4분기 경영실적</td>
+              <td class="td_dl"><i class="bi bi-download"></i></td>
+            </tr>
+            <tr>
+              <td class="td_date">2020-10-28</td>
+              <td class="td_title">아모레퍼시픽 2020년 3/4분기 경영실적</td>
+              <td class="td_dl"><i class="bi bi-download"></i></td>
+            </tr>
+            <tr>
+              <td class="td_date">2020-07-31</td>
+              <td class="td_title">아모레퍼시픽 2020년 2/4분기 경영실적</td>
+              <td class="td_dl"><i class="bi bi-download"></i></td>
+            </tr>
+            <tr>
+              <td class="td_date">2020-04-28</td>
+              <td class="td_title">아모레퍼시픽 2020년 1/4분기 경영실적</td>
+              <td class="td_dl"><i class="bi bi-download"></i></td>
+            </tr>
+            <tr>
+              <td class="td_date">2020-02-05</td>
+              <td class="td_title">아모레퍼시픽 2019년 4/4분기 경영실적</td>
+              <td class="td_dl"><i class="bi bi-download"></i></td>
+            </tr>
+            <tr>
+              <td class="td_date">2019-10-30</td>
+              <td class="td_title">아모레퍼시픽 2019년 3/4분기 경영실적</td>
+              <td class="td_dl"><i class="bi bi-download"></i></td>
+            </tr>
+            <tr>
+              <td class="td_date">2019-07-31</td>
+              <td class="td_title">아모레퍼시픽 2019년 2/4분기 경영실적</td>
+              <td class="td_dl"><i class="bi bi-download"></i></td>
+            </tr>
+            <tr>
+              <td class="td_date">2019-04-29</td>
+              <td class="td_title">아모레퍼시픽 2019년 1/4분기 경영실적</td>
+              <td class="td_dl"><i class="bi bi-download"></i></td>
+            </tr>
+            <tr>
+              <td class="td_date">2019-01-31</td>
+              <td class="td_title">아모레퍼시픽 2018년 4/4분기 경영실적</td>
+              <td class="td_dl"><i class="bi bi-download"></i></td>
+            </tr>
+            <tr>
+              <td class="td_date">2018-10-29</td>
+              <td class="td_title">아모레퍼시픽 2018년 3/4분기 경영실적</td>
+              <td class="td_dl"><i class="bi bi-download"></i></td>
+            </tr>
+            <tr>
+              <td class="td_date">2018-07-26</td>
+              <td class="td_title">아모레퍼시픽 2018년 2/4분기 경영실적</td>
+              <td class="td_dl"><i class="bi bi-download"></i></td>
+            </tr>
+            <tr>
+              <td class="td_date">2018-05-09</td>
+              <td class="td_title">아모레퍼시픽 2018년 1/4분기 경영실적</td>
+              <td class="td_dl"><i class="bi bi-download"></i></td>
+            </tr>
+            <tr>
+              <td class="td_date">2018-01-31</td>
+              <td class="td_title">아모레퍼시픽 2017년 4/4분기 경영실적</td>
+              <td class="td_dl"><i class="bi bi-download"></i></td>
+            </tr>
+            <tr>
+              <td class="td_date">2017-10-30</td>
+              <td class="td_title">아모레퍼시픽 2017년 3/4분기 경영실적</td>
+              <td class="td_dl"><i class="bi bi-download"></i></td>
+            </tr>
+            <tr>
+              <td class="td_date">2017-07-26</td>
+              <td class="td_title">아모레퍼시픽 2017년 2/4분기 경영실적</td>
+              <td class="td_dl"><i class="bi bi-download"></i></td>
+            </tr>
+            <tr>
+              <td class="td_date">2017-04-24</td>
+              <td class="td_title">아모레퍼시픽 2017년 1/4분기 경영실적</td>
+              <td class="td_dl"><i class="bi bi-download"></i></td>
+            </tr>
+            <tr>
+              <td class="td_date">2017-02-02</td>
+              <td class="td_title">아모레퍼시픽 2016년 4/4분기 경영실적</td>
+              <td class="td_dl"><i class="bi bi-download"></i></td>
+            </tr>
+            <tr>
+              <td class="td_date">2016-11-01</td>
+              <td class="td_title">아모레퍼시픽 2016년 3/4분기 경영실적</td>
+              <td class="td_dl"><i class="bi bi-download"></i></td>
+            </tr>
+            <tr>
+              <td class="td_date">2016-07-29</td>
+              <td class="td_title">아모레퍼시픽 2016년 2/4분기 경영실적</td>
+              <td class="td_dl"><i class="bi bi-download"></i></td>
+            </tr>
+            <tr>
+              <td class="td_date">2016-05-02</td>
+              <td class="td_title">아모레퍼시픽 2016년 1/4분기 경영실적</td>
+              <td class="td_dl"><i class="bi bi-download"></i></td>
+            </tr>
+            <tr>
+              <td class="td_date">2016-02-02</td>
+              <td class="td_title">아모레퍼시픽 2015년 4/4분기 경영실적</td>
+              <td class="td_dl"><i class="bi bi-download"></i></td>
+            </tr>
+            <tr>
+              <td class="td_date">2015-10-30</td>
+              <td class="td_title">아모레퍼시픽 2015년 3/4분기 경영실적</td>
+              <td class="td_dl"><i class="bi bi-download"></i></td>
+            </tr>
+            <tr>
+              <td class="td_date">2015-08-13</td>
+              <td class="td_title">아모레퍼시픽 2015년 2/4분기 경영실적</td>
+              <td class="td_dl"><i class="bi bi-download"></i></td>
+            </tr>
+            <tr>
+              <td class="td_date">2015-05-14</td>
+              <td class="td_title">아모레퍼시픽 2015년 1/4분기 경영실적</td>
+              <td class="td_dl"><i class="bi bi-download"></i></td>
+            </tr>
+            <tr>
+              <td class="td_date">2015-03-02</td>
+              <td class="td_title">아모레퍼시픽 2014년 4/4분기 경영실적</td>
+              <td class="td_dl"><i class="bi bi-download"></i></td>
+            </tr>
+            <tr>
+              <td class="td_date">2014-10-11</td>
+              <td class="td_title">아모레퍼시픽 2014년 3/4분기 경영실적</td>
+              <td class="td_dl"><i class="bi bi-download"></i></td>
+            </tr>
+            <tr>
+              <td class="td_date">2014-08-11</td>
+              <td class="td_title">아모레퍼시픽 2014년 2/4분기 경영실적</td>
+              <td class="td_dl"><i class="bi bi-download"></i></td>
+            </tr>
+            <tr>
+              <td class="td_date">2014-05-09</td>
+              <td class="td_title">아모레퍼시픽 2014년 1/4분기 경영실적</td>
+              <td class="td_dl"><i class="bi bi-download"></i></td>
+            </tr>
+            <tr>
+              <td class="td_date">2014-02-06</td>
+              <td class="td_title">아모레퍼시픽 2013년 4/4분기 경영실적</td>
+              <td class="td_dl"><i class="bi bi-download"></i></td>
+            </tr>
+            <tr>
+              <td class="td_date">2013-11-12</td>
+              <td class="td_title">아모레퍼시픽 2013년 3/4분기 경영실적</td>
+              <td class="td_dl"><i class="bi bi-download"></i></td>
+            </tr>
+            <tr>
+              <td class="td_date">2013-08-06</td>
+              <td class="td_title">아모레퍼시픽 203년 2/4분기 경영실적</td>
+              <td class="td_dl"><i class="bi bi-download"></i></td>
+            </tr>
+            <tr>
+              <td class="td_date">2013-05-08</td>
+              <td class="td_title">아모레퍼시픽 2013년 1/4분기 경영실적</td>
+              <td class="td_dl"><i class="bi bi-download"></i></td>
+            </tr>
+            <tr>
+              <td class="td_date">2023-02-07</td>
+              <td class="td_title">아모레퍼시픽 2012년 4/4분기 경영실적</td>
+              <td class="td_dl"><i class="bi bi-download"></i></td>
+            </tr>
+            <tr>
+              <td class="td_date">2012-11-07</td>
+              <td class="td_title">아모레퍼시픽 2012년 3/4분기 경영실적</td>
+              <td class="td_dl"><i class="bi bi-download"></i></td>
+            </tr>
+            <tr>
+              <td class="td_date">2012-8-09</td>
+              <td class="td_title">아모레퍼시픽 2012년 2/4분기 경영실적</td>
+              <td class="td_dl"><i class="bi bi-download"></i></td>
+            </tr>
+            <tr>
+              <td class="td_date">2012-05-09</td>
+              <td class="td_title">아모레퍼시픽 2012년 1/4분기 경영실적</td>
+              <td class="td_dl"><i class="bi bi-download"></i></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <nav aria-label="Page navigation example">
+        <ul class="pagination">
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Previous">
+              <i class="bi bi-chevron-double-left"></i>
+            </a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Previous">
+              <i class="bi bi-chevron-left"></i>
+            </a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Next">
+              <i class="bi bi-chevron-right"></i>
+            </a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Next">
+              <i class="bi bi-chevron-double-right"></i>
+            </a>
+          </li>
+        </ul>
+      </nav>
     </section>
   </main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"
+    integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="js/sub_investors.js"></script>
 </body>
 </html>
