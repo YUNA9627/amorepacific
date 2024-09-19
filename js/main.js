@@ -181,7 +181,7 @@ function moveSlide(num) {
   });
   
   $slides.eq(currentSlideIdx).addClass("active").find('video').prop("muted", true).get(0).play().catch(error => {
-    console.error('Autoplay failed:', error);
+    //console.error('Autoplay failed:', error);
     // Handle the error (e.g., ask user to start playback manually)
   });
 }
@@ -223,10 +223,10 @@ videos.forEach(function(video, index) {
  let brandButton = $('#brand .slider').slick({
   arrows:false,
   dots: false,
-  infinite:true,
+  infinite:false,
   speed: 300,
   slidesToShow: 1,
-  centerMode: true,
+  centerMode: false,
   variableWidth: true
 });
 $('.button .prev').click(function(){
@@ -237,7 +237,7 @@ $('.button .next').click(function(){
 })
 
 
-$('.brand_row').slick({
+let brandSlides = $('.brand_row').slick({
   slidesToShow: 4,
   slidesToScroll: 1,
   infinite: true,
@@ -246,25 +246,39 @@ $('.brand_row').slick({
   autoplay: true,
   responsive: [
     {
-      breakpoint: 1024,
+      breakpoint: 768,
       settings: {
         slidesToShow: 3
       }
     },
     {
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 2
-      }
-    },
-    {
       breakpoint: 576,
       settings: {
-        slidesToShow: 1
+        slidesToShow: 2
       }
     }
   ]
 });
+$('.slider li a').click(function(e){
+  e.preventDefault();
+  let target = $(this).attr('href');
+  let targetIdx =  $(target).attr('data-id');
+  brandSlides.slick('slickGoTo',targetIdx);
+
+  $('.slider li a').removeClass('active');
+  $(this).addClass('active');
+})
+
+$('.brand_row li').mouseenter(function() {
+  $('.brand_row li').removeClass('slick-current'); // 모든 li에서 active 클래스 제거
+  $(this).addClass('slick-current');    // 현재 hover한 li에 active 클래스 추가
+});
+$('.brand_row li').mouseleave(function() {
+  $('.brand_row li').removeClass('slick-current'); // 모든 li에서 active 클래스 제거
+  // $(this).addClass('slick-current');    // 현재 hover한 li에 active 클래스 추가
+});
+
+
 
 
 
