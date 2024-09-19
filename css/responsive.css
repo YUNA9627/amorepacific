@@ -1,15 +1,18 @@
-/* Laptop-small –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* Bootstrap-lg-––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
 @media (max-width: 1200px) {
-/* BRANDS */
-.brands_wrapper ul li img {
-  padding: 0 40px 0 45px;
+  /* BRANDS */
+  .brands_wrapper ul li img {
+    padding: 0 40px 0 45px;
+  }
+  .brands_wrapper ul p{
+    font-size: 1.875rem;
+  }
 }
-.brands_wrapper ul p{
-  font-size: 1.875rem;
-}
-}
-@media (max-width: 992px) {
+ 
 
+/* Bootstrap-md–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+@media (max-width: 992px) {
+  /* SUSTAIN */
   .sustain {
     background-image: url(../images/sustain_bg_tb.jpg);
     .container-lg {
@@ -71,7 +74,9 @@
     }
   }
 }
-/* Tablet –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+/* Bootstrap-sm-(Tablet)––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
 @media (max-width: 768px) {
   /* HEADER */
 
@@ -255,7 +260,7 @@
 }
 
 
-/* Mobile –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* Bootstrap-xs-(Mobile) –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
 @media (max-width: 576px) {
 
   /* BRANDS */
