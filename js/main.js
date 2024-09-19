@@ -209,11 +209,13 @@ videos.forEach(function(video, index) {
   // 비디오가 재생될 때
   video.addEventListener("timeupdate", function () {
     var value = (video.currentTime / video.duration) * 100;
-    progressBar.style.width= value+'px';  // 비디오 진행에 맞춰 게이지 업데이트
+    progressBar.style.width = value+'px';  // 비디오 진행에 맞춰 게이지 업데이트
+    progressBar.style.transition = '0.5s linear';
   });
   // 비디오가 끝나면 게이지를 다시 0으로
   video.addEventListener("ended", function () {
-    progressBar.style.width= 0;
+    progressBar.style.width = 0;
+    progressBar.style.transition = 'none';
   });
 })
 
