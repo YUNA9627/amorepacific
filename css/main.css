@@ -743,8 +743,12 @@ main .news{
   }
   .content_wrapper{
     background: rgba(6, 44, 94, .8); 
+    position: relative;
     h2{
-      margin-bottom: 109px;    
+      position: absolute;   
+      top: 143px;
+      left: 50%;
+      transform: translateX(-50%);
     }
   }
   .atc_wrapper{
@@ -752,6 +756,11 @@ main .news{
     justify-content: space-between;
     article{
       width: 33.3333%;
+      background: green;
+      border-right: 1px solid #fff;
+      svg{
+        margin-top: 127px;
+      }
       svg > *{
         stroke-dasharray: 160;
         stroke-dashoffset: 160; 
@@ -787,6 +796,12 @@ main .news{
           font-size: 1.5rem;
           font-weight: 300;
       }
+      .btn_more{
+        display: none;
+      }
+    }
+    .space_1{
+      background: url(../images/space_bg.jpg);
     }
   }
 }
