@@ -274,7 +274,7 @@ $('.sns_slide').slick({
   prevArrow: '<button class="slick-prev"><i class="bi bi-chevron-left"></i></button>',
   nextArrow: '<button class="slick-next"><i class="bi bi-chevron-right"></i></button>',
   dots: false,
-  autoplay: true,
+  // autoplay: true,
   responsive: [
     {
       breakpoint: 1024,
