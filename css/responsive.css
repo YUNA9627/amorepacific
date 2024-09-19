@@ -1,4 +1,13 @@
 /* Laptop-small –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+@media (max-width: 1200px) {
+/* BRANDS */
+.brands_wrapper ul li img {
+  padding: 0 40px 0 45px;
+}
+.brands_wrapper ul p{
+  font-size: 1.875rem;
+}
+}
 @media (max-width: 992px) {
   .sustain {
     background-image: url(../images/sustain_bg_tb.jpg);
@@ -82,7 +91,7 @@
 
   .button .tt_li {
     width: 250px;
-    height: 50px;
+    height: 45px;
   }
 
   .brands_wrapper .btn_more {
