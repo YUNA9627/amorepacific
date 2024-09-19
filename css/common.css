@@ -146,7 +146,6 @@ body {
 .btn_more:hover {
   color: var(--white);
   background: var(--primary);
-  border: 1px solid var(--primary);
 }
 
 .btn_more:hover i::before {

@@ -93,7 +93,7 @@ videos.forEach(function(video, index) {
 /* SPACE - 홍은진
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
 const space = $('.space');
-const spaceOST = space.offset().top - 100;
+const spaceOST = space.offset().top - 500;
 let excuted = false;
 
 /*
