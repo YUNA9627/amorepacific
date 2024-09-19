@@ -5,9 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Amorepacific</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/bootstrap_custom.css">
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/responsive.css">
 </head>
@@ -499,18 +500,37 @@
       <h3 class="sec_title_sm">About Our Brands</h3>
       <h2 class="sec_title_lg">Story of AMOREPACIFIC</h2>
       <p class="sec_desc_md">아모레퍼시픽은 고객의 관점에서 만족시킬 수 있는 품질과 첨단 과학을 바탕으로 한 최고의 신뢰를 고객에게 제공합니다.</p>
-      <ul class="story_list">
-        <li class="story_lg st_list_1 con_title_lg"><a href="">고객안심품질</a></li>
-        <li class="story_thumb1 st_list_2 con_title_sm"><a href="">투명한 성분</a></li>
-        <li class="story_thumb1 st_list_3 con_title_sm"><a href="">최상의 원료</a></li>
-        <li class="story_thumb1 st_list_4 con_title_sm"><a href="">안전한 제품</a></li>
-        <li class="story_thumb1 st_list_5 con_title_sm"><a href="">생산 품질</a></li>
-        <li class="story_thumb2 st_list_6 con_title_sm"><a href="">신품종 녹차 개발</a></li>
-        <li class="story_thumb2 st_list_7 con_title_sm"><a href="">진세노믹스</a></li>
-        <li class="story_thumb2 st_list_8 con_title_sm"><a href="">스피어 플랫폼</a></li>
-        <li class="story_thumb2 st_list_9 con_title_sm"><a href="">순수 비타민C</a></li>
-        <li class="story_lg st_list_10 con_title_lg"><a href="">혁신기술</a></li>
+      <ul class="nav nav-underline mb-3" id="pills-tab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="st1" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">고객안심품질</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="st2" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">혁신기술</button>
+        </li>
       </ul>
+
+      <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="st1" tabindex="0">
+          <ul class="story_list">
+            <li class="story_lg st_list_1 con_title_lg"><a href="">고객안심품질</a></li>
+            <li class="story_thumb1 st_list_2 con_title_sm"><a href="">투명한 성분</a></li>
+            <li class="story_thumb1 st_list_3 con_title_sm"><a href="">최상의 원료</a></li>
+            <li class="story_thumb1 st_list_4 con_title_sm"><a href="">안전한 제품</a></li>
+            <li class="story_thumb1 st_list_5 con_title_sm"><a href="">생산 품질</a></li>
+          </ul>
+        </div>
+        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="st2" tabindex="0">
+          <ul class="story_list">
+            <li class="story_lg st_list_10 con_title_lg"><a href="">혁신기술</a></li>
+            <li class="story_thumb2 st_list_6 con_title_sm"><a href="">신품종 녹차 개발</a></li>
+            <li class="story_thumb2 st_list_7 con_title_sm"><a href="">진세노믹스</a></li>
+            <li class="story_thumb2 st_list_8 con_title_sm"><a href="">스피어 플랫폼</a></li>
+            <li class="story_thumb2 st_list_9 con_title_sm"><a href="">순수 비타민C</a></li>
+          </ul>
+        </div>
+      </div>
+
+
       <!-- <a href="#" class="btn_more">더보기 <i class="bi bi-chevron-right"></i></a> -->
     </section>
     <!-- //Story 홍은진 -->
