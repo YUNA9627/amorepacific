@@ -221,6 +221,38 @@ $('.button .next').click(function(){
   brandButton.slick('slickNext');
 })
 
+
+$('.brand_row').slick({
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  infinite: true,
+  arrows: false,
+  dots: false,
+  autoplay: true,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2
+      }
+    },
+    {
+      breakpoint: 576,
+      settings: {
+        slidesToShow: 1
+      }
+    }
+  ]
+});
+
+
+
 /* SNS - 배유나
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
 
@@ -241,6 +273,7 @@ $('.sns_slide').slick({
   prevArrow: '<button class="slick-prev"><i class="bi bi-chevron-left"></i></button>',
   nextArrow: '<button class="slick-next"><i class="bi bi-chevron-right"></i></button>',
   dots: false,
+  autoplay: true,
   responsive: [
     {
       breakpoint: 1024,
