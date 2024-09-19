@@ -218,6 +218,34 @@ videos.forEach(function(video, index) {
 })
 
 
+/* SPACE - 홍은진
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+const space = $('.space');
+const spaceOST = space.offset().top - 100;
+let excuted = false;
+
+/*
+윈도우에 스크롤이 생기면 할 일
+  스크롤양이 300보다 크면 notepads에 active 추가
+  아니라면 active 제거
+*/
+
+$(window).scroll(function(){
+  if($(this).scrollTop() > spaceOST){
+    if(!excuted){
+      space.addClass('active');
+      
+      excuted = true;
+    } //else{
+    //   space.removeClass('active');
+    // }
+  }
+});
+
+
+
+
+
 /* BRANDS - 강현주
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
  let brandButton = $('#brand .slider').slick({
