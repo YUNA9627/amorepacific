@@ -32,7 +32,7 @@ h2::before{
     right: calc(50% + 36px);
 }
 h2::after{
-    left: calc(50% + 140px);
+    left: calc(50% + 145px);
 }
 h3{
     font-family: 'Arita buri';
