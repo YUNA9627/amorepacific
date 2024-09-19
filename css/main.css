@@ -729,35 +729,46 @@ main .news{
   position: relative;
   text-align: center;
   color: var(--white);
-  .space_bg{
-    position: absolute;
-    top: 0; bottom: 0;
-    left: 0; right: 0;
-    z-index: -10;
-    background-image: 
-    linear-gradient(rgba(124,167,222,0.1), rgba(124,167,222,0.9)),  
-    url(../images/space_bg.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
+
   .content_wrapper{
     background: rgba(6, 44, 94, .8); 
     position: relative;
+
     h2{
       position: absolute;   
       top: 143px;
       left: 50%;
       transform: translateX(-50%);
+      z-index: 10;
     }
+
   }
   .atc_wrapper{
     display: flex;
     justify-content: space-between;
+
+    article::before{
+      content: '';
+      display: block;
+      width: 1px;
+      height: 100%;
+      position: absolute;
+      right: 0;
+      top: 0;
+      background: rgba(255, 255, 255, 0.4);
+      z-index: 10;
+    }
     article{
       width: 33.3333%;
-      background: green;
-      border-right: 1px solid #fff;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+
+      > * {
+        position: relative;
+        z-index: 10;
+      }
       svg{
         margin-top: 127px;
       }
@@ -797,12 +808,39 @@ main .news{
           font-weight: 300;
       }
       .btn_more{
-        display: none;
+        opacity: 0;
+        margin-top: 74px;
+        transform: translateY(100px);
+        transition: all 0.5s;
       }
     }
-    .space_1{
-      background: url(../images/space_bg.jpg);
+    article::after{
+      content: '';
+      position: absolute;
+      top: 0; bottom: 0;
+      left: 0; right: 0;
+      background: 
+      linear-gradient(rgba(6,44,94,0.8), rgba(6,44,94,1));
+      opacity: 1;
+      transition: all 0.5s;
     }
+    .space_1{
+      background-image: url(../images/space_amore1.jpg);
+    }
+    .space_2{
+      background-image: url(../images/space_amore2.jpg);
+    }
+    .space_3{
+      background-image: url(../images/space_amore3.jpg);
+    }
+    article:hover::after{
+      opacity: 0.5;
+    }
+    article:hover .btn_more{
+      opacity: 1;
+      transform: none;
+    }
+
   }
 }
 
