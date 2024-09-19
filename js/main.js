@@ -232,6 +232,12 @@ let brandSlides = $('.brand_row').slick({
   autoplay: true,
   responsive: [
     {
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 4
+      }
+    },
+    {
       breakpoint: 768,
       settings: {
         slidesToShow: 3
