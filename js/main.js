@@ -262,7 +262,7 @@ $('.video_slide video').each(function() {
     this.play();
   }).on('mouseout', function() {
     this.pause();
-    this.currentTime = 0; // 비디오가 처음부터 다시 재생되도록 설정
+    this.currentTime = 0;
   });
 });
 
