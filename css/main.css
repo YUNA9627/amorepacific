@@ -231,7 +231,7 @@ header {
 
 nav {position: absolute; left: 0; right: 0; bottom: 0;}
 
-.gnb {
+nav .gnb {
   display: flex;
   justify-content: center;
   > li > a {
@@ -241,7 +241,7 @@ nav {position: absolute; left: 0; right: 0; bottom: 0;}
   }
 }
 
-.gnb .gnb-item {
+nav .gnb .gnb-item {
   display: flex;
   > a {
     padding: 18px 20px;
@@ -251,7 +251,7 @@ nav {position: absolute; left: 0; right: 0; bottom: 0;}
   }
 }
 
-.gnb .gnb-item a:before {
+nav .gnb .gnb-item a:before {
   content: '';
   background: var(--secondary);
   width: 100%; height: 3px;
@@ -262,7 +262,7 @@ nav {position: absolute; left: 0; right: 0; bottom: 0;}
   transition: 0.3s;
 }
 
-.gnb .gnb-item .lnbBg {
+nav .gnb .gnb-item .lnbBg {
   position: absolute;
   background: var(--white);
   width: 100%;
@@ -274,7 +274,7 @@ nav {position: absolute; left: 0; right: 0; bottom: 0;}
   visibility: hidden;
 }
 
-.gnb .gnb-item .lnbBg .lnbInner {
+nav .gnb .gnb-item .lnbBg .lnbInner {
   padding: 60px 60px; margin: 0 auto; text-align: left;
   * {color: var(--medium-gray); font-size: 1.125rem;}
   .lnbDesc {
@@ -348,17 +348,24 @@ header.shrink {background: var(--primary); padding: 5px 0;}
 .open .header .content_wrapper .content .search-button .x-button {display: block;}
 .open .header_overlay {visibility: visible; opacity: 1;}
 
-aside.open {display: block;}
-aside.open:after {visibility: visible; opacity: 1;}
+html.navOpen {overflow: hidden;}
+aside.navOpen {display: block;}
+aside.navOpen .resize_gnb .resize_gnb_inner .content_wrap {width: 100%;}
 
-.gnb-item.active > a {color: var(--secondary);}
-.gnb-item.active > a:before {opacity: 1; transform: scaleX(1);}
-.gnb-item.active .lnbBg {visibility: visible; opacity: 1;}
+aside.navOpen:after {visibility: visible; opacity: 1;}
+
+nav .gnb-item.active > a {color: var(--secondary);}
+nav .gnb-item.active > a:before {opacity: 1; transform: scaleX(1);}
+nav .gnb-item.active .lnbBg {visibility: visible; opacity: 1;}
 .header_overlay.active {visibility: visible; opacity: 1;}
 
 header:hover {background-color: var(--primary);}
-.gnb .gnb-item .lnbBg .lnbInner .lnb li a:hover {
+nav .gnb .gnb-item .lnbBg .lnbInner .lnb li a:hover {
   color: var(--black); text-decoration: underline;
+}
+
+.resize_gnb .gnb_item.re-active .lnb_list {
+  height: 100%;
 }
 
 @media (max-width: 1024px) {
@@ -389,12 +396,63 @@ aside:after {
 aside .resize_gnb {position: fixed; top: 0; right: 0; bottom: 0; z-index: 110;}
 aside .resize_gnb .resize_gnb_inner {
   display: flex;
+  flex-direction: column;
   background: var(--white);
   width: 568px;
   height: 100%;
   position: absolute;
   top: 0;
   right: 0;
+}
+aside .resize_gnb .resize_gnb_inner .content_wrap {
+  display: flex; gap: 24px; justify-content: flex-end; align-items: center;
+}
+
+aside .resize_gnb .resize_gnb_inner .gnb {display: flex; width: 100%;}
+.resize_gnb_inner .gnb .gnb_list {width: 100%;}
+
+.resize_gnb_inner .gnb .gnb_list .gnb_item > a {
+  font-family: 'Arita buri'; font-weight: 700; font-size: 1.25rem; color: var(--light-gray);
+  display: block; position: relative;
+}
+.resize_gnb_inner .gnb .gnb_list .gnb_item > a:after {
+  content: "\f282"; font-family: bootstrap-icons; font-weight: 500; font-size: 1rem;
+  position: absolute; right: 0;
+}
+
+.resize_gnb .gnb_item .lnb_list {
+  height: 0; overflow: hidden;
+}
+
+.content_wrap .x-button {
+  position: relative;
+  width: 20px; height: 16px;
+  background: none; border: none; cursor: pointer; 
+}
+
+.content_wrap .x-button span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  border-radius: 1px;
+  background: var(--black);
+}
+
+.content_wrap .x-button span:nth-child(1){
+  top: 0; opacity: 0;
+}
+
+.content_wrap .x-button span:nth-child(2){
+  top: 7px; transform:rotate(45deg);
+}
+
+.content_wrap .x-button span:nth-child(3){
+  top: 7px; transform:rotate(-45deg);
+}
+
+.content_wrap .x-button span:nth-child(4){
+  top: 14px; opacity: 0;
 }
 
 /* MAIN BANNER - 한태희
