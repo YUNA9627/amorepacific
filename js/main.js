@@ -167,7 +167,7 @@ function moveSlide(num) {
   });
   
   $slides.eq(currentSlideIdx).addClass("active").find('video').prop("muted", true).get(0).play().catch(error => {
-    console.error('Autoplay failed:', error);
+    //console.error('Autoplay failed:', error);
     // Handle the error (e.g., ask user to start playback manually)
   });
 }
@@ -251,10 +251,14 @@ let brandSlides = $('.brand_row').slick({
     }
   ]
 });
-let target = $('.brand_row li a')
+$('.brand_row li a').click(function(e){
+  e.preventDefault();
+  let target = $(this).attr('href');
+  let targetIdx =  $(target).attr('data-id');
+  brandSlides.slick('slickGoTo',targetIdx);
+})
 
-let targetIdx =  $(target).atter('data-id');
-brandSlides.slick('slickGoTo',targetIdx);
+
 
 
 
