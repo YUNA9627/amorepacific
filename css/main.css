@@ -842,10 +842,10 @@ main .news{
   color: var(--light-gray);
   padding-bottom: 5px;
 }
-.button ul li:hover a{
+.button ul li:hover a, .button ul li a.active{
   color: var(--black);
 }
-.button ul li:hover a{
+.button ul li:hover a, .button ul li a.active{
   border-bottom: 3px solid var(--primary);
 }
 .button button{
@@ -879,7 +879,7 @@ main .news{
   border-right: 1px solid var(--light-gray);
 }
 .brands_wrapper ul li img {
-  padding: 0 80px 0 80px;
+  padding: 0 80px 0 90px;
   opacity: 0.5;
 }
 .brands_wrapper ul p{
@@ -898,7 +898,12 @@ main .news{
   right: 0;
   bottom: calc(100% + 100px);
 }
-
+.brands_wrapper ul li.slick-current img{
+  opacity: 1;
+}
+.brands_wrapper ul li.slick-current p{
+  color: black;
+}
 /* SNS - 배유나
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
 
