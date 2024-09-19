@@ -373,7 +373,7 @@ header:hover {background-color: var(--primary);}
   .hamburger-button {display: block;}
 }
 
-.resize_gnb {position: fixed; top: 0; right: 0; bottom: 0;}
+.resize_gnb {position: fixed; top: 0; right: 0; bottom: 0; display: none;}
 .resize_gnb .resize_gnb_inner {
   display: flex;
   background: var(--white);
