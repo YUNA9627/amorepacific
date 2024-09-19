@@ -208,7 +208,7 @@ videos.forEach(function(video, index) {
  let brandButton = $('#brand .slider').slick({
   arrows:false,
   dots: false,
-  infinite:true,
+  infinite:false,
   speed: 300,
   slidesToShow: 1,
   centerMode: true,
@@ -222,7 +222,7 @@ $('.button .next').click(function(){
 })
 
 
-$('.brand_row').slick({
+let brandSlides = $('.brand_row').slick({
   slidesToShow: 4,
   slidesToScroll: 1,
   infinite: true,
@@ -250,6 +250,11 @@ $('.brand_row').slick({
     }
   ]
 });
+let target = $('.brand_row li a')
+
+let targetIdx =  $(target).atter('data-id');
+brandSlides.slick('slickGoTo',targetIdx);
+
 
 
 
