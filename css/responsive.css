@@ -76,7 +76,7 @@
   }
 
   .brands .button {
-    width: 300px;
+    width: 250px;
     margin-left: 24px;
   }
 
@@ -89,17 +89,15 @@
     bottom: calc(100% + 103px);
   }
 
-  .brands_wrapper ul {
-    width: 2500px;
-  }
-
   .brands_wrapper ul li {
-    width: 250px;
     font-size: 1.25rem;
   }
 
   .brands_wrapper ul li img {
-    padding: 0 40px 0 30px;
+    padding: 0 40px 0 45px;
+  }
+  .brands_wrapper ul p{
+    font-size: 1.875rem;
   }
 
   /* SUSTAIN */
@@ -261,7 +259,7 @@
   }
 
   .brands .button {
-    width: 248px;
+    width: 200px;
   }
 
   .btn_more {
@@ -281,24 +279,19 @@
   }
 
   .button .tt_li {
-    width: 218px;
-    height: 36px;
+    width: 207px;
+    height: 35px;
   }
 
   .button .tt_li .con_title_sm {
     font-size: 1.25rem;
   }
 
-  .brands_wrapper ul {
-    width: 2780px;
-  }
-
-  .brands_wrapper ul li {
-    width: 278px;
-  }
-
   .brands_wrapper ul li img {
-    padding: 0 53px;
+    padding: 0 53px 0 55px;
+  }
+  .brands_wrapper ul p{
+    font-size: 1.875rem;
   }
 
   /* SUSTAIN */
