@@ -1,4 +1,25 @@
+/* HEADER - 배유나
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
 
+$(window).scroll(function(){
+  if($(this).scrollTop() > 500){
+    header.addClass('shrink');
+    sideBtn.addClass('on');
+  }else {
+    header.removeClass('shrink');
+    sideBtn.removeClass('on');
+  }
+});
+
+$(window).scroll(function(){
+  currentST = $(this).scrollTop();
+  if(currentST > prevST){
+    header.css('top', '-145px');
+  }else {
+    header.css('top', '0');
+  }
+  prevST = currentST;
+});
 
 /* MAIN BANNER - 한태희
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -113,10 +134,6 @@ $(window).scroll(function(){
     // }
   }
 });
-
-
-
-
 
 /* BRANDS - 강현주
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
