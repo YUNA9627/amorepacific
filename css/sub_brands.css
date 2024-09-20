@@ -2,11 +2,7 @@
 @import url('../css/normalize.css');
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
 @import url('https://webfontbox.github.io/Arita/font.min.css');
-
-:root{
-  --black: #161616;
-  --white: #FFFFFF;
-}
+@import url('../css/common.css');
 
 h2{
     font-family: 'Arita buri';
