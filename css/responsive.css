@@ -94,15 +94,6 @@
       }
 
       .btn_more_sm {
-        display: inline-block;
-        width: 50px;
-        height: 50px;
-        box-sizing: border-box;
-        border: 1px solid var(--white);
-        border-radius: 50%;
-        line-height: 50px;
-        text-align: center;
-        font-size: 20px;
         position: absolute;
         right: 3rem;
         top: 5rem;
