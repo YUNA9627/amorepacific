@@ -77,7 +77,6 @@ $('.gnb-item').mouseleave(function(){
 
 $('.resize_gnb .gnb_item').click(function(){
   $(this).toggleClass('re-active');
-
 })
 
 var prevST = 0;
@@ -128,3 +127,24 @@ $.get(apiUrl, function(response) {
   });
   $('#stock-box').html(tableContent);
 })
+
+$('.resize_gnb .gnb_item').click(function(){
+  var $this = $(this);
+  var $lnbList = $this.find('.lnb_list');
+
+  $('.resize_gnb .lnb_list').not($lnbList).removeClass('re-active').css('height', '0');
+
+  if ($lnbList.hasClass('re-active')) {
+    $lnbList.removeClass('re-active').css('height', '');
+    $this.removeClass('re-active');
+    $this.find('> a').css('color','');
+  }else {
+    $lnbList.addClass('re-active').css('height', $lnbList.attr('data-height'));
+    $this.addClass('re-active');
+    $this.find('> a').css('color','#062C5E');
+  }
+})
+
+
+
+
