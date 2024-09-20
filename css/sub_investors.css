@@ -2,13 +2,7 @@
 @import url('../css/normalize.css');
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
 @import url('https://webfontbox.github.io/Arita/font.min.css');
-
-:root{
-  --black: #161616;
-  --light-gray: #C7C7C7;
-  --white: #FFFFFF;
-  --primary: #062C5E;
-}
+@import url('../css/common.css');
 
 h2{
     font-family: 'Arita buri';
@@ -51,7 +45,7 @@ p{
     margin-bottom: 50px;
 }
 .investors tr{
-    border-bottom: 1px solid;
+    border-bottom: 1px solid var(--light-gray);
 }
 .tab_title{
     margin: 0 0 15px 10px;
@@ -80,6 +74,11 @@ text-align: center;
     line-height: 50px;
     background: #f5f5f5;
     border-radius: 25px;
+    font-size: 1.25rem;
+}
+.td_dl a:hover{
+    background: var(--primary);
+    color: var(--white);
 }
 .investors .dropdown{
     display: flex;
