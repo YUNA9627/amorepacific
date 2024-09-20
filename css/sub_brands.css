@@ -84,15 +84,17 @@ p{
 
 @media (max-width:768px){
     .gallery .item{
-        width: 46%;
-        margin: 0 4%;
+        width: 48%;
+        margin: 0 1%;
+        margin-bottom: 10px;
     }
 
 }
 @media (max-width:567px){
     .gallery .item{
         width: 99%;
-        margin: 0 1%;
+        margin:0 0.5%;
+        margin-bottom: 10px;
     }
     h2{
         font-size: 1.25rem;
