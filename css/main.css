@@ -544,6 +544,7 @@ nav .gnb .gnb-item .lnbBg .lnbInner .lnb li a:hover {
   border-radius: 2px;
   overflow:hidden;
   opacity: 65%;
+  cursor: pointer;
 }
 .progress-btn span{
   position: absolute;
