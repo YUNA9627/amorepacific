@@ -1,40 +1,106 @@
 
   var rowsPerPage = 10; // 한 페이지에 표시할 행 수
   var rows = $('tbody tr'); // 모든 tr 요소
-  var totalRows = rows.length; // 총 행 수
-  var totalPages = Math.ceil(totalRows / rowsPerPage); // 총 페이지 수
+  var rowsCount = rows.length; // 총 행 수
+  var pageCount = Math.ceil(rowsCount / rowsPerPage); // 총 페이지 수
+  const numbers = document.querySelector('#numbers');
+  const maxPageNum = 3;
+  let pageActiveIdx = 0;
+  const prevBtn = document.querySelector('.pagination .bi-chevron-left');
+  const nextBtn = document.querySelector('.pagination .bi-chevron-right');
+  const prevBackBtn = document.querySelector('.pagination .bi-chevron-double-left');
+  const nextBackBtn = document.querySelector('.pagination .bi-chevron-double-right');
 
-  // 처음 페이지 설정
-  function showPage(page) {
-    var start = (page - 1) * rowsPerPage;
-    var end = start + rowsPerPage;
+let numberHTML = '';
+for(let i = 1; i<=pageCount;i++){
+  numberHTML += `<li><a href="">${i}</a></li>`;
+}
+numbers.innerHTML = numberHTML;
 
-    rows.hide(); // 모든 행을 숨김
-    rows.slice(start, end).show(); // 해당 페이지의 행만 표시
+const numberBtn = numbers.querySelectorAll('a');
+const pageGroupCount = Math.ceil(pageCount/maxPageNum); //4
+console.log(pageGroupCount);
 
-    $('.pagination li').removeClass('active'); // 모든 페이지 버튼에서 active 제거
-    $('.pagination li').eq(page).addClass('active'); // 현재 페이지 버튼에 active 추가
+function displayRow(num){
+  for(item of rows){
+    item.style.display = 'none';
+  }
+  let start = rowsPerPage * num;
+  let end = start + rowsPerPage;
+  let rowsArray =  [...rows];
+  let newRows = rowsArray.slice(start,end);
+  for(let item of newRows){
+    item.style.display = '';
+  }
+}
+displayRow(0);
+
+numberBtn.forEach((item,idx)=>{
+  item.addEventListener('click',(e)=>{
+    e.preventDefault();
+    displayRow(idx);
+
+    for(let item of numberBtn){
+      item.classList.remove('active');
+    }
+    item.classList.add('active');
+    
+  })
+})
+
+function displayPagination(num){
+  /* 모든 페이지 안보이도록 */
+  for(item of numberBtn){
+    item.style.display = 'none';
   }
 
-  // 페이지 네비게이션 클릭 이벤트
-  $('.pagination li a').on('click', function(e) {
-    e.preventDefault();
+  let start = maxPageNum * num;
+  let end = start + maxPageNum;
 
-    var page = $(this).parent().index(); // 클릭한 페이지 번호 가져오기
+  let pArray =  [...numberBtn];
+  let np = pArray.slice(start,end);
+  for(let item of np){
+    item.style.display = '';
+  }
 
-    if ($(this).attr('aria-label') === 'Previous') {
-      page = $('.pagination li.active').index() - 1;
-      if (page < 1) page = 1;
-    } else if ($(this).attr('aria-label') === 'Next') {
-      page = $('.pagination li.active').index() + 1;
-      if (page > totalPages) page = totalPages;
-    }
+  for(item of numberBtn){
+    item.classList.remove('active');
+  }
+  numberBtn[start].classList.add('active');
+  displayRow(start);
 
-    showPage(page);
-  });
+  pageActiveIdx = num;
+  console.log(pageActiveIdx);
 
-  // 초기화 - 첫 번째 페이지 보여줌
-  showPage(1);
+//  if( pageActiveIdx === 0){
+//   prevBtn.style.display = 'none';
+//  } else{
+//   prevBtn.style.display = 'block';
+//  }
+
+//  if( pageActiveIdx === pageGroupCount -1){
+//   nextBtn.style.display = 'none';
+//  } else{
+//   nextBtn.style.display = 'block';
+//  }
+}
+displayPagination(0);
+
+nextBtn.addEventListener('click',(num)=>{
+  displayPagination(pageActiveIdx+1);
+  // displayRow(num);
+
+  // for(let item of numberBtn){
+  //   item.classList.remove('active');
+  // }
+  // item.classList.add('active');
+  
+})
+
+prevBtn.addEventListener('click',()=>{
+  displayPagination(pageActiveIdx-1);
+});
+
 
 
 
