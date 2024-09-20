@@ -131,6 +131,9 @@
 @media (max-width: 768px) {
   /* HEADER */
   .header {max-width: 720px;}
+  .search_wrapper .search_box .searchWideBar {
+    width: 90%;
+  }
 
   /* MAIN BANNER */
   .video_content {
@@ -315,6 +318,15 @@
 /* Bootstrap-xs-(Mobile) –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
 @media (max-width: 576px) {
 
+  /* HEADER */
+  aside.navOpen .resize_gnb .resize_gnb_inner {
+    width: 100%;
+  }
+
+  .search_wrapper .search_box .searchWideBar {
+    width: 80%;
+  }
+
   /* BRANDS */
   #brand {
     margin: 0 20px;
@@ -456,7 +468,7 @@
 
   .footer_menu .other ul>li>ul {
     display: flex;
-    gap: 60px;
+    gap: 20px;
   }
 
   .footer_menu .other ul li ul li {
