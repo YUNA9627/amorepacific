@@ -49,6 +49,12 @@ p{
     text-align: center;
     margin-bottom: 50px;
 }
+.investors tr{
+    border-bottom: 1px solid;
+}
+.tab_title{
+    margin: 0 0 15px 10px;
+}
 .tab_title ul{
     display: flex;
     gap: 20px;
@@ -73,5 +79,13 @@ text-align: center;
     line-height: 50px;
     background: #f5f5f5;
     border-radius: 25px;
-
+}
+.investors .dropdown{
+    display: flex;
+    justify-content: end;
+    padding: 15px
+}
+.investors nav .pagination{
+    display: flex;
+    justify-content: center;
 }
