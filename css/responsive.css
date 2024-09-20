@@ -54,6 +54,7 @@
   }
   /* HEADER */
 .header {max-width: 1140px;}
+.line_guide .navigation {max-width: 1140px;}
 /* BRANDS */
   .brands_wrapper ul li img {
     padding: 0 40px 0 45px;
