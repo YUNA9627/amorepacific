@@ -1,47 +1,47 @@
-function historyScroll() {
-  gsap.registerPlugin(ScrollTrigger);
+const $pointer = $('.pointer');
+const $historyBarOn = $('.history_bar_on');
+const $historyBar = $('.history_bar');
+const $items = $('.item');
 
-  const progressBar = gsap.timeline();
-  const pointerEl = gsap.timeline();
-  const yearTrigger = $('.year_img');
-  const yearLayout = $('.year_ctn');
-  const yearCount = yearTrigger.length;
-  const yearSection = $('.historyContainer .tabContents');
-  const secCount = yearSection.length;
-  let yearNav = [];
-  let secNav = [];
-  // let docHeight = $('.historyContainer').height();
-      
+const pointerMaxScroll = $historyBar.height() - $pointer.height();
+const historyMaxScroll = $historyBar.height() - $historyBarOn.height();
+const listInnerHeight = $('.cont_list').innerHeight();
 
-  yearLayout.each((idx) => {
-    if(idx % 2 !== 0) {
-      yearLayout.eq(idx).addClass('even');
-    }
+
+$(window).scroll(function(){
+  const scrollTop = $(window).scrollTop();
+  const pointerNewTop = Math.min(scrollTop, pointerMaxScroll);
+  const historyNewTop = Math.min(scrollTop, pointerMaxScroll);
+  
+  $pointer.css('top', pointerNewTop + 'px');
+  $historyBarOn.css('height', historyNewTop + 'px');
+});
+
+$(window).on('scroll', function() {
+  var scrollPos = $(window).scrollTop() + $(window).height() / 3; // 뷰포트 중앙 위치
+
+  $items.each(function(){
+      var $this = $(this);
+      var offsetTop = $this.offset().top;
+      var offsetBottom = offsetTop + $this.outerHeight();
+
+      if (scrollPos >= offsetTop && scrollPos < offsetBottom) {
+          $this.addClass('active');
+      } else {
+          $this.removeClass('active');
+      }
   });
+});
 
-  ScrollTrigger.create({
-    animation: progressBar,
-    trigger: ".history_bar",
-    start: "top 300",
-    end: "bottom center",
-    scrub: 0.3
+$(window).scroll(function(){
+  const $imgCont = $('.img_cont');
+  const $ul = $('.cont_list').find('ul');
+  
+  $('.img_cont').addClass('disShowMotion');
+  
+  $ul.each(function() {
+    var innerHeight = $(this).innerHeight();
+    var $this = $(this);
+    var offsetTop = $this.offset().top;
   });
-
-  ScrollTrigger.create({
-    animation: pointerEl,
-    trigger: ".history_bar",
-    start: "top 300",
-    end: "bottom center",
-    scrub: 0.3
-  });
-
-  progressBar.from(".history_bar_on", {height:0, ease: "none"})
-  pointerEl.from(".pointer", {top:0, ease: "none"})
-
-  function checkYearTopOffset () {
-    let arr = [];
-    for(let i = 0; i < yearCount; i++){
-      arr[i] = yearTrigger.eq(i).offset().top;
-    }
-    return arr;
-  }}
+});
