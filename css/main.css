@@ -264,38 +264,42 @@ main .news{
     background-size: 100%;
     background-repeat: no-repeat;
     transition: all 0.5s;
+    position: relative;
   }
+
   li:hover{
     background-size: 105%;
   }
+  
   .story_lg_desc{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 40px;
     width: 100%;
     height: 100%;
-    padding-top: 180px;
-    padding-bottom: 102px;
     position: relative;
 
     small{
       font-family: 'Arita buri';
       color: var(--medium-gray);
       font-size: 1.125rem;
-      display: none;
+      display:block;
     }
     p{
       font-size: 1.25rem;
       max-width: 408px;
       margin: 0 auto;
-      padding-top: 40px;
-      padding-bottom: 70px;
-      display: none;
-      opacity: 0;
+      opacity: 0; 
       transition: all 0.5s;
     }
-  
+    .btn_more{
+      position:absolute;
+      bottom: 0;
+      left: 0;
+      display:block;
+    }
     > *{
       position: relative;
       z-index: 10;
@@ -306,14 +310,16 @@ main .news{
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
     border-radius: 20px;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.3);
   }
   .story_lg_desc:hover{
     p{
       opacity: 1;
-      display: block;
     }
+    
+
   }
+  
   .story_thumb1{
    width: 100%;
    height: 100%;
