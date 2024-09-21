@@ -659,7 +659,7 @@ aside .resize_gnb .resize_gnb_inner .gnb {display: flex; width: 100%;}
 }
 
 header.shrink {background: var(--primary);}
-.shrink .header {height: 54px; justify-content: space-between; padding-top: 0; padding: 0.3125rem 2rem;}
+.shrink .header {height: 64px; justify-content: space-between; padding-top: 0; padding: 0.3125rem 2rem;}
 .shrink .header .logo {top: 0; left: 0; transform: none; position: static;}
 .shrink .header .logo a .logo_wh {max-width: 170px; display: block;}
 .shrink .header .logo a .logo_bk {max-width: 170px; display: none;}
