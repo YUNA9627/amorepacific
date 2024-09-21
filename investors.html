@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="css/sub_investors.css">
 </head>
 <body>
+  <header></header>
   <main>
     <section class="investors container pd2">
       <div>
@@ -37,7 +38,7 @@
           <li><button class="dropdown-item" type="button">2024</button></li>
         </ul>
       </div>
-      <div class="container">
+      <div id="result" class="container">
         <table class="table table-hover">
           <thead class=" table-light">
             <tr>
@@ -301,14 +302,442 @@
         </table>
       </div>
       <div class="pagination">
-        <i class="bi bi-chevron-double-left"></i>
-        <i class="bi bi-chevron-left"></i>
+        <button><i class="bi bi-chevron-left"></i></button>
         <ol id="numbers"></ol>
-        <i class="bi bi-chevron-right"></i>
-        <i class="bi bi-chevron-double-right"></i>
+        <button><i class="bi bi-chevron-right"></i></button>
+      </div>
+      <div id="business" class="container">
+        <table class="table table-hover">
+          <thead class=" table-light">
+            <tr>
+              <th class="th_date align-middle">등록일</th>
+              <th class="th_title align-middle">제목</th>
+              <th class="th_ko_download align-middle">다운로드<br>(Download)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="td_date">2023</td>
+              <td class="td_title">아모레퍼시픽그룹 2023년 사업보고서</td>
+              <td class="td_dl"><a href="#"><i class="bi bi-download"></i></a></td>
+            </tr>
+            <tr>
+              <td class="td_date">2023</td>
+              <td class="td_title">아모레퍼시픽그룹 2023년 3분기 보고서</td>
+              <td class="td_dl"><a href="#"><i class="bi bi-download"></i></a></td>
+            </tr>
+            <tr>
+              <td class="td_date">2023</td>
+              <td class="td_title">아모레퍼시픽그룹 2023년 반기 보고서</td>
+              <td class="td_dl"><a href="#"><i class="bi bi-download"></i></a></td>
+            </tr>
+            <tr>
+              <td class="td_date">2023</td>
+              <td class="td_title">아모레퍼시픽그룹 2023년 1분기 보고서</td>
+              <td class="td_dl"><a href="#"><i class="bi bi-download"></i></a></td>
+            </tr>
+            <tr>
+              <td class="td_date">2022</td>
+              <td class="td_title">아모레퍼시픽그룹 2022년 사업보고서</td>
+              <td class="td_dl"><a href="#"><i class="bi bi-download"></i></a></td>
+            </tr>
+            <tr>
+              <td class="td_date">2022</td>
+              <td class="td_title">아모레퍼시픽그룹 2022년 3분기 보고서</td>
+              <td class="td_dl"><a href="#"><i class="bi bi-download"></i></a></td>
+            </tr>
+            <tr>
+              <td class="td_date">2022</td>
+              <td class="td_title">아모레퍼시픽그룹 2022년 반기 보고서</td>
+              <td class="td_dl"><a href="#"><i class="bi bi-download"></i></a></td>
+            </tr>
+            <tr>
+              <td class="td_date">2022</td>
+              <td class="td_title">아모레퍼시픽그룹 2022년 1분기 보고서</td>
+              <td class="td_dl"><a href="#"><i class="bi bi-download"></i></a></td>
+            </tr>
+            <tr>
+              <td class="td_date">2021</td>
+              <td class="td_title">아모레퍼시픽그룹 2021년 사업보고서</td>
+              <td class="td_dl"><a href="#"><i class="bi bi-download"></i></a></td>
+            </tr>
+            <tr>
+              <td class="td_date">2021</td>
+              <td class="td_title">아모레퍼시픽그룹 2021년 3분기 보고서</td>
+              <td class="td_dl"><a href="#"><i class="bi bi-download"></i></a></td>
+            </tr>
+            <tr>
+              <td class="td_date">2021</td>
+              <td class="td_title">아모레퍼시픽그룹 2021년 반기 보고서</td>
+              <td class="td_dl"><a href="#"><i class="bi bi-download"></i></a></td>
+            </tr>
+            <tr>
+              <td class="td_date">2021</td>
+              <td class="td_title">아모레퍼시픽그룹 2021년 1분기 보고서</td>
+              <td class="td_dl"><a href="#"><i class="bi bi-download"></i></a></td>
+            </tr>
+            <tr>
+              <td class="td_date">2020</td>
+              <td class="td_title">아모레퍼시픽그룹 2020년 사업보고서</td>
+              <td class="td_dl"><a href="#"><i class="bi bi-download"></i></a></td>
+            </tr>
+            <tr>
+              <td class="td_date">2020</td>
+              <td class="td_title">아모레퍼시픽그룹 2020년 3분기 보고서</td>
+              <td class="td_dl"><a href="#"><i class="bi bi-download"></i></a></td>
+            </tr>
+            <tr>
+              <td class="td_date">2020</td>
+              <td class="td_title">아모레퍼시픽그룹 2020년 반기 보고서</td>
+              <td class="td_dl"><a href="#"><i class="bi bi-download"></i></a></td>
+            </tr>
+            <tr>
+              <td class="td_date">2020</td>
+              <td class="td_title">아모레퍼시픽그룹 2020년 1분기 보고서</td>
+              <td class="td_dl"><a href="#"><i class="bi bi-download"></i></a></td>
+            </tr>
+            <tr>
+              <td class="td_date">2019</td>
+              <td class="td_title">아모레퍼시픽그룹 2019년 사업보고서</td>
+              <td class="td_dl"><a href="#"><i class="bi bi-download"></i></a></td>
+            </tr>
+            <tr>
+              <td class="td_date">2019</td>
+              <td class="td_title">아모레퍼시픽그룹 2019년 3분기 보고서</td>
+              <td class="td_dl"><a href="#"><i class="bi bi-download"></i></a></td>
+            </tr>
+            <tr>
+              <td class="td_date">2019</td>
+              <td class="td_title">아모레퍼시픽그룹 2019년 반기 보고서</td>
+              <td class="td_dl"><a href="#"><i class="bi bi-download"></i></a></td>
+            </tr>
+            <tr>
+              <td class="td_date">2019</td>
+              <td class="td_title">아모레퍼시픽그룹 2019년 1분기 보고서</td>
+              <td class="td_dl"><a href="#"><i class="bi bi-download"></i></a></td>
+            </tr>
+            <tr>
+              <td class="td_date">2018</td>
+              <td class="td_title">아모레퍼시픽그룹 2018년 사업보고서</td>
+              <td class="td_dl"><a href="#"><i class="bi bi-download"></i></a></td>
+            </tr>
+            <tr>
+              <td class="td_date">2018</td>
+              <td class="td_title">아모레퍼시픽그룹 2018년 3분기 보고서</td>
+              <td class="td_dl"><a href="#"><i class="bi bi-download"></i></a></td>
+            </tr>
+            <tr>
+              <td class="td_date">2018</td>
+              <td class="td_title">아모레퍼시픽그룹 2018년 반기 보고서</td>
+              <td class="td_dl"><a href="#"><i class="bi bi-download"></i></a></td>
+            </tr>
+            <tr>
+              <td class="td_date">2018</td>
+              <td class="td_title">아모레퍼시픽그룹 2018년 1분기 보고서</td>
+              <td class="td_dl"><a href="#"><i class="bi bi-download"></i></a></td>
+            </tr>
+            <tr>
+              <td class="td_date">2017</td>
+              <td class="td_title">아모레퍼시픽그룹 2017년 사업보고서</td>
+              <td class="td_dl"><a href="#"><i class="bi bi-download"></i></a></td>
+            </tr>
+            <tr>
+              <td class="td_date">2017</td>
+              <td class="td_title">아모레퍼시픽그룹 2017년 3분기 보고서</td>
+              <td class="td_dl"><a href="#"><i class="bi bi-download"></i></a></td>
+            </tr>
+            <tr>
+              <td class="td_date">2017</td>
+              <td class="td_title">아모레퍼시픽그룹 2017년 반기 보고서</td>
+              <td class="td_dl"><a href="#"><i class="bi bi-download"></i></a></td>
+            </tr>
+            <tr>
+              <td class="td_date">2017</td>
+              <td class="td_title">아모레퍼시픽그룹 2017년 1분기 보고서</td>
+              <td class="td_dl"><a href="#"><i class="bi bi-download"></i></a></td>
+            </tr>
+            <tr>
+              <td class="td_date">2016</td>
+              <td class="td_title">아모레퍼시픽그룹 2016년 사업보고서</td>
+              <td class="td_dl"><a href="#"><i class="bi bi-download"></i></a></td>
+            </tr>
+            <tr>
+              <td class="td_date">2016</td>
+              <td class="td_title">아모레퍼시픽그룹 2016년 3분기 보고서</td>
+              <td class="td_dl"><a href="#"><i class="bi bi-download"></i></a></td>
+            </tr>
+            <tr>
+              <td class="td_date">2016</td>
+              <td class="td_title">아모레퍼시픽그룹 2016년 반기 보고서</td>
+              <td class="td_dl"><a href="#"><i class="bi bi-download"></i></a></td>
+            </tr>
+            <tr>
+              <td class="td_date">2016</td>
+              <td class="td_title">아모레퍼시픽그룹 2016년 1분기 보고서</td>
+              <td class="td_dl"><a href="#"><i class="bi bi-download"></i></a></td>
+            </tr>
+            <tr>
+              <td class="td_date">2015</td>
+              <td class="td_title">아모레퍼시픽그룹 2015년 사업보고서</td>
+              <td class="td_dl"><a href="#"><i class="bi bi-download"></i></a></td>
+            </tr>
+            <tr>
+              <td class="td_date">2015</td>
+              <td class="td_title">아모레퍼시픽그룹 2015년 3분기 보고서</td>
+              <td class="td_dl"><a href="#"><i class="bi bi-download"></i></a></td>
+            </tr>
+            <tr>
+              <td class="td_date">2015</td>
+              <td class="td_title">아모레퍼시픽그룹 2015년 반기 보고서</td>
+              <td class="td_dl"><a href="#"><i class="bi bi-download"></i></a></td>
+            </tr>
+            <tr>
+              <td class="td_date">2015</td>
+              <td class="td_title">아모레퍼시픽그룹 2015년 1분기 보고서</td>
+              <td class="td_dl"><a href="#"><i class="bi bi-download"></i></a></td>
+            </tr>
+            <tr>
+              <td class="td_date">2014</td>
+              <td class="td_title">아모레퍼시픽그룹 2014년 사업보고서</td>
+              <td class="td_dl"><a href="#"><i class="bi bi-download"></i></a></td>
+            </tr>
+            <tr>
+              <td class="td_date">2014</td>
+              <td class="td_title">아모레퍼시픽그룹 2014년 3분기 보고서</td>
+              <td class="td_dl"><a href="#"><i class="bi bi-download"></i></a></td>
+            </tr>
+            <tr>
+              <td class="td_date">2014</td>
+              <td class="td_title">아모레퍼시픽그룹 2014년 반기 보고서</td>
+              <td class="td_dl"><a href="#"><i class="bi bi-download"></i></a></td>
+            </tr>
+            <tr>
+              <td class="td_date">2014</td>
+              <td class="td_title">아모레퍼시픽그룹 2014년 1분기 보고서</td>
+              <td class="td_dl"><a href="#"><i class="bi bi-download"></i></a></td>
+            </tr>
+            <tr>
+              <td class="td_date">2013</td>
+              <td class="td_title">아모레퍼시픽그룹 2013년 사업보고서</td>
+              <td class="td_dl"><a href="#"><i class="bi bi-download"></i></a></td>
+            </tr>
+            <tr>
+              <td class="td_date">2013</td>
+              <td class="td_title">아모레퍼시픽그룹 2013년 3분기 보고서</td>
+              <td class="td_dl"><a href="#"><i class="bi bi-download"></i></a></td>
+            </tr>
+            <tr>
+              <td class="td_date">2013</td>
+              <td class="td_title">아모레퍼시픽그룹 2013년 반기 보고서</td>
+              <td class="td_dl"><a href="#"><i class="bi bi-download"></i></a></td>
+            </tr>
+            <tr>
+              <td class="td_date">2013</td>
+              <td class="td_title">아모레퍼시픽그룹 2013년 1분기 보고서</td>
+              <td class="td_dl"><a href="#"><i class="bi bi-download"></i></a></td>
+            </tr>
+            <tr>
+              <td class="td_date">2012</td>
+              <td class="td_title">아모레퍼시픽그룹 2012년 사업보고서</td>
+              <td class="td_dl"><a href="#"><i class="bi bi-download"></i></a></td>
+            </tr>
+            <tr>
+              <td class="td_date">2012</td>
+              <td class="td_title">아모레퍼시픽그룹 2012년 3분기 보고서</td>
+              <td class="td_dl"><a href="#"><i class="bi bi-download"></i></a></td>
+            </tr>
+            <tr>
+              <td class="td_date">2012</td>
+              <td class="td_title">아모레퍼시픽그룹 2012년 반기 보고서</td>
+              <td class="td_dl"><a href="#"><i class="bi bi-download"></i></a></td>
+            </tr>
+            <tr>
+              <td class="td_date">2012</td>
+              <td class="td_title">아모레퍼시픽그룹 2012년 1분기 보고서</td>
+              <td class="td_dl"><a href="#"><i class="bi bi-download"></i></a></td>
+            </tr>
+            <tr>
+              <td class="td_date">2011</td>
+              <td class="td_title">아모레퍼시픽그룹 2011년 사업보고서</td>
+              <td class="td_dl"><a href="#"><i class="bi bi-download"></i></a></td>
+            </tr>
+            <tr>
+              <td class="td_date">2011</td>
+              <td class="td_title">아모레퍼시픽그룹 2011년 3분기 보고서</td>
+              <td class="td_dl"><a href="#"><i class="bi bi-download"></i></a></td>
+            </tr>
+            <tr>
+              <td class="td_date">2011</td>
+              <td class="td_title">아모레퍼시픽그룹 2011년 반기 보고서</td>
+              <td class="td_dl"><a href="#"><i class="bi bi-download"></i></a></td>
+            </tr>
+            <tr>
+              <td class="td_date">2011</td>
+              <td class="td_title">아모레퍼시픽그룹 2011년 1분기 보고서</td>
+              <td class="td_dl"><a href="#"><i class="bi bi-download"></i></a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="pagination">
+        <button><i class="bi bi-chevron-left"></i></button>
+        <ol id="numbers"></ol>
+        <button><i class="bi bi-chevron-right"></i></button>
+      </div>
+      <div id="sales" class="container">
+        <table class="table table-hover">
+          <thead class=" table-light">
+            <tr>
+              <th class="th_date align-middle">등록일</th>
+              <th class="th_title align-middle">제목</th>
+              <th class="th_ko_download align-middle">다운로드<br>(Download)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="td_date">2023</td>
+              <td class="td_title">아모레퍼시픽 제65기(2023) 영업보고서</td>
+              <td class="td_dl"><a href="#"><i class="bi bi-download"></i></a></td>
+            </tr>
+            <tr>
+              <td class="td_date">2022</td>
+              <td class="td_title">아모레퍼시픽 제64기(2022) 영업보고서</td>
+              <td class="td_dl"><a href="#"><i class="bi bi-download"></i></a></td>
+            </tr>
+            <tr>
+              <td class="td_date">2021</td>
+              <td class="td_title">아모레퍼시픽 제63기(2021) 영업보고서</td>
+              <td class="td_dl"><a href="#"><i class="bi bi-download"></i></a></td>
+            </tr>
+            <tr>
+              <td class="td_date">2020</td>
+              <td class="td_title">아모레퍼시픽 제62기(2020) 영업보고서</td>
+              <td class="td_dl"><a href="#"><i class="bi bi-download"></i></a></td>
+            </tr>
+            <tr>
+              <td class="td_date">2019</td>
+              <td class="td_title">아모레퍼시픽 제61기(2019) 영업보고서</td>
+              <td class="td_dl"><a href="#"><i class="bi bi-download"></i></a></td>
+            </tr>
+            <tr>
+              <td class="td_date">2018</td>
+              <td class="td_title">아모레퍼시픽 제60기(2018) 영업보고서</td>
+              <td class="td_dl"><a href="#"><i class="bi bi-download"></i></a></td>
+            </tr>
+            <tr>
+              <td class="td_date">2017</td>
+              <td class="td_title">아모레퍼시픽 제59기(2017) 영업보고서</td>
+              <td class="td_dl"><a href="#"><i class="bi bi-download"></i></a></td>
+            </tr>
+            <tr>
+              <td class="td_date">2016</td>
+              <td class="td_title">아모레퍼시픽 제58기(2016) 영업보고서</td>
+              <td class="td_dl"><a href="#"><i class="bi bi-download"></i></a></td>
+            </tr>
+            <tr>
+              <td class="td_date">2015</td>
+              <td class="td_title">아모레퍼시픽 제57기(2015) 영업보고서</td>
+              <td class="td_dl"><a href="#"><i class="bi bi-download"></i></a></td>
+            </tr>
+            <tr>
+              <td class="td_date">2014</td>
+              <td class="td_title">아모레퍼시픽 제56기(2014) 영업보고서</td>
+              <td class="td_dl"><a href="#"><i class="bi bi-download"></i></a></td>
+            </tr>
+            <tr>
+              <td class="td_date">2013</td>
+              <td class="td_title">아모레퍼시픽 제55기(2013) 영업보고서</td>
+              <td class="td_dl"><a href="#"><i class="bi bi-download"></i></a></td>
+            </tr>
+            <tr>
+              <td class="td_date">2012</td>
+              <td class="td_title">아모레퍼시픽 제54기(2012) 영업보고서</td>
+              <td class="td_dl"><a href="#"><i class="bi bi-download"></i></a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="pagination">
+        <button><i class="bi bi-chevron-left"></i></button>
+        <ol id="numbers"></ol>
+        <button><i class="bi bi-chevron-right"></i></button>
+      </div>
+      <div id="report" class="container">
+        <table class="table table-hover">
+          <thead class=" table-light">
+            <tr>
+              <th class="th_date align-middle">등록일</th>
+              <th class="th_title align-middle">제목</th>
+              <th class="th_ko_download align-middle">다운로드<br>(Download)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="td_date">2021-06-21</td>
+              <td class="td_title">아모레퍼시픽-코스비전의 주식교환</td>
+              <td class="td_dl"><a href="#"><i class="bi bi-download"></i></a></td>
+            </tr>
+            <tr>
+              <td class="td_date">2021-06-21</td>
+              <td class="td_title">아모레퍼시픽의 에스트라 합병</td>
+              <td class="td_dl"><a href="#"><i class="bi bi-download"></i></a></td>
+            </tr>
+            <tr>
+              <td class="td_date">2019-11-18</td>
+              <td class="td_title">아모레퍼시픽 그룹 전환우선주 유상증자 신주인수권증서 매매 안내문</td>
+              <td class="td_dl"><a href="#"><i class="bi bi-download"></i></a></td>
+            </tr>
+            <tr>
+              <td class="td_date">2019-10-10</td>
+              <td class="td_title">아모레퍼시픽 타법인 주식 및 출자증권 취득결정 발표</td>
+              <td class="td_dl"><a href="#"><i class="bi bi-download"></i></a></td>
+            </tr>
+            <tr>
+              <td class="td_date">2019-10-10</td>
+              <td class="td_title">아모레퍼시픽 유상증자 결정 발표</td>
+              <td class="td_dl"><a href="#"><i class="bi bi-download"></i></a></td>
+            </tr>
+            <tr>
+              <td class="td_date">2019-02-20</td>
+              <td class="td_title">아모레퍼시픽 자기주식 취득 결정 발표</td>
+              <td class="td_dl"><a href="#"><i class="bi bi-download"></i></a></td>
+            </tr>
+            <tr>
+              <td class="td_date">2015-03-03</td>
+              <td class="td_title">아모레퍼시픽 액면분할 결정발표</td>
+              <td class="td_dl"><a href="#"><i class="bi bi-download"></i></a></td>
+            </tr>
+            <tr>
+              <td class="td_date">2013-08-06</td>
+              <td class="td_title">아모레퍼시픽 자사주 매입</td>
+              <td class="td_dl"><a href="#"><i class="bi bi-download"></i></a></td>
+            </tr>
+            <tr>
+              <td class="td_date">2013-02-07</td>
+              <td class="td_title">아모레퍼시픽 vs. 태평양제약의 포괄적 주식교환 자료</td>
+              <td class="td_dl"><a href="#"><i class="bi bi-download"></i></a></td>
+            </tr>
+            <tr>
+              <td class="td_date">2012-02-10</td>
+              <td class="td_title">아모레퍼시픽 (주)코스비전 인수 자료</td>
+              <td class="td_dl"><a href="#"><i class="bi bi-download"></i></a></td>
+            </tr>
+            <tr>
+              <td class="td_date">2011-05-20</td>
+              <td class="td_title">아모레퍼시픽 지주회사 사명 변경</td>
+              <td class="td_dl"><a href="#"><i class="bi bi-download"></i></a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="pagination">
+        <button><i class="bi bi-chevron-left"></i></button>
+        <ol id="numbers"></ol>
+        <button><i class="bi bi-chevron-right"></i></button>
       </div>
     </section>
   </main>
+  <footer></footer>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"
     integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ=="

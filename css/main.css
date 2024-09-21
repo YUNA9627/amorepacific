@@ -569,10 +569,6 @@ main .news{
 
 /* BRANDS - 강현주
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
-.brands{
-  padding: 143px 0 88px 0;
-}
-
 .brands h2{
   margin-bottom: 50px;
 }
@@ -615,7 +611,6 @@ main .news{
 }
 .button .prev {
   right: 100%;
-  /* left: calc(100% - 5px); */
 }
 /*brand logo slide */
 .brands_wrapper {
@@ -626,15 +621,19 @@ main .news{
 }
 .brands_wrapper ul {
   display: flex;
-  /* width: 3360px; */
   padding-top: 50px;
 }
 .brands_wrapper ul li{
-  /* width: 336px; */
   border-right: 1px solid var(--light-gray);
 }
+.brands_wrapper ul li a{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .brands_wrapper ul li img {
-  padding: 0 80px 0 90px;
+  /* padding: 0 80px 0 90px; */
   opacity: 0.5;
 }
 .brands_wrapper ul p{
@@ -659,6 +658,7 @@ main .news{
 .brands_wrapper ul li.slick-current p{
   color: black;
 }
+
 /* SNS - 배유나
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
 

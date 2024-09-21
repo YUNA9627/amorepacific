@@ -8,8 +8,8 @@
   let pageActiveIdx = 0;
   const prevBtn = document.querySelector('.pagination .bi-chevron-left');
   const nextBtn = document.querySelector('.pagination .bi-chevron-right');
-  const prevBackBtn = document.querySelector('.pagination .bi-chevron-double-left');
-  const nextBackBtn = document.querySelector('.pagination .bi-chevron-double-right');
+  let currentPage = 1;
+  const totalPages = 5;
 
 let numberHTML = '';
 for(let i = 1; i<=pageCount;i++){
@@ -70,8 +70,10 @@ function displayPagination(num){
   displayRow(start);
 
   pageActiveIdx = num;
-  console.log(pageActiveIdx);
 
+
+  prevBtn.disabled = pageActiveIdx === 0;
+  nextBtn.disabled = pageActiveIdx === pageGroupCount - 1;
 //  if( pageActiveIdx === 0){
 //   prevBtn.style.display = 'none';
 //  } else{
@@ -86,21 +88,19 @@ function displayPagination(num){
 }
 displayPagination(0);
 
-nextBtn.addEventListener('click',(num)=>{
-  displayPagination(pageActiveIdx+1);
-  // displayRow(num);
-
-  // for(let item of numberBtn){
-  //   item.classList.remove('active');
-  // }
-  // item.classList.add('active');
-  
-})
-
-prevBtn.addEventListener('click',()=>{
-  displayPagination(pageActiveIdx-1);
+// nextBtn.addEventListener('click',(num)=>{
+//   displayPagination(pageActiveIdx+1);
+// })
+nextBtn.addEventListener('click', (num) => {
+  if (pageActiveIdx < pageGroupCount - 1) {
+    displayPagination(pageActiveIdx + 1);
+  }
 });
 
-
+prevBtn.addEventListener('click', (num) => {
+  if (pageActiveIdx > 0) {
+    displayPagination(pageActiveIdx - 1);
+  }
+});
 
 
