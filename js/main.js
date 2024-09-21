@@ -111,6 +111,19 @@ videos.forEach(function(video, index) {
   });
 })
 
+$('.m_control').click(function(){
+  $(this).toggleClass('play pause');
+  if ($(this).hasClass('pause')) {
+    clearInterval(timer);
+    $slides.eq(currentSlideIdx).find('video').get(0).pause();
+  } else {
+    $slides.eq(currentSlideIdx).find('video').get(0).play().catch(error => {
+      console.error('자동 재생 실패:', error);
+    });
+    autoSlide();
+  }
+})
+
 
 /* SPACE - 홍은진
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
