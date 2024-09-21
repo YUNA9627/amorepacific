@@ -174,8 +174,6 @@ body {
   transition: 0.3s;
 }
 
-
-
 /* HEADER - 배유나
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
 
@@ -410,7 +408,7 @@ header {
   transition: 0.3s;
 }
 
-nav {position: absolute; left: 0; right: 0; bottom: 0;}
+nav {position: absolute; left: 0; right: 0; bottom: 0; z-index: 120;}
 
 nav .gnb {
   display: flex;
@@ -506,26 +504,55 @@ nav .gnb .gnb-item .lnbBg .lnbInner {
 
 .line_guide {
   position: absolute; left: 0; top: 145px; width: 100%; background: var(--primary);
-  height: 54px; border-top: 1px solid var(--light-gray);
+  height: 54px; border-top: 1px solid rgba(255,255,255,.5); 
+  border-bottom: 1px solid rgba(255,255,255,.5);
 }
 
 .line_guide .navigation {display: flex; justify-content: center;}
-.line_guide .navigation div {
-  border-right: 1px solid var(--light-gray);
+
+.line_guide .navigation > div {
+  border-right: 1px solid rgba(255,255,255,.5); position: relative;
 }
+
 .line_guide .navigation div button {
   background: none; border: none; cursor: pointer; width: 272px; height: 54px;
-  display: flex; justify-content: space-between; align-items: center; padding: 0 24px;
+  display: flex; justify-content: space-between; align-items: center; padding: 0 1.25rem;
 }
-.line_guide .navigation .depth_1 button {border-left: 1px solid var(--light-gray);}
+
+.line_guide .navigation div button.on:after {
+  transform: rotate(180deg); color: var(--white);
+}
+
+.line_guide .navigation .depth_1 > button {border-left: 1px solid rgba(255,255,255,.5);}
+
 .line_guide .navigation .depth_1 button span {
   font-family: 'Arita buri'; font-weight: 700;
 }
+
 .line_guide .navigation div button:after {
-  content: "\f282"; font-family: bootstrap-icons; display: block;
+  content: "\f282"; font-family: bootstrap-icons; display: block; color: rgba(255,255,255,.5);
+  transform: rotate(0); transition: transform 0.3s, color 0.3s;
 }
-.line_guide .navigation div button span {font-size: 1.125rem;}
-.line_guide .navigation div ul {display: none;}
+
+.line_guide .navigation div button span {
+  font-size: 1rem; color: rgba(255,255,255,.5); transition: color 0.3s;
+}
+
+.line_guide .navigation div button.on span {font-size: 1rem; color: var(--white);}
+
+.line_guide .navigation div ul {
+  background: var(--bg-gray); position: absolute; left: 0; top: calc(100% + 1px);
+  width: 100%; text-align: left; padding: 0.5rem 0; 
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15); display: none;
+}
+
+.line_guide .navigation div ul li a {
+  display: inline-block; padding: 0.5rem 1.25rem; width: 100%; box-sizing: border-box;
+  color: var(--light-gray); font-weight: 600;
+}
+.line_guide .navigation div ul li a:hover {
+  color: var(--black);
+}
 
 aside {display: block;}
 
@@ -758,6 +785,8 @@ nav .gnb .gnb-item .lnbBg .lnbInner .lnb li a:hover {
   display: block;
   text-align: center;
   font-size: 40px;
+  position: relative;
+  overflow: hidden;
 }
 
 .footer_wrapper {
