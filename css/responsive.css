@@ -159,9 +159,8 @@
     font-size: 1.25rem;
   }
 
-  .brands_wrapper ul li img {
-    padding: 0 40px 0 45px;
-  }
+  
+  
   .brands_wrapper ul p{
     font-size: 1.875rem;
   }
@@ -355,10 +354,6 @@
 
   .button .tt_li .con_title_sm {
     font-size: 1.25rem;
-  }
-
-  .brands_wrapper ul li img {
-    padding: 0 53px 0 55px;
   }
   .brands_wrapper ul p{
     font-size: 1.875rem;
