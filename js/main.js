@@ -11,6 +11,7 @@ $(window).scroll(function(){
   }
 });
 
+var prevST = 0;
 $(window).scroll(function(){
   currentST = $(this).scrollTop();
   if(currentST > prevST){
