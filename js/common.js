@@ -25,6 +25,7 @@ goToTop.click(function(e){
   $('html, body').css('scroll-behavior', 'smooth');
 });
 
+
 $('.search-button').click(function(){
   header.toggleClass('open');
   if(header.hasClass('open')){
@@ -135,3 +136,43 @@ $(window).scroll(function(){
     $('.line_guide').removeClass('fixed');
   }
 })
+
+$('.navigation > div').click(function() {
+  var $button = $(this).find('button');
+  var $ul = $(this).find('ul');
+
+  $('.navigation > div').not($(this)).each(function() {
+    $(this).find('button').removeClass('on');
+    $(this).find('ul').slideUp(200).removeClass('open');
+  });
+
+  $button.toggleClass('on');
+  
+  if ($ul.is(':visible')) {
+    $ul.slideUp(200).removeClass('open');
+  } else {
+    $ul.slideDown(200).addClass('open');
+  }
+});
+
+let $lineGuide = $('.line_guide');
+var lineprevST = 0;
+$(window).scroll(function(){
+  currentST = $(this).scrollTop();
+  if(currentST > lineprevST){
+    $lineGuide.css('top', '-60px').css('transition','top 0.3s ease');
+  }else {
+    if (currentST <= 145){
+      if ($(window).width() <= 1200) {
+        $lineGuide.css('top', '64px').css('transition','');
+      } else {
+        $lineGuide.css('top', '145px').css('transition','');
+      }
+    } else {
+      $lineGuide.css('top', '0').css('transition','top 0.3s ease');
+    }
+    
+  }
+  
+  lineprevST = currentST;
+});
