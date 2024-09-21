@@ -57,11 +57,12 @@ p{
 .tab_title li{
     font-family: 'Arita', '돋움', sans-serif;
     font-weight: 500;
-    font-size: 1.25em;
+    font-size: 1.85em;
     color: var(--light-gray);
 }
 .tab_title li:hover{
     color: var(--black);
+    border-bottom: 3px solid var(--primary);
 }
 td,
 th {
@@ -113,8 +114,20 @@ text-align: center;
 	background: var(--primary);
 	color: var(--white);
 }
+.pagination button{
+    background: none;
+    border: none;
+    padding-top: 55px;
+    color: var(--black);
+}
+/* .pagination button:disabled {
+    color: var(--light-gray) !important; 
+  }
+.pagination button:disabled i{
+    color: var(--light-gray) !important; 
+  } */
 .pagination i{
 	color: var(--black);
 	font-size: 1.5em;
-    padding-top: 50px;
+
 }
