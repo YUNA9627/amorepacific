@@ -74,13 +74,13 @@
   gap: 10px;
 }
 .progress-btn {
-  width: 80px;
-  height: 4px;
+  width: 4rem;
+  height: 0.25rem;
   border: none;
   background: rgba(255, 255, 255, .5);
   padding: 0;
   position: relative;
-  border-radius: 2px;
+  border-radius: 0.1rem;
   overflow:hidden;
   opacity: 65%;
   cursor: pointer;
@@ -128,28 +128,47 @@
 }
 @keyframes mainScroll {to{left: 100%;}}
 
-.main_banner .m_pause {
+.main_banner .m_control {
   position: absolute;
-  bottom: 3rem;
-  left: 6rem;
+  width: 20px; height: 20px;
+  bottom: 3.5rem;
+  left: 65%;
+  transform: translateX(-65%);
   display: block;
-  
 }
 
-.main_banner .m_pause button {
+.main_banner .m_control button {
   color: var(--white);
   text-transform: uppercase;
   font-family: 'Pretendard';
   background: none; border: none;
   font-size: 1.25rem;
+  position: relative; width: 100%; height: 100%;
 }
 
-.main_banner .m_pause button span {
-  width: 2px; height: 15px; display: inline-block; background: var(--white);
+.main_banner .m_control.play button .rectangle {
+  position: absolute; left: 0; top: 0; width: 100%; height: 100%;
 }
 
-.main_banner .m_pause button span:nth-child(2) {
+.main_banner .m_control.play button .rectangle span {
+  width: 3px; height: 15px; display: inline-block; background: var(--white);
+}
+
+.main_banner .m_control.play button .rectangle span:nth-child(2) {
   margin-right: 0.25rem;
+}
+
+.main_banner .m_control.pause button .triangle {
+  position: absolute; width: 100%; height: 100%;
+  top: 0; left: 1px;
+}
+
+.main_banner .m_control.pause button .triangle span {
+  border-radius: 2px; position: absolute; left: 10%; top: 10%;
+  border-bottom: 8px solid transparent;
+  border-top: 8px solid transparent;
+  border-left: 10px solid var(--white);
+  border-right: 10px solid transparent;
 }
 
 /* NEWS - 한태희
