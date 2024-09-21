@@ -664,7 +664,15 @@ main .news{
 
 .sns_wrap .sns_slide {left: -12px;}
 
-.sns_wrap .sns_slide li {margin-left: 24px; margin-right: auto;}
+.sns_wrap .sns_slide li {
+  margin-left: 24px; margin-right: auto; padding: 1rem 0;
+  transition: transform 0.3s ease;
+}
+
+.sns_wrap .sns_slide li:hover {
+  transform: scale(1.05);
+  z-index: 1;
+}
 
 .video_slide {
   position: relative;
@@ -695,14 +703,20 @@ main .news{
   z-index: 10;
   top: 50%;
   transform: translateY(-100%);
-  background: rgba(22,22,22,.75);
+  background: rgba(22,22,22,.5);
   border: none;
   width: 70px;
   height: 70px;
   line-height: 72px;
   border-radius: 50%;
   cursor: pointer;
-  i {font-size: 2rem; color: rgba(255,255,255,.75);}
+  i {font-size: 2rem; color: rgba(255,255,255,.5); transition: 0.3s ease;}
+  transition: 0.3s ease;
+}
+
+.slick-arrow:hover {
+  background: rgba(22,22,22,.75);
+  i {color: rgba(255,255,255,.75);}
 }
 
 .slick-prev {
