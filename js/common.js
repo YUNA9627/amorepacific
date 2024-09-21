@@ -23,7 +23,7 @@ goToTop.click(function(e){
         scrollTop: 0
     }, 200);
   $('html, body').css('scroll-behavior', 'smooth');
-})
+});
 
 $('.search-button').click(function(){
   header.toggleClass('open');
@@ -114,6 +114,7 @@ $('.resize_gnb .gnb_item').click(function(){
   var $lnbList = $this.find('.lnb_list');
 
   $('.resize_gnb .lnb_list').not($lnbList).removeClass('re-active').css('height', '0');
+  $('.resize_gnb .gnb_item').not($this).removeClass('re-active').find('> a').css('color', '');
 
   if ($lnbList.hasClass('re-active')) {
     $lnbList.removeClass('re-active').css('height', '');
