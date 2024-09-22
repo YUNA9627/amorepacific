@@ -192,3 +192,13 @@ $(window).scroll(function(){
   
   lineprevST = currentST;
 });
+
+
+
+/* 서브페이지 상단 공통
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+const subtopBg = $('.sub_top_bg');
+
+$(window).scroll(function(){
+    subtopBg.addClass('on')
+});
