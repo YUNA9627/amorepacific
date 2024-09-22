@@ -133,8 +133,15 @@ text-align: center;
     color: var(--primary);
 }
 .nav-link:hover{
-    color:var(--primary);
+    color:var(--white);
+    background: var(--primary);
 }
 .nav-pills .nav-link.active{
     background: var(--primary);
+}
+@media (max-width:768px){
+    .nav-link {
+        font-size: 1rem;
+    }
+
 }

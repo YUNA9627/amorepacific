@@ -89,6 +89,13 @@
   // 페이지 로드 시 첫 번째 탭에 대해 초기화
   initializePagination('#result tbody', '#result .pagination');
 
+  var mixer = mixitup('.product_list');
 
+  document.querySelectorAll('.dropdown-item').forEach(function(button) {
+      button.addEventListener('click', function() {
+          var filterValue = button.getAttribute('data-filter') || 'all';
+          mixer.filter(filterValue);
+      });
+  });
 
 
