@@ -89,6 +89,11 @@
   // 페이지 로드 시 첫 번째 탭에 대해 초기화
   initializePagination('#result tbody', '#result .pagination');
 
+  var mixer = mixitup('.product_list');
 
+  document.getElementById('filter').addEventListener('change', function() {
+    var filterValue = this.value;
+    mixer.filter(filterValue);
+  });
 
 
