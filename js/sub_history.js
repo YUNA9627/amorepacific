@@ -17,8 +17,8 @@ $(window).scroll(function(){
   $historyBarOn.css('height', historyNewTop + 'px');
 });
 
-$(window).on('scroll', function() {
-  var scrollPos = $(window).scrollTop() + $(window).height() / 3; // 뷰포트 중앙 위치
+$(window).scroll(function(){
+  var scrollPos = $(window).scrollTop() + $(window).height() / 3;
 
   $items.each(function(){
       var $this = $(this);
@@ -30,18 +30,42 @@ $(window).on('scroll', function() {
       } else {
           $this.removeClass('active');
       }
-  });
-});
 
-$(window).scroll(function(){
-  const $imgCont = $('.img_cont');
-  const $ul = $('.cont_list').find('ul');
-  
-  $('.img_cont').addClass('disShowMotion');
-  
-  $ul.each(function() {
-    var innerHeight = $(this).innerHeight();
-    var $this = $(this);
-    var offsetTop = $this.offset().top;
+      $('.cont_list > ul').each(function(){
+        var $this = $(this);
+        var $child = $this.find('li');
+        
+        if ($child.hasClass('active')) {
+          $this.addClass('active');
+        } else {
+          $this.removeClass('active');
+        }    
+      });
+
+      $('.cont_list ul').each(function(index) {
+        if ($(this).hasClass('active')) {
+          $('.cont_nav .inner button').removeClass('active');
+          $('.cont_nav .inner button').eq(index).addClass('active');
+        }
+      });
+    
+      $('.cont_list ul').scroll(function() {
+        var index = $(this).index();
+        $('.cont_list ul').removeClass('active');
+        $(this).addClass('active');
+        $('button .inner button').removeClass('active');
+        $('.cont_nav .inner button').eq(index).addClass('active');
+      });
   });
+  $('.cont_nav .inner button').click(function() {
+    $('.cont_nav .inner button').removeClass('active');
+    $(this).addClass('active');
+    
+    var index = $(this).index();
+    var targetUl = $('.cont_list ul').eq(index);
+    
+    $('html, body').stop().animate({
+        scrollTop: targetUl.offset().top
+    }, 10);
+});
 });
