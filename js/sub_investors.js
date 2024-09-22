@@ -91,9 +91,11 @@
 
   var mixer = mixitup('.product_list');
 
-  document.getElementById('filter').addEventListener('change', function() {
-    var filterValue = this.value;
-    mixer.filter(filterValue);
+  document.querySelectorAll('.dropdown-item').forEach(function(button) {
+      button.addEventListener('click', function() {
+          var filterValue = button.getAttribute('data-filter') || 'all';
+          mixer.filter(filterValue);
+      });
   });
 
 
