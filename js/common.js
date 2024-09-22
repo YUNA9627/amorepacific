@@ -17,6 +17,22 @@ $(window).scroll(function(){
   }
 });
 
+$(window).scroll(function(){
+  if(header.hasClass('sub_header')){
+    if($(this).scrollTop() > 100){
+      sideBtn.addClass('on');
+    }else {
+      sideBtn.removeClass('on');
+    }
+  }else{
+    if($(this).scrollTop() > 500){
+      sideBtn.addClass('on');
+    }else {
+      sideBtn.removeClass('on');
+    }
+  }
+});
+
 goToTop.click(function(e){
   e.preventDefault();
     $('html, body').animate({
@@ -130,7 +146,7 @@ $('.resize_gnb .gnb_item').click(function(){
 
 $(window).scroll(function(){
   var scrollAmt = $(this).scrollTop();
-  if(scrollAmt > 145){
+  if(scrollAmt > 135){
     $('.line_guide').addClass('fixed');
   }else {
     $('.line_guide').removeClass('fixed');
@@ -163,7 +179,7 @@ $(window).scroll(function(){
     $lineGuide.css('top', '-60px').css('transition','top 0.3s ease');
   }else {
     if (currentST <= 145){
-      if ($(window).width() <= 1200) {
+      if ($(window).width() < 1200) {
         $lineGuide.css('top', '64px').css('transition','');
       } else {
         $lineGuide.css('top', '135px').css('transition','');
