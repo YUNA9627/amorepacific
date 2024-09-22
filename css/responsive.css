@@ -510,7 +510,11 @@
       }
     }
   }
-    
+
+  /* SNS */
+  .sns_wrap .sns_slide li {
+    padding: 2rem 1rem;
+  }
 
   /* employ */
   #em {
