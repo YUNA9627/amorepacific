@@ -355,7 +355,7 @@
       display: none;
     }
     .story_list{
-      /* grid-auto-rows: 11.69rem; */
+      grid-auto-rows: 7.375rem;
       grid-template-areas: 
       'a a a a'
       'a a a a'
@@ -363,6 +363,22 @@
       'c c c c'
       'd d d d'
       'e e e e'
+    }
+    .story_list p{
+        display: none;
+    }
+    .story_lg .btn_more_w{
+      right: 50%;
+      bottom: 40px;
+      transform: translateX(50%);
+    }
+    .st_list_1 .btn_more_w{
+      color: var(--black);
+    }
+    .story_thumb .btn_more_sm{
+      right: 10%;
+      bottom: 50%;
+      transform: translateY(50%);
     }
   }  
 
