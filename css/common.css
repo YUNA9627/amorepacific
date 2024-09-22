@@ -512,7 +512,7 @@ nav .gnb .gnb-item .lnbBg .lnbInner {
 #stock-box .stock-cell:first-child {padding-left: 10px;}
 
 .line_guide {
-  position: absolute; left: 0; top: 145px; width: 100%; background: var(--primary);
+  position: absolute; left: 0; top: 135px; width: 100%; background: var(--primary);
   height: 54px; border-top: 1px solid rgba(255,255,255,.5); 
   border-bottom: 1px solid rgba(255,255,255,.5);
 }
@@ -750,7 +750,7 @@ nav .gnb .gnb-item .lnbBg .lnbInner .lnb li a:hover {
 
 @media (max-width: 1024px) {
   html.navOpen {word-break: keep-all; overflow: hidden;}
-  .header {height: 54px; justify-content: space-between;}
+  .header {height: 64px; justify-content: space-between;}
   .header .content_wrapper .language {visibility: hidden; opacity: 0;}
   .header .logo {top: 0; left: 0; transform: none; position: static;}
   .header .logo a {padding: 19px 0;}
@@ -816,6 +816,9 @@ nav .gnb .gnb-item .lnbBg .lnbInner .lnb li a:hover {
 
 .footer_box {padding: 50px 0; display: flex; justify-content: space-between;}
 
+.footer_box .footer_info {padding-right: calc(var(--bs-gutter-x)* .5);
+  padding-left: calc(var(--bs-gutter-x)* .5);}
+
 .footer_box .footer_text a,
 .footer_box .footer_text p {font-size: 1rem;}
 
@@ -832,7 +835,7 @@ nav .gnb .gnb-item .lnbBg .lnbInner .lnb li a:hover {
   vertical-align: middle;
 }
 
-.footer_box div p {display: inline; margin-left: 5px;}
+.footer_box div p {display: inline;}
 
 .footer_box ul {margin-bottom: 20px;}
 
@@ -853,6 +856,8 @@ nav .gnb .gnb-item .lnbBg .lnbInner .lnb li a:hover {
   flex-direction: row;
   align-items: flex-start;
   gap: 10px;
+  padding-right: calc(var(--bs-gutter-x)* .5);
+  padding-left: calc(var(--bs-gutter-x)* .5);
 }
 
 .footer_box .footer_sns a {
