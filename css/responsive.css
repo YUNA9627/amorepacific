@@ -1,5 +1,17 @@
+/* Bootstrap-xl-––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+@media (max-width: 1400px){
+  /* STORY */
+  .story{
+    .story_list{
+      grid-auto-rows: 16.69rem;
+    }
+  }
+}
+
+
 /* Bootstrap-lg-––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
 @media (max-width: 1200px) {
+
   /* SPACE */
   .space{
     .content_wrapper{
@@ -52,17 +64,21 @@
       }
     }
   }
-  /* HEADER */
-.header {max-width: 1140px;}
-.line_guide .navigation {max-width: 1140px;}
-/* BRANDS */
-  .brands_wrapper ul li img {
-    padding: 0 40px 0 45px;
+    /* HEADER */
+  .header {max-width: 1140px;}
+  .line_guide .navigation {max-width: 1140px;}
+  
+  /* BRANDS */
+    .brands_wrapper ul li img {
+      padding: 0 40px 0 45px;
+    }
+    .brands_wrapper ul p{
+      font-size: 1.875rem;
+    }
   }
-  .brands_wrapper ul p{
-    font-size: 1.875rem;
-  }
-}
+
+
+/* Bootstrap-md-––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
 @media (max-width: 992px) {
   /* SUSTAIN */
   .sustain {
