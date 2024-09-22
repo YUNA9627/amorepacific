@@ -261,6 +261,7 @@ main .news{
     }
     .nav-link.active{
       color: var(--black);
+      border-bottom-color: var(--primary);
     }
   }
   .sec_desc_md{
