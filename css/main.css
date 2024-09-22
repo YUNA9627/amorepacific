@@ -132,8 +132,8 @@
   position: absolute;
   width: 20px; height: 20px;
   bottom: 3.5rem;
-  left: 65%;
-  transform: translateX(-65%);
+  left: calc(50% + 12rem);
+  transform: translateX(-50%);
   display: block;
 }
 
