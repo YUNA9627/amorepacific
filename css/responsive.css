@@ -1,5 +1,21 @@
+/* Bootstrap-xl-––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+@media (max-width: 1400px){
+  /* STORY */
+  .story{
+    .story_list{
+      grid-auto-rows: 16.69rem;
+    }
+  }
+}
+
+
 /* Bootstrap-lg-––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
 @media (max-width: 1200px) {
+
+  /* HEADER */
+  .header {max-width: 1140px;}
+  .line_guide .navigation {max-width: 1140px;}
+
   /* SPACE */
   .space{
     .content_wrapper{
@@ -52,18 +68,31 @@
       }
     }
   }
-  /* HEADER */
-.header {max-width: 1140px;}
-.line_guide .navigation {max-width: 1140px;}
-/* BRANDS */
-  .brands_wrapper ul li img {
-    padding: 0 40px 0 45px;
+  
+  /* BRANDS */
+    .brands_wrapper ul li img {
+      padding: 0 40px 0 45px;
+    }
+    .brands_wrapper ul p{
+      font-size: 1.875rem;
+    }
   }
-  .brands_wrapper ul p{
-    font-size: 1.875rem;
-  }
-}
+
+
+/* Bootstrap-md-––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
 @media (max-width: 992px) {
+  /* STORY */
+  .story{
+    .story_list{
+      /* grid-auto-rows: 11.69rem; */
+      grid-template-areas: 
+      'a a a a'
+      'a a a a'
+      'b b c c'
+      'd d e e'
+    }
+  }
+
   /* SUSTAIN */
   .sustain {
     background-image: url(../images/sustain_bg_tb.jpg);
@@ -316,6 +345,24 @@
   .search_wrapper .search_box .searchWideBar {
     width: 80%;
   }
+
+  /* STORY */
+  .story{
+    > p{
+      display: none;
+    }
+    .story_list{
+      /* grid-auto-rows: 11.69rem; */
+      grid-template-areas: 
+      'a a a a'
+      'a a a a'
+      'b b b b'
+      'c c c c'
+      'd d d d'
+      'e e e e'
+    }
+  }  
+
 
   /* BRANDS */
   #brand {

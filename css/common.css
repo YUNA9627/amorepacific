@@ -109,12 +109,21 @@ body {
 /*
   LAYOUT
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+/*
 .pd1 {
   padding: 143px 0 143px 0;
 }
-
 .pd2 {
   padding: 143px 0 88px 0;
+}
+*/
+.pd1 {
+  padding-top: 8.938rem;
+  padding-bottom: 8.938rem;
+}
+.pd2 {
+  padding-top: 8.938rem;
+  padding-bottom: 5.5rem;
 }
 
 /*
