@@ -183,7 +183,7 @@ let brandSlides = $('.brand_row').slick({
       }
     },
     {
-      breakpoint: 768,
+      breakpoint: 992,
       settings: {
         slidesToShow: 3
       }
