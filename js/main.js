@@ -4,10 +4,8 @@
 $(window).scroll(function(){
   if($(this).scrollTop() > 500){
     header.addClass('shrink');
-    sideBtn.addClass('on');
   }else {
     header.removeClass('shrink');
-    sideBtn.removeClass('on');
   }
 });
 
