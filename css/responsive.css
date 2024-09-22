@@ -11,6 +11,10 @@
 
 /* Bootstrap-lg-––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
 @media (max-width: 1200px) {
+  
+  /* HEADER */
+  .header {max-width: 1140px;}
+  .line_guide .navigation {max-width: 1140px;}
 
   /* SPACE */
   .space{
@@ -64,9 +68,6 @@
       }
     }
   }
-    /* HEADER */
-  .header {max-width: 1140px;}
-  .line_guide .navigation {max-width: 1140px;}
   
   /* BRANDS */
     .brands_wrapper ul li img {
