@@ -40,7 +40,7 @@ html {scroll-behavior: smooth;}
 
 .cont_list {
   width: 50%; display: flex; flex-direction: column; transform: translateX(100%);
-  padding-left: 2rem;
+  padding-left: 2rem; z-index: 80;
 }
 .cont_list .item {
   display: flex; flex-direction: column; gap: 40px; padding-top: 100px; padding-bottom: 20px;
@@ -152,14 +152,14 @@ main {padding-top: 54px;}
   clip-path: ellipse(300% 300% at 50% 100%);
 }
 
-.history_show .history_cont .img_wrap .img_overlay .img_cont.showMotion div:fitst-of-type img {
+.history_show .history_cont .img_wrap .img_overlay .img_cont.showMotion div:first-of-type img {
   animation: ZoomOut var(--clip-transition);
   animation-fill-mode: forwards;
 }
 
 .cont_nav {
   position: fixed; top: 50%; right: 5%; width: 2rem; height: 200px; transform: translateY(-50%);
-  background: var(--bg-gray); border-radius: 15px; padding: 10px 0;
+  background: var(--bg-gray); border-radius: 15px; padding: 10px 0; z-index: 90;
 }
 
 .cont_nav .inner {
