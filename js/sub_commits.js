@@ -1,7 +1,5 @@
-const commitsBg = $('.commits_bg');
+const subtopBg = $('.sub_top_bg');
 
 $(window).scroll(function(){
-    commitsBg.css({
-        width: '100%'
-    })
+    subtopBg.addClass('on')
 });
