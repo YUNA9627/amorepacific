@@ -171,32 +171,31 @@ $('.navigation > div').click(function() {
   }
 });
 
-let $lineGuide = $('.line_guide');
-var lineprevST = 0;
-$(window).scroll(function(){
-  currentST = $(this).scrollTop();
-  if(currentST > lineprevST){
-    $lineGuide.css('top', '-60px').css('transition','top 0.3s ease');
-  }else {
-    if (currentST <= 135){
-
-      $(window).resize(function(){
-        if ($(window).width() >= 1200) {
-          $lineGuide.css('top', '135px').css('transition','');
-        } else {
-          $lineGuide.css('top', '64px').css('transition','');
-        }
-      })
-    } else {
-      $lineGuide.css('top', '0').css('transition','top 0.3s ease');
-    }
-    
-  }
+function updateLineGuide(){
+  let $lineGuide = $('.line_guide');
+  var lineprevST = 0;
   
-  lineprevST = currentST;
-});
+    currentST = $(this).scrollTop();
+    let windowWidth = $(window).width();
+  
+    if(currentST > lineprevST){
+      $lineGuide.css({'top': '-60px','transition': 'top 0.3s ease'});
+    }else{
+      if (currentST <= 135) {
+        if (windowWidth >= 1024) {
+          $lineGuide.css({'top': '135px','transition': ''});
+        } else {
+          $lineGuide.css({'top': '64px','transition': ''});
+        }
+      } else {
+        $lineGuide.css({'top': '0','transition': 'top 0.3s ease'});
+      }
+    }
+    lineprevST = currentST;
+}
 
-
+$(window).scroll(updateLineGuide);
+$(window).resize(updateLineGuide);
 
 /* 서브페이지 상단 공통
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
