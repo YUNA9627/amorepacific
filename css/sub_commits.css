@@ -19,11 +19,29 @@
     .sub_con_tit_sm{
         font-size: 1.25rem;
     }
+    .con_decs{
+        font-family: 'Pretendard', sans-serif;
+    }
     
+
     .sub_con_decs{
         display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        
+        h4{
+            max-width: 38.625rem;
+        }
+        p{
+            max-width: 44.25rem;
+        }
     }
+
+    
     .sub_con_card{
         display: flex;
+        margin-top: 74px;
+        margin-bottom: 110px;
     }
+ 
 }
