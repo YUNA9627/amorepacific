@@ -1,7 +1,7 @@
 
 
 //----------------------------------------------------------------------- 
-//performance 스크롤 넘버 카운팅 이벤트
+//commits_achivement 스크롤 넘버 카운팅 이벤트
 //----------------------------------------------------------------------- 
 
 
@@ -20,14 +20,14 @@ $(window).on('scroll', function() {
         let oneLimit = Number($item.data('num'));
         let count = 0;
         let autoNumber = setInterval(function() {
-          count += 50;
+          count += 10;
           if (count >= oneLimit) {
             $item.text(oneLimit.toLocaleString());
             clearInterval(autoNumber);
           } else {
             $item.text(count.toLocaleString());
           }
-        }, 100);
+        }, 60);
       });
       animated = true;
     }
