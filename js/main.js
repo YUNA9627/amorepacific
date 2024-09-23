@@ -1,3 +1,41 @@
+/* MODAL - 강현주
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+$(document).ready(function() {
+  // 쿠키 설정 함수
+  function setCookie(name, value, days) {
+    let date = new Date();
+    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000)); // 쿠키 만료 시간 설정
+    document.cookie = `${name}=${value};expires=${date.toUTCString()};path=/`;
+  }
+
+  // 쿠키 가져오기 함수
+  function getCookie(name) {
+    let cookieArr = document.cookie.split(';');
+    for (let i = 0; i < cookieArr.length; i++) {
+      let cookiePair = cookieArr[i].trim().split('=');
+      if (cookiePair[0] === name) {
+        return cookiePair[1];
+      }
+    }
+    return null;
+  }
+
+  // 페이지 로드 시 쿠키 확인 후 모달 표시 여부 결정
+  if (!getCookie('modalClosed')) {
+    $('#cookieMobal').show();  // 쿠키가 없으면 모달 표시
+  } else {
+    $('#cookieMobal').hide();  // 쿠키가 있으면 모달 숨김
+  }
+
+  // 닫기 버튼 클릭 시
+  $('#closeBtn').click(function() {
+    if ($('#check').is(':checked')) {
+      // "하루 동안 안 보기" 체크 시 쿠키 설정
+      setCookie('modalClosed', 'true', 1);  // 1일 동안 쿠키 유지
+    }
+    $('#cookieMobal').fadeOut(); // 모달 닫기
+  });
+});
 /* HEADER - 배유나
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
 
