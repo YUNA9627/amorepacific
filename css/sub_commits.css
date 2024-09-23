@@ -1,3 +1,27 @@
-.sub_contents{
-    padding-top: 100px;
+.esg{
+    .sub_top_hd3{
+        font-family: 'Arita';
+    }
+    .sub_contents{
+        padding-top: 100px;
+    }
+    [class*='sub_con_tit_']{
+        font-weight: 700;
+    }
+    .sub_con_tit_lg{
+        font-size: 3.125rem;
+    }
+    .sub_con_tit_md{
+        font-size: 2.5rem;
+    }
+    .sub_con_tit_sm{
+        font-size: 1.5rem;
+    }
+    
+    .sub_con_decs{
+        display: flex;
+    }
+    .sub_con_card{
+        display: flex;
+    }
 }
