@@ -71,41 +71,6 @@ body {
   font-weight: 400;
 }
 
-@media (max-width: 768px) {
-  .sec_title_lg {
-    font-size: 2.25rem;
-  }
-
-  .sec_desc_md {
-    font-size: 1.125rem;
-  }
-
-  .con_title_lg {
-    font-size: 2rem;
-  }
-
-  .con_title_sm {
-    font-size: 1.75rem;
-  }
-}
-
-@media (max-width: 576px) {
-  .sec_title_lg {
-    font-size: 1.75rem;
-  }
-
-  .sec_desc_md {
-    font-size: 1rem;
-  }
-
-  .con_title_lg {
-    font-size: 1.25rem;
-  }
-
-  .con_title_sm {
-    font-size: 1.125rem;
-  }
-}
 
 /*
   LAYOUT
@@ -963,3 +928,74 @@ nav .gnb .gnb-item .lnbBg .lnbInner .lnb li a:hover {
 .footer_box .footer_info .content {margin-top: 40px;}
 
 .footer_box .footer_info .content ul li ul {display: flex;}
+
+
+
+
+/* Bootstrap-sm-(Tablet)––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+@media (max-width: 768px) {
+
+  /* TYPOGRAPHY */
+  .sec_title_lg {
+    font-size: 2.25rem;
+  }
+
+  .sec_desc_md {
+    font-size: 1.125rem;
+  }
+
+  .con_title_lg {
+    font-size: 2rem;
+  }
+
+  .con_title_sm {
+    font-size: 1.75rem;
+  }
+  /* 서브페이지 상단 텍스트 속성 */
+  .sub_top_hd2{
+    font-size:  1.25rem;
+  }
+  .sub_top_hd3{
+    font-size: 3.5rem;
+  }
+  .sub_top_txt{
+    font-size:  1.125rem;
+  }
+
+}
+
+/* Bootstrap-xs-(Mobile) –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+@media (max-width: 576px) {
+
+  /* TYPOGRAPHY */
+  .sec_title_lg {
+    font-size: 1.75rem;
+  }
+
+  .sec_desc_md {
+    font-size: 1rem;
+  }
+
+  .con_title_lg {
+    font-size: 1.25rem;
+  }
+
+  .con_title_sm {
+    font-size: 1.125rem;
+  }
+
+   /* 서브페이지 상단 텍스트 속성 */
+   .sub_top_hd2{
+    font-size:  1rem;
+  }
+  .sub_top_hd3{
+    font-size: 2.375rem;
+  }
+  .sub_top_txt{
+    font-size:  1rem;
+  }
+  .sub_top_hd2::before, .sub_top_hd2::after{
+    width: 72px;
+
+  }
+}
