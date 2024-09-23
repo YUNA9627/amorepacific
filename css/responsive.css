@@ -189,10 +189,27 @@
 
   /* MAIN BANNER */
   .video_content {
-    left: 15%; 
+    left: 50%; transform: translateX(-50%);
   }
   .main_banner .m_scroll {
     font-size: 1.124rem;
+  }
+
+  .video_content h3 {
+    font-size: 1rem;
+}
+
+  .video_content h2 {
+    font-size: 3.4rem; width: 400px;
+}
+
+  .video_content p {
+    font-size: 1rem;
+    width: 300px;
+  }
+
+  .main_banner .m_scroll {
+    right: 4rem;
   }
 
   /* NEWS */
@@ -387,6 +404,11 @@
 
   .search_wrapper .search_box .searchWideBar {
     width: 80%;
+  }
+
+  /* MAIN BANNER */
+  .main_banner .m_control {
+    left: calc(50% - 12rem);
   }
 
   /* NEWS */
