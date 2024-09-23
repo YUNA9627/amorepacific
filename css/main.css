@@ -1,3 +1,87 @@
+/* MODAL - 강현주
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+.mobal {
+  position: fixed;
+  left: 100px;
+  top: 100px;
+  background: 
+  url(../images/modal_bg1.png)no-repeat top left,
+  url(../images/modal_bg2.png)no-repeat right top var(--white);
+  padding: 50px;
+  border-radius: 20px;
+  z-index: 150;
+  color: var(--black);
+  box-shadow: 0 4px 15px rgba(6 , 44, 94, 0.9);
+}
+.mobalhd{
+  gap: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#cookieMobal .mobalhd img{
+ display: block;
+ max-width: 100%;
+ height: auto;
+}
+.mobalhd > p{
+  margin-top: 10px;
+  text-align: center;
+}
+h2{
+  padding: 20px 0 10px 0; 
+}
+h2 span {
+  color: var(--primary);
+  font-weight: bold;
+}
+.popct p span{
+  font-weight: 600;
+}
+.link{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.link a{
+  color: #FF1493;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.link p {
+  margin-top: 10px;
+}
+.link p img{
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+}
+/* 닫기 버튼 스타일 */
+#closeBtn {
+  padding: 5px 10px;
+  background-color: var(--primary);
+  color: var(--white);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* 체크박스 스타일 */
+.cookie{
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+#check {
+  margin-right: 120px;
+}
+.cookie input[type="checkbox"]{
+  width: 20px;
+  height: 20px;
+}
+
 /* MAIN BANNER - 한태희
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
 .main_banner {
