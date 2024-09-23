@@ -187,6 +187,10 @@
     width: 90%;
   }
 
+  .line_guide .navigation div button {
+    width: 254px;
+  }
+
   /* MAIN BANNER */
   .video_content {
     left: 50%; transform: translateX(-50%);
@@ -406,9 +410,21 @@
     width: 80%;
   }
 
+  .navigation .depth_1 {
+    display: none;
+  }
+
+  .line_guide .navigation div button {
+    min-width: 48.5vw;
+  }
+
   /* MAIN BANNER */
   .main_banner .m_control {
     left: calc(50% - 12rem);
+  }
+
+  .main_banner .buttons .progress-btn {
+    width: 3rem; border-radius: 0.08rem;
   }
 
   /* NEWS */
