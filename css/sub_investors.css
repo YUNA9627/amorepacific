@@ -105,7 +105,7 @@ text-align: center;
     color: var(--light-gray);
 }
 .nav-link {
-    color: var(--primary);
+    color: var(--black);
 }
 .nav-link:hover{
     color:var(--white);
