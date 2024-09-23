@@ -1,8 +1,3 @@
-@import url('../css/reset.css');
-@import url('../css/normalize.css');
-@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
-@import url('https://webfontbox.github.io/Arita/font.min.css');
-@import url('../css/common.css');
 .sub_top_txt{
     margin-top: 2.5rem;
 }
