@@ -54,8 +54,6 @@ html {scroll-behavior: smooth;}
   font-size: 1.5rem; line-height: 3rem; font-weight: 700; width: 80%;
 }
 
-main {padding-top: 54px;}
-
 @keyframes ZoomOut {
   from {
       transform: translateY(30px) scale(1.5)
