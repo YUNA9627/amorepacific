@@ -62,7 +62,7 @@ $(window).scroll(function(){
       var index = $(this).index();
       $('.cont_list ul').removeClass('active');
       $(this).addClass('active');
-      $('button .inner button').removeClass('active');
+      $('.inner button').removeClass('active');
       $('.cont_nav .inner button').eq(index).addClass('active');
     });
 
@@ -100,7 +100,7 @@ $(window).scroll(function(){
 });
 
 $(window).scroll(function(){
-  if($(this).scrollTop() > 450){
+  if($(this).scrollTop() > 600){
     $('.history_show').addClass('visible');
     $('.cont_nav').addClass('visible');
   }else{
