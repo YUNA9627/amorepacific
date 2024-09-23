@@ -183,7 +183,8 @@ body {
   transition: 0.3s;
 }
 
-/* 서브페이지 공통 속성
+/*
+  Subpage
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 /* 서브페이지 전체 위아래 패딩값 */
@@ -224,7 +225,7 @@ body {
   font-size: 3.75rem;
   font-weight: 700;
 }
-.sub_top_desc{
+.sub_top_txt{
   margin-top: 3.125rem;
   margin-bottom: 3.125rem;
   font-size: 1.25rem;
