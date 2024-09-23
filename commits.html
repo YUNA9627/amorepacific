@@ -430,13 +430,18 @@
         
         <div class="con_card_wrap container">
           <ul class="sub_con_card row">
-            <li class="col-5">
-              <span>01</span>
-              <p>신제품 100%에 환경 또는 사회 친화적 속성을 구현하고, 고객의 지속가능한 라이프스타일 영위에 기여하는 브랜드 활동을 전개</p>
+            <li class="col-6">
+              <div class="card_wrap">
+                <span>01</span>
+                <p>신제품 100%에 환경 또는 사회 친화적 속성을 구현하고, 고객의 지속가능한 라이프스타일 영위에 기여하는 브랜드 활동을 전개</p>
+            </div>
             </li>
-            <li class="col-5">
-              <span>02</span>
-              <p>다양성과 포용의 가치를 사내외에 확산하고, 모든 이해관계자와의 조화로운 성장을 구현</p>
+            <li class="col-6">
+              <div class="card_wrap">
+                <span>02</span>
+                <p>다양성과 포용의 가치를 사내외에 확산하고, 모든 이해관계자와의 조화로운 성장을 구현</p>
+              </div>
+       
             </li>
           </ul>
   
@@ -450,32 +455,57 @@
 
         <section class="commits_achivement">
           <h5 class="sub_con_tit_md">주요 성과</h5>
-          <small>* 2022년 실적 기준</small>
-          <ul>
-            <li>
-              <strong class="number" data-num="90.5">0</strong>
-              <img src="" alt="">
-              <p>환경 사회 친화적 속성을 구현한 신제품 비율</p>
+          <small class="achv_tit_small">* 2022년 실적 기준</small>
+
+          <ul class="row">
+            <li class="col-4">
+                <div class="achv_card_wrap">
+                  <figure class="achv_card">
+                    <img src="images/sub_commits/achieve_img1.jpg" alt="환경 사회 친화적 속성을 구현한 신제품 아이콘">
+                    <figcaption>
+                      <h6 class="number" data-num="90.5">0<span class="utin">%</span></h6>
+                      <p>환경 사회 친화적 속성을 구현한 신제품 비율</p>
+                    </figcaption>
+                  </figure>
+                </div>
+              </li>
+            <li class="col-4">
+              <div class="achv_card_wrap">
+                <figure class="achv_card">
+                  <img src="images/sub_commits/achieve_img2.jpg" alt="포장재 신규 플라스틱 사용 감축 아이콘">
+                  <figcaption>
+                    <h6 class="number" data-num="1080">0<span class="utin">톤</span></h6>
+                    <p>포장재 신규 플라스틱 사용 감축량</p>
+                  </figcaption>     
+                </figure>
+              </div>
             </li>
-            <li>
-              <strong class="number" data-num="1080">0</strong>
-              <img src="" alt="">
-              <p>포장재 신규 플라스틱 사용 감축량</p>
-            </li>
-            <li>
-              <strong class="number" data-num="90.5">0</strong>
-              <img src="" alt="">
-              <p>취약계층 경제 역량 강화 및 시민의 건강한 삶 지원을 위한 집행 금액</p>
+            <li class="col-4"> 
+              <div class="achv_card_wrap">
+                <figure class="achv_card">
+                  <img src="images/sub_commits/achieve_img3.jpg" alt="
+                  취약계층 경제 역량 강화 및 시민의 건강한 삶 지원을 위한 집행 금액 아이콘">
+                  <figcaption>
+                    <small>누적액</small>
+                    <h6 class="number" data-num="149.3">0<span class="utin">억</span></h6>
+                    <p>취약계층 경제 역량 강화 및 시민 지원을 위한 집행 금액</p>
+                  </figcaption>
+                </figure>
+              </div>
             </li>
           </ul>
         </section>
+
+
         <section class="commits_performance">
-          <div class="pf_desc">
-            <h5 class="sub_con_tit_md">실천 활동</h5>
-            <p class="con_decs">아모레퍼시픽은 소비재 기업으로서 제품 소비가 가져오는 부정적 영향을 최소화하고 고객이 소비를 통해 환경·사회 문제 해결에 기여하는 주체가 될 수 있도록 책임 있는 브랜드 활동과 제품 개발을 전개하고자 합니다</p>
+          <div class="pf_desc row">
+            <h5 class="sub_con_tit_md col-5">실천 활동</h5>
+            <p class="con_decs col-6">아모레퍼시픽은 소비재 기업으로서 제품 소비가 가져오는 부정적 영향을 최소화하고 고객이 소비를 통해 환경·사회 문제 해결에 기여하는 주체가 될 수 있도록 책임 있는 브랜드 활동과 제품 개발을 전개하고자 합니다</p>
           </div>
           <div class="pf_highlight">
-            <p class="sub_con_tit_sm">신제품 <strong>100%</strong>에 환경/사회 친화 속성 구현 및 지속가능한 브랜드 육성</p>
+            <div class="pf_highlight_wrap">
+              <p class="sub_con_tit_sm">신제품 <strong>100%</strong>에 <br> 환경/사회 친화 속성 구현 및 지속가능한 브랜드 육성</p>
+            </div>
           </div>
           <div class="pf_items">
             <ul>
@@ -691,8 +721,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"
     integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <script src="js/common.js"></script>
   <script src="js/sub_commits.js"></script>
 
