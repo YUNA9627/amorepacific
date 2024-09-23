@@ -23,21 +23,21 @@ $(window).scroll(function(){
 /* MAIN BANNER - 한태희
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
 let $mainBanner = $(".main_banner"); 
-  let $video = $mainBanner.find(".video");
-  let $slides = $video.find("li");
-  let $videos = $video.find("video");
-  let videoLength = [];
-  let slideCount = $slides.length;
-  let currentSlideIdx = 0;
-  let timer;
+let $video = $mainBanner.find(".video");
+let $slides = $video.find("li");
+let $videos = $video.find("video");
+let videoLength = [];
+let slideCount = $slides.length;
+let currentSlideIdx = 0;
+let timer;
 
   // 모든 비디오가 메타데이터 로드를 완료할 때까지 기다리기 위한 Promise 배열
   let metadataPromises = [];
 
-  $videos.each(function () {
+  $videos.each(function(){
     let $this = $(this);
     let metadataPromise = new Promise((resolve) => {
-      $this.on("loadedmetadata", function () {
+      $this.on("loadedmetadata", function (){
         const duration = this.duration; // 재생 시간(초 단위)
         videoLength.push(duration);
         resolve();
@@ -66,16 +66,14 @@ let $mainBanner = $(".main_banner");
     console.log(currentSlideIdx);
 
     // 현재 슬라이드 비디오 일시 정지 및 초기화
-    $slides.removeClass("active").find('video').each(function () {
+    $slides.removeClass("active").find('video').each(function(){
       this.pause();
       this.currentTime = 0;
     });
 
     // 현재 슬라이드의 progress bar 숨기기
-    $slides.find('.progress-btn span').each(function () {
-      $(this).css({
-        'width': '0',
-      });
+    $slides.find('.progress-btn span').each(function(){
+      $(this).css({'width':'0'});
     });
 
     // 다음 슬라이드 비디오 재생
@@ -83,7 +81,6 @@ let $mainBanner = $(".main_banner");
     
     // 비디오가 로드된 후에만 재생
     $currentVideo.play().catch(error => {
-      console.error('자동 재생 실패:', error);
       // 사용자 상호작용으로 비디오 재생 시도
       $('.m_control').addClass('play').removeClass('pause');
     });
@@ -101,7 +98,7 @@ let $mainBanner = $(".main_banner");
 
       // 현재 비디오가 끝나기 전에 다음 슬라이드로 이동
       let currentVideo = $slides.eq(currentSlideIdx).find('video').get(0);
-      if (currentVideo.currentTime >= currentVideo.duration - 0.5) {
+      if (currentVideo.currentTime >= currentVideo.duration - 0.5){
         moveSlide(nextIdx);
       }
     }, 500); // 일정 시간마다 체크
@@ -119,10 +116,9 @@ let $mainBanner = $(".main_banner");
       progressBar.style.width = value + '%'; // '%'로 수정
     });
 
-    video.addEventListener("ended", function () {
-      progressBar.style.width = '0';
-      progressBar.style.transition = '';
-    });
+    // video.addEventListener("ended", function () {
+    // progressBar.style.width = '0';
+    // });
   });
 
   // 각 progress-btn에 인덱스 설정
@@ -137,21 +133,21 @@ let $mainBanner = $(".main_banner");
     
     // 해당 인덱스의 슬라이드로 이동
     moveSlide(index);
+    $('.m_control').removeClass('pause');
+    $('.m_control').addClass('play');
     
     // 해당 슬라이드의 비디오 재생
     $slides.eq(index).find('video').get(0).play().catch(error => {
-      console.error('비디오 재생 실패:', error);
     });
   });
 
   $('.m_control').click(function(){
     $(this).toggleClass('play pause');
-    if ($(this).hasClass('pause')) {
+    if ($(this).hasClass('pause')){
       clearInterval(timer);
       $slides.eq(currentSlideIdx).find('video').get(0).pause();
     } else {
       $slides.eq(currentSlideIdx).find('video').get(0).play().catch(error => {
-        console.error('자동 재생 실패:', error);
       });
       autoSlide();
     }
