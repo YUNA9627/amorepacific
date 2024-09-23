@@ -171,9 +171,9 @@ $('.navigation > div').click(function() {
   }
 });
 
+var lineprevST = 0;
 function updateLineGuide(){
   let $lineGuide = $('.line_guide');
-  var lineprevST = 0;
   
     currentST = $(this).scrollTop();
     let windowWidth = $(window).width();
@@ -191,6 +191,7 @@ function updateLineGuide(){
         $lineGuide.css({'top': '0','transition': 'top 0.3s ease'});
       }
     }
+    
     lineprevST = currentST;
 }
 
