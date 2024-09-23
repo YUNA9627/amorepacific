@@ -25,24 +25,28 @@
     }
     
 
-    .sub_con_card{
+    ul.sub_con_card{
         margin-top: 74px;
         margin-bottom: 110px;
-        gap: 24px;
-        justify-content: center;
-        li{
-            /* background: var(--bg-gray); */
-            background: brown;
+        /* justify-content: center; */
+
+        .card_wrap{
+            background: var(--bg-gray);
             border-radius: 20px;
-            padding: 50px 64px;
+            padding: 52px 64px;
+            position: relative;
         }
         span{
             color: var(--secondary);
-            font-family: 'Arita buri'
+            font-family: 'Arita buri';
+            font-weight: 600;
+            position: absolute;
+            top: 26px; left: 26px;
         }
         p{ 
             font-weight: 600;
             max-width: 28.75rem;
+            min-height: 96px;
         }
     }
     .commits_vd{
@@ -56,5 +60,99 @@
         height: 100%;
         left: 0; top: 0;
         border-radius: 20px;
+    }
+
+
+    section.commits_achivement{
+        padding-top: 160px;
+     
+       small.achv_tit_small{
+            display: block;
+            font-size: 0.88rem;
+            color: var(--medium-gray);
+            margin-bottom: 80px;
+        }
+
+        .achv_card_wrap{
+            background: var(--bg-gray);
+            width: 100%;
+            padding-top: 116px;
+            padding-bottom: 120px;
+            box-sizing: border-box;
+            border-radius: 20px;
+        }
+        figure.achv_card{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+
+            small{
+                position: absolute;
+                left: 50%; top: 50%;
+                transform: translate(-50%, -100%);
+                font-size: 20px;
+                color: var(--primary);
+
+            }
+            h6{
+                font-family: 'Arita buri'; 
+                font-weight: 600;
+                font-size: 66px;
+                color: var(--primary);
+                line-height: 1;
+                margin-top: 40px;
+                margin-bottom: 20px;
+                span{
+                    font-size: 26px;
+                    line-height: 1;
+                }
+            }
+            p{
+                max-width: 320px;
+                width: 80%;
+                margin: 0 auto;
+                color: var(--dark-gray);
+            }
+        } 
+    }
+  
+    section.commits_performance{
+        padding-top: 160px;
+        .pf_highlight{
+            margin-top: 160px;
+            margin-bottom: 160px;
+            position: relative;
+            .pf_highlight_wrap{
+                border: 1px solid var(--primary);
+                width: 390px;
+                height: 390px;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;    
+                align-items: center;
+                margin: 0 auto;
+            }
+            .pf_highlight_wrap::before{
+                content: '';
+                width: 50vw;
+                height: 1px;
+                background: var(--primary);
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 0;
+            }
+            p{
+                max-width: 260px;
+                display: inline-block;
+                text-align: center;
+                strong{
+                    color: var(--secondary);
+                }
+            }
+        }
     }
 }
