@@ -178,12 +178,15 @@ $(window).scroll(function(){
   if(currentST > lineprevST){
     $lineGuide.css('top', '-60px').css('transition','top 0.3s ease');
   }else {
-    if (currentST <= 145){
-      if ($(window).width() < 1200) {
-        $lineGuide.css('top', '64px').css('transition','');
-      } else {
-        $lineGuide.css('top', '135px').css('transition','');
-      }
+    if (currentST <= 135){
+
+      $(window).resize(function(){
+        if ($(window).width() >= 1200) {
+          $lineGuide.css('top', '135px').css('transition','');
+        } else {
+          $lineGuide.css('top', '64px').css('transition','');
+        }
+      })
     } else {
       $lineGuide.css('top', '0').css('transition','top 0.3s ease');
     }
