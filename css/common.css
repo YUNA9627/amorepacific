@@ -633,7 +633,7 @@ nav .gnb .gnb-item .lnbBg .lnbInner {
 .line_guide .navigation div button.on span {font-size: 1rem; color: var(--white);}
 
 .line_guide .navigation div ul {
-  background: var(--bg-gray); position: absolute; left: 0; top: calc(100% - 1px);
+  background: var(--bg-gray); position: absolute; left: 0; top: calc(100% - 2px);
   width: 100%; text-align: left; padding: 0.5rem 0; 
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4); display: none;
 }
@@ -853,13 +853,14 @@ nav .gnb .gnb-item .lnbBg .lnbInner .lnb li a:hover {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  z-index: 90;
+  z-index: -1;
   opacity: 0;
   transition: opacity 0.3s;
 }
 
 .side_btn.on {
   opacity: 1;
+  z-index: 90;
 }
 
 .side_btn .amoremall {
