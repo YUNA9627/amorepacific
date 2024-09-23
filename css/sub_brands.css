@@ -3,7 +3,9 @@
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
 @import url('https://webfontbox.github.io/Arita/font.min.css');
 @import url('../css/common.css');
-
+.sub_top_txt{
+    margin-top: 2.5rem;
+}
 .gallery{
     max-width: 1320px;
     width: 95%;
