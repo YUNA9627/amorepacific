@@ -98,3 +98,13 @@ $(window).scroll(function(){
     }, 10);
   });
 });
+
+$(window).scroll(function(){
+  if($(this).scrollTop() > 450){
+    $('.history_show').addClass('visible');
+    $('.cont_nav').addClass('visible');
+  }else{
+    $('.history_show').removeClass('visible');
+    $('.cont_nav').removeClass('visible');
+  }
+})
