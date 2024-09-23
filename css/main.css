@@ -606,7 +606,6 @@ main .news{
   cursor: pointer;
   box-sizing: border-box;
 }
-
 .button .tt_li .draggable{
   padding: 0 !important;
 }
@@ -614,11 +613,10 @@ main .news{
   margin: 0 10px;
   color: var(--light-gray);
   padding-bottom: 5px;
+  transition:color 0.3s ease-out;
 }
 .button ul li:hover a, .button ul li a.active{
   color: var(--black);
-}
-.button ul li:hover a, .button ul li a.active{
   border-bottom: 3px solid var(--primary);
 }
 .button button{
@@ -655,7 +653,7 @@ main .news{
   align-items: center;
 }
 .brands_wrapper ul li img {
-  /* padding: 0 80px 0 90px; */
+  transition: 0.3s ease-out;
   opacity: 0.5;
 }
 .brands_wrapper ul p{
