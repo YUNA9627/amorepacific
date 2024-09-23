@@ -67,6 +67,16 @@ $(window).scroll(function(){
       }
     });
 
+    $('.img_cont').each(function(){
+      if($(this).hasClass('showMotion')){
+        $(this).find('.first > img').removeClass('false');
+        $(this).find('.first > img').addClass('show');
+      }else{
+        $(this).find('.first > img').removeClass('show');
+        $(this).find('.first > img').addClass('false');
+      }
+    })
+
   $('.cont_nav .inner button').click(function() {
     $('.cont_nav .inner button').removeClass('active');
     $(this).addClass('active');
