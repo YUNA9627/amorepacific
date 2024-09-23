@@ -22,106 +22,140 @@ $(window).scroll(function(){
 
 /* MAIN BANNER - 한태희
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
-let $mainBanner = $(".main_banner");
-let $video = $mainBanner.find(".video");
-let $slides = $video.find("li");
-let $videos = $video.find("video");
-let videoLength = [];
-let slideCount = $slides.length;
-let currentSlideIdx = 0;
-let timer;
+let $mainBanner = $(".main_banner"); 
+  let $video = $mainBanner.find(".video");
+  let $slides = $video.find("li");
+  let $videos = $video.find("video");
+  let videoLength = [];
+  let slideCount = $slides.length;
+  let currentSlideIdx = 0;
+  let timer;
 
-console.log($videos);
-// 모든 비디오가 메타데이터 로드를 완료할 때까지 기다리기 위한 Promise 배열
-let metadataPromises = [];
+  // 모든 비디오가 메타데이터 로드를 완료할 때까지 기다리기 위한 Promise 배열
+  let metadataPromises = [];
 
-$videos.each(function () {
-  let $this = $(this);
-  // 각 비디오의 메타데이터가 로드될 때까지 기다리는 Promise 생성
-  let metadataPromise = new Promise((resolve) => {
-    $this.on("loadedmetadata", function () {
-      const duration = this.duration; // 재생 시간(초 단위)
-      videoLength.push(duration);
-      resolve(); // 메타데이터 로드 완료
+  $videos.each(function () {
+    let $this = $(this);
+    let metadataPromise = new Promise((resolve) => {
+      $this.on("loadedmetadata", function () {
+        const duration = this.duration; // 재생 시간(초 단위)
+        videoLength.push(duration);
+        resolve();
+      });
     });
+    metadataPromises.push(metadataPromise);
   });
-  metadataPromises.push(metadataPromise);
-});
 
-// 모든 비디오의 메타데이터가 로드된 후 videoLength 출력
-Promise.all(metadataPromises).then(() => {
-  console.log(videoLength); // 모든 비디오의 재생 시간 출력
-  autoSlide();
-});
-
-if (slideCount > 1) {
-  $slides.each(function (idx) {
-    $(this).css("left", `${idx * 100}%`);
+  // 모든 비디오의 메타데이터가 로드된 후 videoLength 출력
+  Promise.all(metadataPromises).then(() => {
+    console.log(videoLength); // 모든 비디오의 재생 시간 출력
+    moveSlide(0);  // 첫 번째 슬라이드로 이동
+    autoSlide();   // 자동 슬라이드 시작
   });
-}
 
-function moveSlide(num) {
-  $video.css("left", `${-num * 100}%`);
-  currentSlideIdx = num;
-  console.log(currentSlideIdx);
+  if (slideCount > 1) {
+    $slides.each(function (idx) {
+      $(this).css("left", `${idx * 100}%`);
+    });
+  }
 
-  $slides.removeClass("active").find('video').each(function () {
-    this.pause();
-    this.currentTime = 0;
-  });
-  
-  $slides.eq(currentSlideIdx).addClass("active").find('video').prop("muted", true).get(0).play().catch(error => {
-    //console.error('Autoplay failed:', error);
-    // Handle the error (e.g., ask user to start playback manually)
-  });
-}
-moveSlide(0);
+  function moveSlide(num) {
+    // 비디오 전환을 부드럽게 하기 위한 처리
+    $video.css("left", `${-num * 100}%`);
+    currentSlideIdx = num;
+    console.log(currentSlideIdx);
 
-function autoSlide() {
-  let time = videoLength[currentSlideIdx] * 1000;
-  console.log(time);
-  timer = setInterval(() => {
-    let nextIdx = (currentSlideIdx + 1) % slideCount;
-    moveSlide(nextIdx);
-  }, time);
-}
+    // 현재 슬라이드 비디오 일시 정지 및 초기화
+    $slides.removeClass("active").find('video').each(function () {
+      this.pause();
+      this.currentTime = 0;
+    });
 
+    // 현재 슬라이드의 progress bar 숨기기
+    $slides.find('.progress-btn span').each(function () {
+      $(this).css({
+        'width': '0',
+      });
+    });
 
-var videos = document.querySelectorAll(".video video");
-var progressBars = document.querySelectorAll(".progress-btn span");
-
-
-// 각 비디오에 대해 progressbar 업데이트
-videos.forEach(function(video, index) {
-  var progressBar = progressBars[index];
-
-
-  // 비디오가 재생될 때
-  video.addEventListener("timeupdate", function () {
-    var value = (video.currentTime / video.duration) * 100;
-    progressBar.style.width = value+'px';  // 비디오 진행에 맞춰 게이지 업데이트
-    progressBar.style.transition = '0.5s linear';
-  });
-  // 비디오가 끝나면 게이지를 다시 0으로
-  video.addEventListener("ended", function () {
-    progressBar.style.width = 0;
-    progressBar.style.transition = 'none';
-  });
-})
-
-$('.m_control').click(function(){
-  $(this).toggleClass('play pause');
-  if ($(this).hasClass('pause')) {
-    clearInterval(timer);
-    $slides.eq(currentSlideIdx).find('video').get(0).pause();
-  } else {
-    $slides.eq(currentSlideIdx).find('video').get(0).play().catch(error => {
+    // 다음 슬라이드 비디오 재생
+    let $currentVideo = $slides.eq(currentSlideIdx).addClass("active").find('video').prop("muted", true).get(0);
+    
+    // 비디오가 로드된 후에만 재생
+    $currentVideo.play().catch(error => {
       console.error('자동 재생 실패:', error);
+      // 사용자 상호작용으로 비디오 재생 시도
+      $('.m_control').addClass('play').removeClass('pause');
     });
+
+    // 자동 슬라이드 타이머 초기화
+    clearInterval(timer);
     autoSlide();
   }
-})
 
+  function autoSlide() {
+    let time = videoLength[currentSlideIdx] * 1000;
+    console.log(time);
+    timer = setInterval(() => {
+      let nextIdx = (currentSlideIdx + 1) % slideCount;
+
+      // 현재 비디오가 끝나기 전에 다음 슬라이드로 이동
+      let currentVideo = $slides.eq(currentSlideIdx).find('video').get(0);
+      if (currentVideo.currentTime >= currentVideo.duration - 0.5) {
+        moveSlide(nextIdx);
+      }
+    }, 500); // 일정 시간마다 체크
+  }
+
+  var videos = document.querySelectorAll(".video video");
+  var progressBars = document.querySelectorAll(".progress-btn span");
+
+  // 각 비디오에 대해 progressbar 업데이트
+  videos.forEach(function(video, index) {
+    var progressBar = progressBars[index];
+
+    video.addEventListener("timeupdate", function () {
+      var value = (video.currentTime / video.duration) * 100;
+      progressBar.style.width = value + '%'; // '%'로 수정
+    });
+
+    video.addEventListener("ended", function () {
+      progressBar.style.width = '0';
+      progressBar.style.transition = '';
+    });
+  });
+
+  // 각 progress-btn에 인덱스 설정
+  $('.progress-btn').each(function(index) {
+    $(this).data('index', index);
+  });
+
+  // progress-btn 클릭 시 슬라이드 이동 및 비디오 재생
+  $('.progress-btn').click(function() {
+    // progress-btn의 데이터 속성에서 인덱스 얻기
+    let index = $(this).data('index');
+    
+    // 해당 인덱스의 슬라이드로 이동
+    moveSlide(index);
+    
+    // 해당 슬라이드의 비디오 재생
+    $slides.eq(index).find('video').get(0).play().catch(error => {
+      console.error('비디오 재생 실패:', error);
+    });
+  });
+
+  $('.m_control').click(function(){
+    $(this).toggleClass('play pause');
+    if ($(this).hasClass('pause')) {
+      clearInterval(timer);
+      $slides.eq(currentSlideIdx).find('video').get(0).pause();
+    } else {
+      $slides.eq(currentSlideIdx).find('video').get(0).play().catch(error => {
+        console.error('자동 재생 실패:', error);
+      });
+      autoSlide();
+    }
+  });
 
 /* SPACE - 홍은진
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
