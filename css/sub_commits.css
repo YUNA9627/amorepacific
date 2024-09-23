@@ -1,5 +1,5 @@
 .esg{
-    font-size: 1.125rem;
+    /* font-size: 1.125rem; */
     .sub_top_hd3{
         font-family: 'Arita';
         font-size: 54px;
@@ -172,7 +172,7 @@
         img{
             width: 100%;
             height: 100%;
-            object-fit: contain;
+            object-fit: cover;
             border-radius: 20px;
             vertical-align: bottom;
         }
@@ -201,7 +201,6 @@
             transform: translateY(20px);
             transition: all 0.5s;
             line-height: 1.7;
-       
         }
         .btn_more_sm{
             position: absolute;
@@ -231,4 +230,104 @@
         transform: translateX(5px);
         background: rgba(255, 255, 255, 0.5);
     }
+}
+
+/* Bootstrap-sm-(Tablet)––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+@media (max-width: 768px) {
+    /* TYPOGRAPHY */
+    .sub_con_tit_lg{
+        font-size: 34px;
+        margin-bottom: 40px;
+    }
+    .sub_con_tit_md{
+        margin-bottom: 40px;
+    }
+    .sub_con_tit_sm{
+        font-size: 24px;
+    }
+
+
+    .esg {
+        ul.sub_con_card {
+            p {
+                font-size: 20px;
+                max-width: 100%;
+                min-height: auto;
+            }
+        }
+        section.commits_achivement {
+            .achv_card_wrap {
+                padding-top: 80px;
+                padding-bottom: 80px;
+            }
+        }
+        section.commits_performance {
+            .pf_highlight {
+                margin-top: 100px;
+                margin-bottom: 100px;
+            }
+        }
+        .pf_item_desc {
+            h6 {
+                font-size: 20px;
+                max-width: 200px;
+                margin-bottom: 200px;
+            }
+            .btn_more_sm{
+                scale: 80%;
+            }
+        }
+    }
+
+}
+
+/* Bootstrap-xs-(Mobile) –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+@media (max-width: 576px) {
+   /* TYPOGRAPHY */
+    .sub_con_tit_lg{
+        font-size: 34px;
+        margin-bottom: 40px;
+    }
+    .sub_con_tit_md{
+        margin-bottom: 40px;
+    }
+    .sub_con_tit_sm{
+        font-size: 24px;
+    }
+
+
+    .esg {
+        ul.sub_con_card {
+            p {
+                font-size: 20px;
+                max-width: 100%;
+                min-height: auto;
+            }
+        }
+        section.commits_achivement {
+            .achv_card_wrap {
+                padding-top: 80px;
+                padding-bottom: 80px;
+            }
+        }
+        section.commits_performance {
+            .pf_highlight {
+                margin-top: 100px;
+                margin-bottom: 100px;
+            }
+        }
+
+/* 여기까지확인 */
+        .pf_item {
+            height: 400px;
+        }
+        .pf_item_desc {
+            h6 {
+                font-size: 22px;
+                margin-bottom: 100px;
+                max-width: 230px;
+            }
+        }
+    }
+
 }
