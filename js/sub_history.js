@@ -2,47 +2,56 @@ const $pointer = $('.pointer');
 const $historyBarOn = $('.history_bar_on');
 const $historyBar = $('.history_bar');
 const $items = $('.item');
+const $contList = $('.cont_list');
 
 const pointerMaxScroll = $historyBar.height() - $pointer.height();
 const historyMaxScroll = $historyBar.height() - $historyBarOn.height();
-const listInnerHeight = $('.cont_list').innerHeight();
-
+const listInnerHeight = $contList.innerHeight();
+const contListOffsetTop = $contList.offset().top;
 
 $(window).scroll(function(){
   const scrollTop = $(window).scrollTop();
-  const pointerNewTop = Math.min(scrollTop, pointerMaxScroll);
-  const historyNewTop = Math.min(scrollTop, pointerMaxScroll);
   
-  $pointer.css('top', pointerNewTop + 'px');
-  $historyBarOn.css('height', historyNewTop + 'px');
-});
+  if (scrollTop > contListOffsetTop) {
+    const pointerNewTop = Math.min(scrollTop - contListOffsetTop, pointerMaxScroll);
+    const historyNewTop = Math.min(scrollTop - contListOffsetTop, historyMaxScroll);
+    
+    $pointer.css('top', pointerNewTop + 'px');
+    $historyBarOn.css('height', historyNewTop + 'px');
+  }else {
+    $pointer.css('top','0px');
+    $historyBarOn.css('height','0px');
+  }
 
-$(window).scroll(function(){
   var scrollPos = $(window).scrollTop() + $(window).height() / 3;
 
   $items.each(function(){
       var $this = $(this);
       var offsetTop = $this.offset().top;
-      var offsetBottom = offsetTop + $this.outerHeight();
+      var offsetBottom = offsetTop + $this.innerHeight() - 30;
 
       if (scrollPos >= offsetTop && scrollPos < offsetBottom) {
           $this.addClass('active');
+          $('.cont_nav').addClass('visible');
       } else {
           $this.removeClass('active');
+          $('.cont_nav').removeClass('visible');
       }
 
-      $('.cont_list > ul').each(function(){
-        var $this = $(this);
-        var $child = $this.find('li');
-        
-        if ($child.hasClass('active')) {
-          $this.addClass('active');
-        } else {
-          $this.removeClass('active');
-        }    
-      });
+  $('.cont_list > ul').each(function(){
+    var $this = $(this);
+    var $child = $this.find('li');
+    
+    if ($child.hasClass('active')) {
+      $this.addClass('active');
+    } else {
+      $this.removeClass('active');
+    }    
+  });
+});
 
-      $('.cont_list ul').each(function(index){
+$(window).scroll(function(){
+     $('.cont_list ul').each(function(index){
         if ($(this).hasClass('active')) {
           $('.cont_nav .inner button').removeClass('active');
           $('.cont_nav .inner button').eq(index).addClass('active');
