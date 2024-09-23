@@ -1,6 +1,8 @@
 .esg{
+    font-size: 1.125rem;
     .sub_top_hd3{
         font-family: 'Arita';
+        font-size: 54px;
     }
     .sub_contents{
         padding-top: 100px;
@@ -9,13 +11,13 @@
         font-weight: 700;
     }
     .sub_con_tit_lg{
-        font-size: 3.125rem;
+        font-size: 2.75rem;
     }
     .sub_con_tit_md{
-        font-size: 2.5rem;
+        font-size: 2.125rem;
     }
     .sub_con_tit_sm{
-        font-size: 1.5rem;
+        font-size: 1.25rem;
     }
     
     .sub_con_decs{
