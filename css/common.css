@@ -647,6 +647,13 @@ nav .gnb .gnb-item .lnbBg .lnbInner {
   color: var(--black);
 }
 
+@media (max-width: 835px) {
+  .line_guide .navigation div button {
+    max-width: 32.6vw;
+    min-width: 254px;
+  }
+}
+
 aside {display: block;}
 
 aside .resize_gnb {
