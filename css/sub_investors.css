@@ -93,6 +93,9 @@ text-align: center;
 	color: var(--black);
 	font-size: 1.5em;
 }
+.pagination button[disabled] i{
+    color: var(--light-gray);
+}
 .nav-link {
     color: var(--primary);
 }
