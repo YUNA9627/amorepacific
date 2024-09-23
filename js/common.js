@@ -182,7 +182,7 @@ function updateLineGuide(){
       $lineGuide.css({'top': '-60px','transition': 'top 0.3s ease'});
     }else{
       if (currentST <= 135) {
-        if (windowWidth >= 1024) {
+        if (windowWidth > 1024) {
           $lineGuide.css({'top': '135px','transition': ''});
         } else {
           $lineGuide.css({'top': '64px','transition': ''});
