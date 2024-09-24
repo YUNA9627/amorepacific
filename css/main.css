@@ -279,17 +279,17 @@ main .news{
 }
 .n_right{
   width: 55%;
-  margin-top: 120px;
+  margin-top: 128px;
 }
 .news_list{
-  border-top: 2px solid var(--black);
+  border-top: 1px solid var(--light-gray);
 }
 .news_list li{
-  border-bottom: 2px solid var(--black);
+  border-bottom: 1px solid var(--light-gray);
 }
 .news_list li a{
   display: block;
-  padding: 2.188rem;
+  padding: 2.625rem;
 }
 .news_list li .n_imagebox{
   position: absolute;
@@ -319,30 +319,46 @@ main .news{
 .n_textbox{
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
 }
 .n_textbox h3{
   font-family: 'Arita';
   font-weight: 600;
   font-size: 1.563rem;
-  line-height: 26px;
+
 }
 .n_textbox p{
   font-family: 'Pretendard';
   font-weight: 300;
   font-size: 1.25rem;
-  line-height: 32.5px;
+  line-height: 1.65;
 }
 .n_textbox span{
   font-family: 'Arita';
-  font-weight: 600;
-  font-size: 1.25rem;
-  line-height: 26px;
+  font-weight: 500;
+  font-size: 1rem;
+
   color: var(--medium-gray);
 }
-/* .n_textbox span b{
+.n_textbox span b{
   color: var(--primary);
-} */
+  font-size: 1.125rem;
+  position: relative;
+}
+.n_textbox span b::after{
+  content: '';
+  display: inline-block;
+  width: 1px;
+  height: 100%;
+  background: var(--medium-gray);
+  position: absolute;
+  right: -15px; bottom: 0;
+}
+.n_textbox span small{
+  margin-left: 20px;
+  font-size: 1rem;
+}
+
 /* STORY - 홍은진
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
 .story{
