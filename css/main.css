@@ -833,7 +833,7 @@ main .news{
 .sns_description {margin-top: 15px;
   span {color: var(--primary); font-weight: 700; font-size: 0.9375rem;}
   h4 {font-weight: 700;}
-  p {line-height: 1.25rem; color: var(--light-gray); font-weight: 500;}
+  p {line-height: 1.25rem; color: var(--dark-gray); font-weight: 300;}
 }
 
 .slick-arrow {
