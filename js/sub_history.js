@@ -117,4 +117,12 @@ $(window).scroll(function(){
     $('.history_show').removeClass('visible');
     $('.cont_nav').removeClass('visible');
   }
+
+  if($(this).scrollTop() < 17000){
+    ('.history_show').removeClass('visible');
+    $('.cont_nav').removeClass('visible');
+  }else{
+    $('.history_show').addClass('visible');
+    $('.cont_nav').addClass('visible');
+  }
 })
