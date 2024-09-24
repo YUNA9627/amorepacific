@@ -32,10 +32,10 @@
   margin-top: 10px;
   text-align: center;
 }
-h2{
+.modal_title{
   padding: 20px 0 10px 0; 
 }
-h2 span {
+.modal_title span {
   color: var(--primary);
   font-weight: bold;
 }
@@ -48,7 +48,7 @@ h2 span {
   align-items: center;
 }
 .pop_link a{
-  color: #FF1493;
+  color: #E70771;
   font-weight: 700;
   text-decoration: underline;
 }
@@ -704,7 +704,7 @@ main .news{
 }
 .button .tt_li a{
   margin: 0 10px;
-  color: var(--light-gray);
+  color: var(--dark-gray);
   padding-bottom: 5px;
   transition:color 0.3s ease-out;
 }
@@ -737,7 +737,7 @@ main .news{
   padding-top: 50px;
 }
 .brands_wrapper ul li{
-  border-right: 1px solid var(--light-gray);
+  border-right: 1px solid var(--dark-gray);
 }
 .brands_wrapper ul li a{
   display: flex;
