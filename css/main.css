@@ -248,7 +248,7 @@
 }
 
 .main_banner .m_control.play button .rectangle span:nth-child(2) {
-  margin-left: 0.2rem;
+  margin-left: 0;
 }
 
 .main_banner .m_control.pause button .triangle {
