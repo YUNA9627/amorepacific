@@ -369,12 +369,15 @@ main .news{
   }
   .nav{
     .nav-link{
-      color: var(--light-gray);
+      color: var(--medium-gray);
     }
     .nav-link.active{
       color: var(--black);
       border-bottom-color: var(--primary);
     }
+    .nav-link:hover{
+      border-bottom: none;
+    } 
   }
   .sec_desc_md{
     max-width: 510px;
