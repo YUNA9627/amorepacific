@@ -220,6 +220,15 @@
   .news .btn_more{
     right: var(--bs-gutter-x);
   }
+  .n_textbox h3{
+    font-size: 22px;
+  }
+  .n_textbox p{
+    font-size: 18px;
+  }
+  .n_textbox span b{
+    font-size: 1.0625rem;
+  }
 
   /* BRANDS */
   #brand {
@@ -418,13 +427,17 @@
     padding-right: var(--bs-gutter-x);
     padding-left: var(--bs-gutter-x);
   }
+  .news h2{
+    max-width: 300px;
+  }
   .news .n_imagebox{
     display: none;
   }
   .news .btn_more{
-    left: var(--bs-gutter-x);
+    right: var(--bs-gutter-x);
     top: calc(8.938rem + 80px) ;
   }
+
   /* STORY */
   .story{
     > p{
