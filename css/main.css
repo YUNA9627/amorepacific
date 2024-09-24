@@ -16,6 +16,11 @@
 #cookieMobal{
   visibility: hidden;
 }
+#cookieMobal p a{
+  color: var(--primary);
+  font-weight: 700;
+  text-decoration: underline;
+}
 .mobalhd{
   gap: 10px;
   display: flex;
@@ -47,7 +52,7 @@
   gap: 10px;
   align-items: center;
 }
-.pop_link a{
+#cookieMobal .pop_link a{
   color: #E70771;
   font-weight: 700;
   text-decoration: underline;
