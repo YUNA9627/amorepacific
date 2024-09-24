@@ -13,6 +13,9 @@
   color: var(--black);
   box-shadow: 0 4px 15px rgba(6 , 44, 94, 0.9);
 }
+#cookieMobal{
+  visibility: hidden;
+}
 .mobalhd{
   gap: 10px;
   display: flex;
