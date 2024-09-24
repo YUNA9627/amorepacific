@@ -42,20 +42,20 @@ h2 span {
 .popct p span{
   font-weight: 600;
 }
-.link{
+.pop_link{
   display: flex;
   gap: 10px;
   align-items: center;
 }
-.link a{
+.pop_link a{
   color: #FF1493;
   font-weight: 700;
   text-decoration: underline;
 }
-.link p {
+.pop_link p {
   margin-top: 10px;
 }
-.link p img{
+.pop_link p img{
   width: 20px;
   height: 20px;
   margin-left: 10px;
