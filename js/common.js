@@ -175,7 +175,7 @@ var lineprevST = 0;
 function updateLineGuide(){
   let $lineGuide = $('.line_guide');
   
-    currentST = $(this).scrollTop();
+    let currentST = $(this).scrollTop();
     let windowWidth = $(window).width();
   
     if(currentST > lineprevST){
