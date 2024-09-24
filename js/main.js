@@ -101,28 +101,30 @@ let timer;
     // 비디오 전환을 부드럽게 하기 위한 처리
     $video.css("left", `${-num * 100}%`);
     currentSlideIdx = num;
-    console.log(currentSlideIdx);
-
+  
     // 현재 슬라이드 비디오 일시 정지 및 초기화
-    $slides.removeClass("active").find('video').each(function(){
+    $slides.removeClass("active").find('video').each(function() {
       this.pause();
       this.currentTime = 0;
     });
-
+  
     // 현재 슬라이드의 progress bar 숨기기
-    $slides.find('.progress-btn span').each(function(){
+    $slides.find('.progress-btn span').each(function() {
       $(this).css({'width':'0'});
     });
-
+  
     // 다음 슬라이드 비디오 재생
     let $currentVideo = $slides.eq(currentSlideIdx).addClass("active").find('video').prop("muted", true).get(0);
     
-    // 비디오가 로드된 후에만 재생
-    $currentVideo.play().catch(error => {
-      // 사용자 상호작용으로 비디오 재생 시도
+    // 비디오 재생을 명확하게 시도하고 오류 처리
+    $currentVideo.play().then(() => {
+      console.log("비디오가 재생되었습니다.");
+    }).catch(error => {
+      console.error("비디오 재생 오류:", error);
+      // 재생이 차단될 경우 재생 버튼을 활성화
       $('.m_control').addClass('play').removeClass('pause');
     });
-
+  
     // 자동 슬라이드 타이머 초기화
     clearInterval(timer);
     autoSlide();
