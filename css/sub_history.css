@@ -33,6 +33,18 @@ article h3 {margin-bottom: 3.125rem;}
   .cont_list_wrap .history_show.visible {top: 3%;}
   .cont_list_wrap .history_show .history_cont {width: 58.59vw; height: 38.34vw;
   left: 0;}
+
+  .history_show.visible:before {
+    content: '';
+    background: var(--white);
+    width: 600px;
+    height: 400px;
+    position: absolute; top: 0; left: -20%;
+  }
+  
+  main .cont_nav .inner button {
+    font-size: 1rem;
+  }
 }
 
 .history_bar .history_bar_on {
@@ -101,6 +113,7 @@ article h3 {margin-bottom: 3.125rem;}
   padding: 0px 90.1875px;
   box-sizing: border-box;
   position: absolute;
+  z-index: 90;
 }
 
 .history_show.visible {
@@ -182,34 +195,31 @@ article h3 {margin-bottom: 3.125rem;}
 }
 
 .cont_nav {
-  position: fixed; top: 50%; right: 20px; 
-  transform: translateY(-50%); z-index: 90;
-  opacity: 0;
+  display: flex; justify-content: center; border-bottom: 1px solid var(--light-gray);
+  width: 100%; background: var(--white); z-index: 100;
 }
 
-.cont_nav.visible {
-  opacity: 1;
-}
+.cont_nav.visible {position: fixed; top: 0; left: 0;}
 
-.cont_nav .inner {
-  display: flex; flex-direction: column; align-items: flex-end; height: 100%;
-}
+.cont_nav .inner {display: flex; align-items: flex-end; height: 70px;}
 
 .cont_nav .inner button {
-  background: none; border: none; color: var(--light-gray); height: 100%;
-  cursor: pointer; padding: 0.5rem 1.25rem; font-weight: 700; font-size: 1.25rem;
+  background: none; border: none; color: var(--light-gray); width: auto; height: 60px;
+  cursor: pointer; padding: 0.5rem 1.25rem; font-weight: 600; font-size: 1.25rem;
   position: relative; transition: color 0.3s ease-in;
 }
 
-.cont_nav .inner button.active {
-  color: var(--primary);
-}
+.cont_nav .inner button.active {color: var(--primary);}
 
 .cont_nav .inner button:before {
-  content: ''; position: absolute; right: 0; top: calc(50% - 1px); transform: translateY(-50%);
-  background: var(--primary); width: 5px; height: 0; transition: height 0.3s ease;
+  content: ''; position: absolute; left: 50%; top: 6px; border-radius: 50%;
+  background: var(--primary); width: 8px; height: 8px;
+  visibility: hidden; transition: visibility 0.3s ease;
 }
 
-.cont_nav .inner button.active:before {
-  height: 20px;
+.cont_nav .inner button:after {
+  content: ''; width: 1px; height: 20px; position: absolute; background: var(--light-gray);
+  right: 0;
 }
+
+.cont_nav .inner button.active:before {visibility: visible;}
