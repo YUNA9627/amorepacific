@@ -1,8 +1,8 @@
 const $pointer = $('.pointer');
 const $historyBarOn = $('.history_bar_on');
 const $historyBar = $('.history_bar');
-const $items = $('.item');
 const $contList = $('.cont_list');
+const $items = $('.item');
 
 const pointerMaxScroll = $historyBar.height() - $pointer.height();
 const historyMaxScroll = $historyBar.height() - $historyBarOn.height();
@@ -59,9 +59,23 @@ $(window).scroll(function(){
   });
 });
 
+$(window).scroll(function(){
+  $contList.find('ul').each(function(index){
+    if($(this).find('li:first-child').hasClass('active')){
+      $('.img_cont').eq(index).find('.false img').removeClass('show');
+      $('.img_cont').eq(index).find('.false img').addClass('false');
+      $('.img_cont').eq(index).find('.first img').removeClass('false');
+      $('.img_cont').eq(index).find('.first img').addClass('show');
+    }else if($(this).find('li:nth-child(3)').hasClass('active')){
+      $('.img_cont').eq(index).find('.first img').removeClass('show');
+      $('.img_cont').eq(index).find('.first img').addClass('false');
+      $('.img_cont').eq(index).find('.false img').removeClass('false');
+      $('.img_cont').eq(index).find('.false img').addClass('show');
+    }
+  })
+})
 
 $(window).scroll(function(){
-  
   $('.cont_list ul').each(function(index) {
     if ($(this).hasClass('active')) {
       $('.cont_nav .inner button').removeClass('active');
@@ -86,16 +100,6 @@ $(window).scroll(function(){
     }
   });
 
-  $('.img_cont').each(function(){
-    if($(this).hasClass('showMotion')){
-      $(this).find('.first > img').removeClass('false');
-      $(this).find('.first > img').addClass('show');
-    }else{
-      $(this).find('.first > img').removeClass('show');
-      $(this).find('.first > img').addClass('false');
-    }
-  })
-
   $('.cont_nav .inner button').click(function() {
     $('.cont_nav .inner button').removeClass('active');
     $(this).addClass('active');
@@ -110,19 +114,11 @@ $(window).scroll(function(){
 });
 
 $(window).scroll(function(){
-  if($(this).scrollTop() > 600){
+  if($(this).scrollTop() > 600 && $(this).scrollTop() < 18000) {
     $('.history_show').addClass('visible');
     $('.cont_nav').addClass('visible');
-  }else{
+  } else {
     $('.history_show').removeClass('visible');
     $('.cont_nav').removeClass('visible');
-  }
-
-  if($(this).scrollTop() < 17000){
-    ('.history_show').removeClass('visible');
-    $('.cont_nav').removeClass('visible');
-  }else{
-    $('.history_show').addClass('visible');
-    $('.cont_nav').addClass('visible');
   }
 })
