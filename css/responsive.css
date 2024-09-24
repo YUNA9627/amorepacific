@@ -418,6 +418,14 @@
     min-width: 48.5vw;
   }
 
+  .line_guide .navigation div.sub_b button {
+    min-width: 97.22vw;
+  }
+
+  .sub_b {
+    width: 97.22vw;
+  }
+
   /* MAIN BANNER */
   .main_banner .m_control {
     left: calc(50% - 12rem);
