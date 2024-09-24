@@ -71,7 +71,6 @@ $(window).scroll(function(){
   history();
 });
 
-
 $(window).scroll(function(){
   $contList.find('ul').each(function(index){
     if($(this).find('li:first-child').hasClass('active')){
@@ -87,6 +86,18 @@ $(window).scroll(function(){
   });
 });
 
+let $contNav = $('.cont_nav');
+var navOft = $('header').height() + $('.line_guide').height() + 180 + 217 + $('.subtopbg_warp').innerHeight();
+
+$(window).scroll(function(){
+  var scrollAmt = $(this).scrollTop();
+
+  if(scrollAmt > navOft){
+    $contNav.addClass('visible');
+  }else {
+    $contNav.removeClass('visible');
+  }
+});
 
 $(window).scroll(function(){
   $('.cont_list ul').each(function(index) {
@@ -129,13 +140,10 @@ $(window).scroll(function(){
 $(window).scroll(function(){
   let bottomHt = 280 + 110 + $('footer').height() + 'px';
   let dcw = $(document).height() - $(window).height() - $('footer').height();
-  console.log(dcw);
   if($(this).scrollTop() > 600 && $(this).scrollTop() < dcw) {
     $('.history_show').addClass('visible');
-    $('.cont_nav').addClass('visible');
   } else {
     $('.history_show').removeClass('visible');
-    $('.cont_nav').removeClass('visible');
   }
 
   if(dcw >= $(this).scrollTop()){
