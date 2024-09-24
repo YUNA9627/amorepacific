@@ -633,12 +633,20 @@
   </footer>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha512-S5PZ9GxJZO16tT9r3WJp/Safn31eu8uWrzglMahDT4dsmgqWonRY9grk3j+3tfuPr9WJNsfooOR7Gi7HL5W2jw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="js/common.js"></script>
   <script>
-    $('.gallery').masonry({
-      // options
-      itemSelector: '.item'
-  });
+    const container = $('#gallery');
+    container.imagesLoaded( function() {
+      // images have loaded
+      $('.gallery').masonry({
+        // options
+        itemSelector: '.item'
+      });
+      console.log('이미지 로드됨');
+      container.masonry( 'appended', items );
+    });
+    
   </script>
 </body>
 </html>
