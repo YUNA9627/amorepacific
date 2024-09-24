@@ -313,7 +313,7 @@ header {
   .bi-chevron-down {font-size: 0.875rem; margin-left: 5px;}
 }
 
-.header .language_area button {
+.language_area button {
   background: none; border: none;
 }
 
@@ -333,7 +333,7 @@ header {
 
 .header .language_area:hover .lang_list {opacity: 1;}
 
-.header .language_area .lang_list li {padding: 0.25rem 0.5rem;
+.header .language_area .lang_list li {padding: 0.15rem 0.5rem;
   a {color: rgba(255, 255, 255, .5);}
   a:hover {color: var(--white);}
 }
@@ -722,7 +722,7 @@ aside .language_area .lang_list {
 
 aside .language_area:hover .lang_list {opacity: 1;}
 
-aside .language_area .lang_list li {padding: 5px 10px;
+aside .language_area .lang_list li {padding: 0.15rem 0.5rem;
   a {color: rgba(0, 0, 0, .5);}
   a:hover {color: var(--black);}
 }
