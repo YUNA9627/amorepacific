@@ -313,6 +313,10 @@ header {
   .bi-chevron-down {font-size: 0.875rem; margin-left: 5px;}
 }
 
+.header .language_area button {
+  background: none; border: none;
+}
+
 .header .language_area .lang_list {
   position: absolute;
   left: 50%;
@@ -329,7 +333,7 @@ header {
 
 .header .language_area:hover .lang_list {opacity: 1;}
 
-.header .language_area .lang_list li {padding: 5px 10px;
+.header .language_area .lang_list li {padding: 0.25rem 0.5rem;
   a {color: rgba(255, 255, 255, .5);}
   a:hover {color: var(--white);}
 }
