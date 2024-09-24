@@ -187,10 +187,6 @@
     width: 90%;
   }
 
-  .line_guide .navigation div button {
-    width: 254px;
-  }
-
   /* MAIN BANNER */
   .video_content {
     left: 50%; transform: translateX(-50%);
@@ -251,8 +247,6 @@
   .brands_wrapper ul li {
     font-size: 1.25rem;
   }
-
-  
   
   .brands_wrapper ul p{
     font-size: 1.875rem;
@@ -408,22 +402,6 @@
 
   .search_wrapper .search_box .searchWideBar {
     width: 80%;
-  }
-
-  .navigation .depth_1 {
-    display: none;
-  }
-
-  .line_guide .navigation div button {
-    min-width: 48.5vw;
-  }
-
-  .line_guide .navigation div.sub_b button {
-    min-width: 97.22vw;
-  }
-
-  .sub_b {
-    width: 97.22vw;
   }
 
   /* MAIN BANNER */
