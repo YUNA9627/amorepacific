@@ -58,7 +58,7 @@ text-align: center;
     display: flex;
     justify-content: center;
 }
-#numbers {
+.numbers {
 	padding: 0;
 	margin: 0 1rem;
 	list-style-type: none;
@@ -66,18 +66,18 @@ text-align: center;
     padding-top: 55px;
 }
 
-#numbers li a {
+.numbers li a {
 	color: var(--black);
 	padding: .5rem 1rem;
 	text-decoration: none;
 	opacity: .7;
 }
 
-#numbers li a:hover {
+.numbers li a:hover {
 	opacity: 1;
 }
 
-#numbers li a.active {
+.numbers li a.active {
 	opacity: 1;
 	background: var(--primary);
 	color: var(--white);
@@ -111,13 +111,15 @@ text-align: center;
 .nav-pills .nav-link.active{
     background: var(--primary);
 }
-#numbers li a.active{
+.numbers li a.active{
     transition: 0.2s 0.1s ease-out;
 }
 @media (max-width:768px){
     .nav-link {
         font-size: 1rem;
-        gap: 15px;
+    }
+    .tab_title ul{
+        gap: 10px;
     }
 }
 @media (max-width:576px){
