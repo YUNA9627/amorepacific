@@ -234,6 +234,11 @@ body {
 /* HEADER - 배유나
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
 
+.link {
+  text-decoration: underline; color: var(--primary) !important;
+  font-weight: 600;
+}
+
 header {
   background-color: none; 
   position: fixed;
