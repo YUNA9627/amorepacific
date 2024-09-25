@@ -111,7 +111,7 @@ $(window).scroll(function(){
     var index = $(this).index();
     $('.cont_list ul').removeClass('active');
     $(this).addClass('active');
-    $('.cont_nav .inner button').removeClass('active').eq(index).addClass('active');
+    $('.cont_nav .inner li button').removeClass('active').eq(index).addClass('active');
   });
 
   $('.cont_list ul').each(function(index){
@@ -124,8 +124,8 @@ $(window).scroll(function(){
     }
   });
 
-  $('.cont_nav .inner button').click(function() {
-    $('.cont_nav .inner button').removeClass('active');
+  $('.cont_nav .inner li').click(function() {
+    $('.cont_nav .inner li').removeClass('active');
     $(this).addClass('active');
     
     var index = $(this).index();
@@ -152,3 +152,11 @@ $(window).scroll(function(){
     $('.history_show').css('bottom', '0').css('top','0.5%');
   }
 })
+
+$('.inner').slick({
+  slidesToShow: 7,
+  slidesToScroll: 1,
+  infinite: true,
+  arrows: false,
+  dots: false,
+});
