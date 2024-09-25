@@ -148,6 +148,12 @@ body {
   font-size: 20px;
   transition: 0.3s;
 }
+.btn_more_sm .bi-chevron-right::before{
+  transition: 0.2;
+}
+.btn_more_sm:hover .bi-chevron-right::before{
+  color: var(--black);
+}
 
 /*
   Subpage
