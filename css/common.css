@@ -255,7 +255,7 @@ body {
   }
 
   .line_guide .navigation div.sub_b button {
-    min-width: 97.22vw;
+    min-width: 88.22vw;
   }
 
   .sub_b {
@@ -605,6 +605,9 @@ nav .gnb .gnb-item .lnbBg .lnbInner {
 
 .line_guide .navigation {display: flex; justify-content: center;}
 
+.line_guide .navigation > a { line-height: 54px;
+padding: 0 0.75rem;}
+
 .line_guide .navigation > div {
   border-right: 1px solid rgba(255,255,255,.5); position: relative;
 }
@@ -643,7 +646,7 @@ nav .gnb .gnb-item .lnbBg .lnbInner {
 
 .line_guide .navigation div ul li a {
   display: inline-block; padding: 0.5rem 1.25rem; width: 100%; box-sizing: border-box;
-  color: var(--light-gray); font-weight: 600;
+  color: var(--medium-gray); font-weight: 600;
 }
 .line_guide .navigation div ul li a:hover {
   color: var(--black);
@@ -651,8 +654,8 @@ nav .gnb .gnb-item .lnbBg .lnbInner {
 
 @media (max-width: 835px) {
   .line_guide .navigation div button {
-    max-width: 32.6vw;
-    min-width: 254px;
+    max-width: 30.8vw;
+    min-width: 232px;
   }
 }
 
