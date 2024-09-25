@@ -8,7 +8,9 @@ const $itemh4 = $('.item h4');
 
 let pointerMaxScroll = $historyBar.height() - $pointer.height();
 let historyMaxScroll = $historyBar.height() - $historyBarOn.height();
-let listInnerHeight = $items.outerHeight();
+let listHeight = $items.height();
+let listInnerHeight = $items.innerHeight();
+let listOuterHeight = $items.outerHeight();
 let h4InnerHeight = $itemh4.outerHeight();
 let contListOffsetTop = $contList.offset().top;
 let ulOffsetTop = $contUl.offset().top;
@@ -33,19 +35,19 @@ function history(){
 
     var $this = $(this);
     var offsetTop = $this.offset().top;
-    var offsetBottom = offsetTop + $this.outerHeight();
-    listInnerHeight = $this.outerHeight();
-
+    var offsetBottom = offsetTop + $this.innerHeight();
+    listInnerHeight = $this.innerHeight();
 
     if (scrollPos > offsetTop && scrollPos < offsetBottom) {
-      let newTop = scrollPos - ulOffsetTop - h4InnerHeight;
-      let newHeight = scrollPos - ulOffsetTop - h4InnerHeight;
+      let newTop = scrollPos - ulOffsetTop - listHeight;
+      let newHeight = scrollPos - ulOffsetTop - listHeight;
      
       $this.addClass('active');
       $('.cont_nav').addClass('visible');
    
-      $pointer.css('top', Math.max(newTop, 0) + 'px');
-      $historyBarOn.css('height', Math.max(newHeight, 0) + 'px');
+      $pointer.css('top', Math.min(Math.max(newTop, 0), pointerMaxScroll) + 'px');
+      $historyBarOn.css('height', Math.min(Math.max(newHeight, 0), historyMaxScroll) + 'px');
+
     } else {
         $this.removeClass('active');
         $('.cont_nav').removeClass('visible');
