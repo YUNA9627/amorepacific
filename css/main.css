@@ -380,9 +380,9 @@ main .news{
       color: var(--black);
       border-bottom-color: var(--primary);
     }
-    .nav-link:hover{
+    /* .nav-link:hover{
       border-bottom: none;
-    } 
+    }  */
   }
   .sec_desc_md{
     max-width: 510px;
@@ -493,7 +493,7 @@ main .news{
   .st_list_6 .story_lg_desc::after{
     background: rgba(0, 0, 0, 0.3);
   }
-  .story_lg_desc:hover{
+  .st_list_1:hover{
     p{
       transform: none; 
       opacity: 1;
