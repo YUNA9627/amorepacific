@@ -493,7 +493,7 @@ main .news{
   .st_list_6 .story_lg_desc::after{
     background: rgba(0, 0, 0, 0.3);
   }
-  .st_list_1:hover{
+  .story_lg:hover{
     p{
       transform: none; 
       opacity: 1;
