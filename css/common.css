@@ -245,6 +245,8 @@ body {
   font-weight: 600;
 }
 
+.inner-gap {display: flex; flex-direction: column;}
+
 @media (max-width: 768px){
   .line_guide .navigation div button {
     width: 254px;
@@ -758,11 +760,11 @@ aside .resize_gnb .resize_gnb_inner .gnb {display: flex; width: 100%;}
 }
 
 .resize_gnb .gnb_item .lnb_list ul li a {
-  color: var(--light-gray); transition: 0.3s ease; font-size: 1.125rem;
+  color: var(--light-gray); transition: 0.3s ease; font-size: 1.25rem;
 }
 
 .resize_gnb .gnb_item .lnb_list ul li a:hover {
-  color: var(--black); font-weight: 600;
+  color: var(--black);
 }
 
 .content_wrap .x-button {
