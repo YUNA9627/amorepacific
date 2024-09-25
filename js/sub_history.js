@@ -2,18 +2,25 @@ const $pointer = $('.pointer');
 const $historyBarOn = $('.history_bar_on');
 const $historyBar = $('.history_bar');
 const $contList = $('.cont_list');
+const $contUl = $('.cont_list ul');
 const $items = $('.item');
+const $itemh4 = $('.item h4');
 
 let pointerMaxScroll = $historyBar.height() - $pointer.height();
 let historyMaxScroll = $historyBar.height() - $historyBarOn.height();
 let listInnerHeight = $items.outerHeight();
+let h4InnerHeight = $itemh4.outerHeight();
 let contListOffsetTop = $contList.offset().top;
+let ulOffsetTop = $contUl.offset().top;
+let itemOffsetTop = $items.offset().top;
 
 
 function updateMeasurements() {
   // 각 아이템의 높이 및 리스트 offset 값을 갱신
   listInnerHeight = $items.outerHeight();
   contListOffsetTop = $contList.offset().top;
+  ulOffsetTop = $contUl.offset().top;
+  itemOffsetTop = $items.offset().top;
   pointerMaxScroll = $historyBar.height() - $pointer.height();
   historyMaxScroll = $historyBar.height() - $historyBarOn.height();
 }
@@ -31,8 +38,8 @@ function history(){
 
 
     if (scrollPos > offsetTop && scrollPos < offsetBottom) {
-      let newTop = scrollPos - contListOffsetTop - listInnerHeight;
-      let newHeight = scrollPos - contListOffsetTop - listInnerHeight;
+      let newTop = scrollPos - ulOffsetTop - h4InnerHeight;
+      let newHeight = scrollPos - ulOffsetTop - h4InnerHeight;
      
       $this.addClass('active');
       $('.cont_nav').addClass('visible');
@@ -62,7 +69,19 @@ function history(){
 // 리사이즈 시 높이 값과 offset 값을 다시 계산
 $(window).resize(function(){
   updateMeasurements();
-  history();
+  if (scrollPos > offsetTop && scrollPos < offsetBottom) {
+    let newTop = scrollPos - listInnerHeight;
+    let newHeight = scrollPos - listInnerHeight;
+   
+    $this.addClass('active');
+    $('.cont_nav').addClass('visible');
+ 
+    $pointer.css('top', Math.max(newTop, 0) + 'px');
+    $historyBarOn.css('height', Math.max(newHeight, 0) + 'px');
+  } else {
+      $this.removeClass('active');
+      $('.cont_nav').removeClass('visible');
+  }
 });
 
 
@@ -102,8 +121,8 @@ $(window).scroll(function(){
 $(window).scroll(function(){
   $('.cont_list ul').each(function(index) {
     if ($(this).hasClass('active')) {
-      $('.cont_nav .inner button').removeClass('active');
-      $('.cont_nav .inner button').eq(index).addClass('active');
+      $('.cont_nav .inner li button').removeClass('active');
+      $('.cont_nav .inner li button').eq(index).addClass('active');
     }
   });
     
@@ -152,11 +171,3 @@ $(window).scroll(function(){
     $('.history_show').css('bottom', '0').css('top','0.5%');
   }
 })
-
-$('.inner').slick({
-  slidesToShow: 7,
-  slidesToScroll: 1,
-  infinite: true,
-  arrows: false,
-  dots: false,
-});
