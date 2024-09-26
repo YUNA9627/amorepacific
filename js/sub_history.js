@@ -20,27 +20,30 @@ let itemOffsetTop = $items.offset().top;
 function updateMeasurements() {
   // 각 아이템의 높이 및 리스트 offset 값을 갱신
   listInnerHeight = $items.outerHeight();
+  offsetTop = $('.item').offset().top;
+  offsetBottom = offsetTop + $('.item').innerHeight();
   contListOffsetTop = $contList.offset().top;
   ulOffsetTop = $contUl.offset().top;
   itemOffsetTop = $items.offset().top;
   pointerMaxScroll = $historyBar.height() - $pointer.height();
   historyMaxScroll = $historyBar.height() - $historyBarOn.height();
+  scrollPos = $(window).scrollTop() + $(window).height() / 2;
 }
 
 
 function history(){
-
-  var scrollPos = $(window).scrollTop() + $(window).height() / 2;
+  
   $items.each(function(){
+    let scrollPos = $(window).scrollTop() + $(window).height() / 2;
 
     var $this = $(this);
     var offsetTop = $this.offset().top;
     var offsetBottom = offsetTop + $this.innerHeight();
-    listInnerHeight = $this.innerHeight();
+    var listInnerHeight = $this.innerHeight();
 
     if (scrollPos > offsetTop && scrollPos < offsetBottom) {
-      let newTop = scrollPos - ulOffsetTop - listHeight;
-      let newHeight = scrollPos - ulOffsetTop - listHeight;
+      let newTop = scrollPos - contListOffsetTop - listHeight;
+      let newHeight = scrollPos - contListOffsetTop - listHeight;
      
       $this.addClass('active');
       $('.cont_nav').addClass('visible');
@@ -72,16 +75,16 @@ function history(){
 $(window).resize(function(){
   updateMeasurements();
   if (scrollPos > offsetTop && scrollPos < offsetBottom) {
-    let newTop = scrollPos - listInnerHeight;
-    let newHeight = scrollPos - listInnerHeight;
+    let newTop = scrollPos - ulOffsetTop;
+    let newHeight = scrollPos - ulOffsetTop;
    
-    $this.addClass('active');
+    $('.item').addClass('active');
     $('.cont_nav').addClass('visible');
  
-    $pointer.css('top', Math.max(newTop, 0) + 'px');
-    $historyBarOn.css('height', Math.max(newHeight, 0) + 'px');
+    $('.pointer').css('top', Math.max(newTop, 0) + 'px');
+    $('.history_bar_on').css('height', Math.max(newHeight, 0) + 'px');
   } else {
-      $this.removeClass('active');
+    $('.item').removeClass('active');
       $('.cont_nav').removeClass('visible');
   }
 });
@@ -173,3 +176,21 @@ $(window).scroll(function(){
     $('.history_show').css('bottom', '0').css('top','0.5%');
   }
 })
+
+
+  var lineprevST = 0;
+
+  $(window).on('scroll', function() {
+    var scrollTop = $(this).scrollTop();
+    
+    console.log("현재 스크롤 위치: ", scrollTop);
+    console.log("이전 스크롤 위치: ", lineprevST);
+
+    if (scrollTop > lineprevST) {
+      $('.cont_nav').css('transform', 'translateY(0)');
+    } else if (scrollTop < lineprevST) {
+      $('.cont_nav').css('transform', 'translateY(54px)');
+    }
+
+    lineprevST = scrollTop;
+  });
