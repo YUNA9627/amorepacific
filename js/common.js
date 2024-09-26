@@ -180,6 +180,7 @@ function updateLineGuide(){
   
     if(currentST > lineprevST){
       $lineGuide.css({'top': '-60px','transition': 'top 0.3s ease'});
+      $('.cont_nav').css('transform', 'translateY(0)');
     }else{
       if (currentST <= 135) {
         if (windowWidth > 1024) {
@@ -189,6 +190,7 @@ function updateLineGuide(){
         }
       } else {
         $lineGuide.css({'top': '0','transition': 'top 0.3s ease'});
+        $('.cont_nav').css('transform', 'translateY(54px)');
       }
     }
     
