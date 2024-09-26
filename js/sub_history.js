@@ -178,19 +178,18 @@ $(window).scroll(function(){
 })
 
 
-  var lineprevST = 0;
 
+var lineprevST = 0;
   $(window).on('scroll', function() {
     var scrollTop = $(this).scrollTop();
     
-    console.log("현재 스크롤 위치: ", scrollTop);
-    console.log("이전 스크롤 위치: ", lineprevST);
-
     if (scrollTop > lineprevST) {
       $('.cont_nav').css('transform', 'translateY(0)');
     } else if (scrollTop < lineprevST) {
       $('.cont_nav').css('transform', 'translateY(54px)');
     }
+    console.log("현재 스크롤 위치: ", scrollTop);
+    console.log("이전 스크롤 위치: ", lineprevST);
 
     lineprevST = scrollTop;
   });
