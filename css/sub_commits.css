@@ -27,7 +27,8 @@
     .commits_customs{
         padding-top: 100px;
     }
-    ul.sub_con_card{
+
+    .sub_con_card{
         margin-top: 74px;
         margin-bottom: 110px;
         /* justify-content: center; */
@@ -47,7 +48,8 @@
         }
         p{ 
             font-weight: 600;
-            max-width: 28.75rem;
+            font-size: 20px;
+            max-width: 29.9rem;
             min-height: 96px;
         }
     }
@@ -234,23 +236,30 @@
 
 /* Bootstrap-sm-(Tablet)––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
 @media (max-width: 768px) {
-    /* TYPOGRAPHY */
-    .sub_con_tit_lg{
-        font-size: 34px;
-        margin-bottom: 40px;
-    }
-    .sub_con_tit_md{
-        margin-bottom: 40px;
-    }
-    .sub_con_tit_sm{
-        font-size: 24px;
-    }
+   
 
+
+    .sub_top_bg{
+        max-width: 90%;
+    }
+    .sub_top_bg.on{
+        margin-left: 0;
+        margin-right: 0;
+    } 
 
     .esg {
-        ul.sub_con_card {
+        /* TYPOGRAPHY */
+        .sub_con_tit_lg{
+            font-size: 34px;
+            margin-bottom: 40px;
+        }
+        .sub_con_tit_md{
+            margin-bottom: 40px;
+        }
+
+        .sub_con_card {
             p {
-                font-size: 20px;
+                font-size: 19px;
                 max-width: 100%;
                 min-height: auto;
             }
@@ -285,21 +294,21 @@
 @media (max-width: 576px) {
    /* TYPOGRAPHY */
     .sub_con_tit_lg{
-        font-size: 34px;
+        font-size: 20px;
         margin-bottom: 40px;
     }
     .sub_con_tit_md{
         margin-bottom: 40px;
     }
     .sub_con_tit_sm{
-        font-size: 24px;
+        font-size: 20px;
     }
 
 
     .esg {
-        ul.sub_con_card {
+        .sub_con_card {
             p {
-                font-size: 20px;
+                font-size: 18px;
                 max-width: 100%;
                 min-height: auto;
             }
@@ -322,10 +331,13 @@
             height: 400px;
         }
         .pf_item_desc {
+            padding-right: 46px;
+            padding-left: 65px;
+
             h6 {
-                font-size: 22px;
+                font-size: 26px;
                 margin-bottom: 100px;
-                max-width: 230px;
+                max-width: 260px;
             }
         }
     }
