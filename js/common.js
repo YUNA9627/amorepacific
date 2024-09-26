@@ -205,6 +205,11 @@ $('main').click(function(){
   $('.navigation > div').find('button').removeClass('on');
 })
 
+$('.resize_gnb').click(function(){
+  $('aside').removeClass('navOpen');
+  $('html').removeClass('navOpen');
+});
+
 /* 서브페이지 상단 공통
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
 const subtopBg = $('.sub_top_bg');
