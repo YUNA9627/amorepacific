@@ -203,7 +203,11 @@ $(window).resize(updateLineGuide);
 $('main').click(function(){
   $('.navigation > div > ul').slideUp(200).removeClass('open');
   $('.navigation > div').find('button').removeClass('on');
-})
+});
+
+$('.resize_gnb_inner').click(function(event) {
+  event.stopPropagation();
+});
 
 $('.resize_gnb').click(function(){
   $('aside').removeClass('navOpen');
