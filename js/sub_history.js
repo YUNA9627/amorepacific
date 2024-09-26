@@ -178,5 +178,5 @@ $(window).scroll(function(){
 })
 
 $('.line_guide .navigation > div').click(function(){
-  $('.cont_nav').css('transform','translateY(-60px)');
+  $('.cont_nav.visible').css('transform','translateY(-60px)');
 })
