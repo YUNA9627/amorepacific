@@ -202,6 +202,7 @@ $(window).resize(updateLineGuide);
 
 $('main').click(function(){
   $('.navigation > div > ul').slideUp(200).removeClass('open');
+  $('.navigation > div').find('button').removeClass('on');
 })
 
 /* 서브페이지 상단 공통
