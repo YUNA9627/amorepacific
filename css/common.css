@@ -254,7 +254,7 @@ body {
 }
 
 @media (max-width: 576px){
-  .navigation .depth_1 {
+  .navigation .depth_3 {
     display: none;
   }
 
