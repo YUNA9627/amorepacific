@@ -648,7 +648,7 @@ padding: 0 0.75rem;}
 
 .line_guide .navigation div ul {
   background: var(--bg-gray); position: absolute; left: 0; top: calc(100% - 2px);
-  width: 100%; text-align: left; padding: 0.5rem 0; 
+  width: 100%; text-align: left; padding: 0.5rem 0;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4); display: none;
 }
 
