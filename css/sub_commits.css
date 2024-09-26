@@ -248,6 +248,10 @@
     }  */
 
     .esg {
+        .sub_top_hd3 {
+            font-size: 3.5rem;
+        }
+
         /* TYPOGRAPHY */
         .sub_con_tit_lg{
             font-size: 34px;
@@ -306,6 +310,10 @@
 
 
     .esg {
+        .sub_top_hd3 {
+            font-size: 2.375rem;
+        }
+
         .sub_con_card {
             p {
                 font-size: 18px;
