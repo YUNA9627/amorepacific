@@ -200,6 +200,10 @@ function updateLineGuide(){
 $(window).scroll(updateLineGuide);
 $(window).resize(updateLineGuide);
 
+$('main').click(function(){
+  $('.navigation > div > ul').slideUp(200).removeClass('open');
+})
+
 /* 서브페이지 상단 공통
 –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
 const subtopBg = $('.sub_top_bg');
