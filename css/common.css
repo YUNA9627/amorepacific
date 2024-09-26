@@ -1013,6 +1013,14 @@ nav .gnb .gnb-item .lnbBg .lnbInner .lnb li a:hover {
     font-size:  1.125rem;
   }
 
+  .sub_top_bg{
+    max-width: 90%;
+}
+  .sub_top_bg.on{
+    margin-left: 0;
+    margin-right: 0;
+} 
+
 }
 
 /* Bootstrap-xs-(Mobile) –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
