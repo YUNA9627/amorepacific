@@ -11,7 +11,9 @@ let historyMaxScroll = $historyBar.height() - $historyBarOn.height();
 let listHeight = $items.height();
 let listInnerHeight = $items.innerHeight();
 let listOuterHeight = $items.outerHeight();
-let h4InnerHeight = $itemh4.outerHeight();
+let h4OuterHeight = $itemh4.outerHeight();
+let h4InnerHeight = $itemh4.innerHeight();
+let h4Height = $itemh4.height();
 let contListOffsetTop = $contList.offset().top;
 let ulOffsetTop = $contUl.offset().top;
 let itemOffsetTop = $items.offset().top;
@@ -42,8 +44,8 @@ function history(){
     var listInnerHeight = $this.innerHeight();
 
     if (scrollPos > offsetTop && scrollPos < offsetBottom) {
-      let newTop = scrollPos - contListOffsetTop - listHeight;
-      let newHeight = scrollPos - contListOffsetTop - listHeight;
+      let newTop = scrollPos - contListOffsetTop - h4Height;
+      let newHeight = scrollPos - contListOffsetTop - h4Height;
      
       $this.addClass('active');
       $('.cont_nav').addClass('visible');
@@ -75,8 +77,8 @@ function history(){
 $(window).resize(function(){
   updateMeasurements();
   if (scrollPos > offsetTop && scrollPos < offsetBottom) {
-    let newTop = scrollPos - ulOffsetTop;
-    let newHeight = scrollPos - ulOffsetTop;
+    let newTop = scrollPos - contListOffsetTop;
+    let newHeight = scrollPos - contListOffsetTop;
    
     $('.item').addClass('active');
     $('.cont_nav').addClass('visible');
